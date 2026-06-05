@@ -10,7 +10,7 @@ export default function About() {
   ];
 
   return (
-    <section className="pt-10 pb-20" style={{ backgroundColor: "#f8f7f4" }}>
+    <section className="pt-16 md:pt-24 pb-20" style={{ backgroundColor: "#f8f7f4" }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left: About text */}

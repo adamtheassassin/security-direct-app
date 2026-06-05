@@ -18,14 +18,14 @@ export default function Hero() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(135deg, rgba(0,29,59,0.92) 0%, rgba(9,75,146,0.75) 60%, rgba(0,29,59,0.6) 100%)",
+            "linear-gradient(to bottom, rgba(0,18,36,0.96) 0%, rgba(0,29,59,0.90) 50%, rgba(0,10,24,0.95) 100%)",
         }}
       />
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white pt-36 md:pt-48 pb-36 md:pb-48">
         {/* Eyebrow */}
-        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-xs md:text-sm font-bold tracking-widest uppercase text-blue-200 mb-6 max-w-full">
+        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-xs md:text-sm font-bold tracking-widest uppercase text-sky-300 mb-6 max-w-full">
           <span className="inline-flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
             Established 2008
@@ -38,19 +38,21 @@ export default function Hero() {
 
         <h1
           style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-          className="text-4xl md:text-6xl font-bold leading-tight mb-4"
+          className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-5 text-white"
         >
-          Gate Motor Repair, Installation
+          Gate Motor Repair,
           <br />
-          <span style={{ color: "#7ab3e0" }}>&amp; Electric Fencing</span>
+          Installation &amp; Electric Fencing
+          <br />
+          <span className="text-yellow-400 font-bold block mt-1">in Johannesburg</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-3 leading-relaxed">
+        <p className="text-base md:text-xl text-white/90 max-w-2xl mx-auto mb-4 leading-relaxed">
           Professional installation &amp; repair of gate motors, electric fencing,
           CCTV systems, and garage door motors across Alberton and Johannesburg.
         </p>
 
-        <p className="text-yellow-300 font-semibold text-base md:text-lg mb-8 tracking-wide uppercase">
+        <p className="text-yellow-400 font-bold text-xs md:text-sm mb-8 tracking-widest uppercase">
           We Cover the Whole of Johannesburg
         </p>
 
