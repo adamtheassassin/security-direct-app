@@ -1,6 +1,11 @@
-import Link from "next/link";
+"use client";
+
+import { useState } from "react";
+import QuoteModal from "./QuoteModal";
 
 export default function Hero() {
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image */}
@@ -18,20 +23,26 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white py-24">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-sm font-medium mb-6">
-          <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-          Established 2008 · Certified Installers · SABS Compliant
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white pt-36 md:pt-48 pb-36 md:pb-48">
+        {/* Eyebrow */}
+        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-xs md:text-sm font-bold tracking-widest uppercase text-blue-200 mb-6 max-w-full">
+          <span className="inline-flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
+            Established 2008
+          </span>
+          <span className="text-white/30 hidden sm:inline">·</span>
+          <span>Certified Installers</span>
+          <span className="text-white/30 hidden sm:inline">·</span>
+          <span>SABS Compliant</span>
         </div>
 
         <h1
           style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
           className="text-4xl md:text-6xl font-bold leading-tight mb-4"
         >
-          Protecting Johannesburg
+          Gate Motor Repair, Installation
           <br />
-          <span style={{ color: "#7ab3e0" }}>Since 2008</span>
+          <span style={{ color: "#7ab3e0" }}>&amp; Electric Fencing</span>
         </h1>
 
         <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-3 leading-relaxed">
@@ -44,15 +55,15 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:0824981272"
-            className="flex items-center justify-center gap-2 bg-white text-blue-900 font-bold px-8 py-4 rounded-lg text-base hover:bg-blue-50 transition-colors shadow-xl"
+          <button
+            onClick={() => setIsQuoteModalOpen(true)}
+            className="flex items-center justify-center gap-2 bg-white text-navy font-bold px-8 py-4 rounded-lg text-base hover:bg-blue-pale hover:text-blue transition-colors shadow-xl cursor-pointer"
           >
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-            082 498 1272
-          </a>
+            Get Free Quote
+          </button>
           <a
             href="https://wa.me/+27824981272"
             target="_blank"
@@ -64,12 +75,6 @@ export default function Hero() {
             </svg>
             WhatsApp Us Now
           </a>
-          <Link
-            href="/gate-motors"
-            className="flex items-center justify-center gap-2 border-2 border-white/40 hover:border-white text-white font-semibold px-8 py-4 rounded-lg text-base transition-colors backdrop-blur-sm"
-          >
-            View Monthly Specials
-          </Link>
         </div>
 
         {/* Trust indicators */}
@@ -89,8 +94,11 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Quote Modal */}
+      <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
+
       {/* Scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
+      <div className="absolute bottom-24 md:bottom-28 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>

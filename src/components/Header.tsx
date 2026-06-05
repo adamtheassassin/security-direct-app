@@ -75,8 +75,8 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex flex-col leading-tight">
               <span
-                style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-                className="text-white text-xl font-bold tracking-wide"
+                style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}
+                className="text-white text-xl font-semibold tracking-wide"
               >
                 Security Direct
               </span>

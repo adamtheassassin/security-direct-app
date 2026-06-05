@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Reviews from "@/components/Reviews";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import MonthlySpecial from "@/components/MonthlySpecial";
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Reviews />
         <About />
         <Services />
         <MonthlySpecial />

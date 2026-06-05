@@ -7,8 +7,8 @@
   --color-blue-light: #4778ad;
   --color-blue-pale: #e8f0f8;
   --color-cream: #f8f7f4;
-  --font-heading: var(--font-playfair);
-  --font-body: var(--font-rubik);
+  --font-heading: var(--font-display);
+  --font-body: var(--font-sans);
 }
 
 @font-face {
@@ -24,11 +24,11 @@ html {
 }
 
 body {
-  font-family: var(--font-rubik), system-ui, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
   color: #1a1a2e;
   background: #ffffff;
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-playfair), Georgia, serif;
+  font-family: var(--font-display), system-ui, sans-serif;
 }

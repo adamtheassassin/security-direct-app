@@ -17,8 +17,8 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h3
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-              className="text-xl font-bold mb-1"
+              style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}
+              className="text-xl font-semibold mb-1"
             >
               Security Direct
             </h3>
