@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="53px" height="53px" viewBox="0 0 53 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group" transform="translate(1.000000, 1.000000)" stroke="#000000" stroke-width="2">
+            <g id="target-path">
+                <path d="M43.7156863,25.9673725 C45.2712084,25.2276566 46.643562,24.1525582 47.7341307,22.8193333" id="Shape"></path>
+                <path d="M50.2834902,16.5586013 C50.4374782,14.8433368 50.2111863,13.1152215 49.6207451,11.4974379" id="Shape"></path>
+                <path d="M45.5271895,6.11152941 C44.1377593,5.09313075 42.5332996,4.40690868 40.8371634,4.10562092" id="Shape"></path>
+                <path d="M7.02611765,28.3444183 C5.40753853,29.1501991 4.00426535,30.3300694 2.93256209,31.7862745" id="Shape"></path>
+                <path d="M0.641673203,38.4866275 C0.601162739,40.2932965 0.991938283,42.0835937 1.78159477,43.7090588" id="Shape"></path>
+                <path d="M6.64172549,48.8607974 C8.22825851,49.7251625 9.99445882,50.2077474 11.8000915,50.2702353" id="Shape"></path>
+                <path d="M23.8267059,17.1594902 L23.8267059,50.2967451" id="Shape"></path>
+                <polyline id="Shape" points="17.5019085 23.4864967 23.8267059 17.1594902 30.1537124 23.4864967"></polyline>
+                <circle id="Oval" cx="23.8267059" cy="5.56145098" r="4.97058824"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

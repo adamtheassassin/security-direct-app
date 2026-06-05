@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="54px" viewBox="0 0 52 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group" transform="translate(1.000000, 1.000000)" stroke="#000000" stroke-width="2">
+            <g id="target-center-1">
+                <circle id="Oval" cx="17.1011905" cy="32.8095238" r="8.51190476"></circle>
+                <circle id="Oval" cx="17.1011905" cy="32.8095238" r="17.0238095"></circle>
+                <path d="M17.1011905,32.8095238 L37.5297619,12.3809524" id="Shape"></path>
+                <path d="M0.0773809524,51.5357143 L5.94492063,45.6681746" id="Shape"></path>
+                <path d="M34.125,51.5357143 L28.2574603,45.6681746" id="Shape"></path>
+                <path d="M42.2237937,17.3178571 C41.4662132,18.076395 40.3956158,18.4338215 39.3342857,18.2825397 L32.5928571,17.320127 L31.6304444,10.5786984 C31.4785775,9.5177373 31.8351442,8.44719647 32.5928571,7.68919048 L39.8154921,0.464285714 L41.8719683,8.03874603 L49.4464286,10.0952222 L42.2237937,17.3178571 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
