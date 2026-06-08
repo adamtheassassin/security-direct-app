@@ -24,17 +24,6 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white pt-36 md:pt-48 pb-36 md:pb-48">
-        {/* Eyebrow */}
-        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-xs md:text-sm font-bold tracking-widest uppercase text-sky-300 mb-6 max-w-full">
-          <span className="inline-flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
-            Established 2008
-          </span>
-          <span className="text-white/30 hidden sm:inline">·</span>
-          <span>Certified Installers</span>
-          <span className="text-white/30 hidden sm:inline">·</span>
-          <span>SABS Compliant</span>
-        </div>
 
         <h1
           style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
