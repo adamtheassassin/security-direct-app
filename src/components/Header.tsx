@@ -102,9 +102,9 @@ export default function Header() {
               <div className="flex items-center gap-4">
                 <a
                   href="tel:0824981272"
-                  className="flex items-center gap-1.5 text-white text-sm font-semibold hover:text-blue-200 transition-colors whitespace-nowrap"
+                  className="flex items-center gap-1.5 bg-white hover:bg-blue-pale text-blue text-xs font-semibold px-4 py-2 rounded-full transition-colors shadow-sm whitespace-nowrap"
                 >
-                  <svg className="w-4 h-4 text-blue-200" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-3.5 h-3.5 text-blue" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
                   082 498 1272
@@ -202,9 +202,9 @@ export default function Header() {
               <li className="py-4 flex flex-col gap-3">
                 <a
                   href="tel:0824981272"
-                  className="flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-white font-semibold py-2.5 rounded-lg text-sm hover:bg-white/10 transition-colors"
+                  className="flex items-center justify-center gap-2 bg-white text-navy font-bold py-2.5 rounded-lg text-sm hover:bg-blue-pale hover:text-blue transition-colors shadow-sm"
                 >
-                  <svg className="w-4 h-4 text-blue-300" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-4 h-4 text-blue" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
                   Call: 082 498 1272
