@@ -2,11 +2,11 @@ import { Metadata } from "next";
 import GateMotorInstallationClient from "@/components/GateMotorInstallationClient";
 
 export const metadata: Metadata = {
-  title: "Professional Gate Motor Installation | Alberton & Johannesburg - Security Direct",
+  title: "Gate Motor Installation in Alberton & Johannesburg | Centurion from R6 600 Installed",
   description:
-    "Expert installation of Centurion D5 Evo, D10, FAAC, and ET Nice gate motors in Alberton and Johannesburg since 2008. Backup batteries and anti-theft brackets included. Call 082 498 1272.",
+    "New Centurion gate motors fitted for sliding and swing gates across Alberton and Johannesburg. Prices from R6 600 installed, backup battery and anti-theft bracket included. Fitting since 2008. Call 082 498 1272.",
   keywords:
-    "gate motor installation, sliding gate motor, swing gate motor, Centurion D5 Smart installation, Alberton, Johannesburg, Security Direct",
+    "gate motor installation, gate motor installation Alberton, gate motor installation Johannesburg, sliding gate motor, swing gate motor, Centurion D5 Evo Smart, Centurion D3 Smart, Centurion D10, gate automation, Security Direct",
 };
 
 export default function GateMotorInstallationPage() {

@@ -144,6 +144,7 @@ interface Suburb {
   region: "alberton" | "jhb";
   landmark: string;
   description: string;
+  descriptionInstall: string;
   image: string;
   icon: (props: { className?: string }) => React.ReactNode;
 }
@@ -156,6 +157,7 @@ const suburbsData: Suburb[] = [
     region: "alberton",
     landmark: "Alberton City & Town Hall Clock",
     description: "Serving the bustling commercial and residential heart of Alberton. Whether it's securing businesses near Alberton City or repairing gate motors for central apartments, we offer fast same-day response.",
+    descriptionInstall: "Right in the busy middle of Alberton, we fit new gate motors for homes and shops near Alberton City. A new build or an old manual gate you finally want to automate, we size the right motor and have it running smoothly within days.",
     image: "/images/areas/alberton_central.png",
     icon: (props) => <ClockTowerIcon {...props} />,
   },
@@ -165,6 +167,7 @@ const suburbsData: Suburb[] = [
     region: "alberton",
     landmark: "Brackenhurst schools & green avenues",
     description: "From Bracken High to the quiet residential avenues, we keep Brackenhurst homes secure. We specialize in Centurion gate motor repairs and electric fence upgrades for local families.",
+    descriptionInstall: "Families around Bracken High and the leafy streets of Brackenhurst come to us to automate their gates. We fit Centurion sliding and swing motors that match your gate, finish the job neatly, and add a backup battery so it keeps working when the power drops.",
     image: "/images/areas/brackenhurst.png",
     icon: (props) => <FernLeafIcon {...props} />,
   },
@@ -174,6 +177,7 @@ const suburbsData: Suburb[] = [
     region: "alberton",
     landmark: "Bracken Gardens & neighborhood parks",
     description: "A peaceful residential area where perimeter security is key. We provide regular maintenance on swing and sliding gate motors and repair fence lines around Brackendowns.",
+    descriptionInstall: "Brackendowns is a calm spot where a quiet, smooth gate makes a real difference. We install new sliding and swing motors here, set the speed and force properly, and fit safety beams so the gate stops for cars and people every time.",
     image: "/images/areas/brackendowns.png",
     icon: (props) => <GardenBenchIcon {...props} />,
   },
@@ -183,6 +187,7 @@ const suburbsData: Suburb[] = [
     region: "alberton",
     landmark: "Meyersdal Eco Estate & wildlife Koppie",
     description: "Serving the secure estates and residences near the Eco Estate. We understand the high security standards of Meyersdal homes and maintain gate motors, CCTV, and backup batteries.",
+    descriptionInstall: "Meyersdal homes and estates want a clean, secure setup that lasts. We fit heavy-duty Centurion motors on the larger estate gates, lock them down with an anti-theft bracket, and link the gate to your CCTV and intercom where you want it.",
     image: "/images/areas/meyersdal_estate.png",
     icon: (props) => <AntelopeKoppieIcon {...props} />,
   },
@@ -191,6 +196,7 @@ const suburbsData: Suburb[] = [
     name: "Randhart",
     region: "alberton",
     landmark: "Randhart sports clubs & schools",
+    descriptionInstall: "We automate gates for busy Randhart households near the schools and sports clubs. You choose the motor that suits your gate weight, we install it neatly, fit a backup battery, and program remotes for the whole family before we leave.",
     description: "Keeping active Randhart families secure. We handle emergency gate repairs and fit battery backups so you're never locked out of your property near the local school and sports clubs.",
     image: "/images/areas/randhart.png",
     icon: (props) => <SportsShieldIcon {...props} />,
@@ -201,6 +207,7 @@ const suburbsData: Suburb[] = [
     region: "alberton",
     landmark: "Rand Airport runways & Alberton Dam",
     description: "Close to Rand Airport and the Alberton Dam. We've been fixing gate motors and securing properties in Verwoerdpark for over 15 years, ensuring reliability during load shedding.",
+    descriptionInstall: "Close to Rand Airport and the dam, we have been fitting gate motors in Verwoerdpark for years. We match the motor to your gate, wire in surge protection, and add a backup battery so an outage never leaves you stuck on the driveway.",
     image: "/images/areas/verwoerdpark_dam.png",
     icon: (props) => <AirplaneIcon {...props} />,
   },
@@ -210,6 +217,7 @@ const suburbsData: Suburb[] = [
     region: "alberton",
     landmark: "Residential parks & sweet berry avenues",
     description: "A quiet, tight-knit suburb where home security matters. We assist Mayberry Park residents with affordable gate motor services, battery replacements, and security checks.",
+    descriptionInstall: "Mayberry Park is a quiet, close-knit suburb where a reliable gate gives real peace of mind. We install good-value Centurion motors here, sized right for your gate, with a backup battery and remotes all set up by the time we drive off.",
     image: "/images/areas/mayberry_park.png",
     icon: (props) => <BerriesIcon {...props} />,
   },
@@ -220,6 +228,7 @@ const suburbsData: Suburb[] = [
     region: "jhb",
     landmark: "Glenvista Country Club & Golf Course",
     description: "Hilly terrains demand more power from gate motors. We install heavy-duty Centurion motors and repair sliding gates on Glenvista's steep driveways.",
+    descriptionInstall: "Glenvista driveways are often steep, so the motor has to pull a lot harder. We fit higher-rated Centurion motors that handle the slope and the gate weight, then set them up so the gate opens smoothly on every cycle.",
     image: "/images/areas/glenvista_golf.png",
     icon: (props) => <GolfValleyIcon {...props} />,
   },
@@ -229,6 +238,7 @@ const suburbsData: Suburb[] = [
     region: "jhb",
     landmark: "Bassonia Koppie & cliffside mansions",
     description: "Perched on the steep cliffs and ridges, Bassonia gates work under high mechanical stress. We calibrate motors to handle steep angles and secure these premium properties.",
+    descriptionInstall: "Bassonia sits up on the ridge, and many homes here have long, heavy gates. We install motors strong enough for that load, mount everything solidly so nothing shifts, and fit an anti-theft bracket to keep the unit safe.",
     image: "/images/areas/bassonia_cliffs.png",
     icon: (props) => <CliffHouseIcon {...props} />,
   },
@@ -238,6 +248,7 @@ const suburbsData: Suburb[] = [
     region: "jhb",
     landmark: "Netcare Mulbarton Hospital",
     description: "Located near the Netcare hospital and local reserves. We provide prompt security system installations and gate repairs to keep Mulbarton families safe.",
+    descriptionInstall: "Near the Netcare hospital, Mulbarton families just want a gate that opens without fuss. We fit new sliding and swing motors, add a backup battery for the power cuts, and show you the remotes and manual release before we head off.",
     image: "/images/areas/mulbarton.png",
     icon: (props) => <MedicalShieldIcon {...props} />,
   },
@@ -247,6 +258,7 @@ const suburbsData: Suburb[] = [
     region: "jhb",
     landmark: "Klipriviersberg Nature Reserve",
     description: "Right on the edge of the beautiful Klipriviersberg Nature Reserve. We protect properties bordering the reserve with high-tension electric fencing and solar gate backups.",
+    descriptionInstall: "On the edge of Klipriviersberg, Kibler Park homes need solid perimeter security. We automate gates here and fit a strong backup battery so the gate still opens during outages, and we can tie it in with electric fencing for the whole perimeter.",
     image: "/images/areas/kibler_reserve.png",
     icon: (props) => <AcaciaTreeIcon {...props} />,
   },
@@ -256,6 +268,7 @@ const suburbsData: Suburb[] = [
     region: "jhb",
     landmark: "Victoria Lake (Germiston Lake)",
     description: "From Germiston Lake to industrial sectors. We provide heavy-duty commercial and residential gate repairs, ensuring fast call-outs to Germiston and surrounds.",
+    descriptionInstall: "From Germiston Lake out to the industrial parts of town, we install both home and commercial gate motors. Bigger gates get a heavy-duty Centurion that takes the daily traffic, fitted properly so it lasts for years.",
     image: "/images/areas/germiston_lake.png",
     icon: (props) => <SailboatIcon {...props} />,
   },
@@ -265,6 +278,7 @@ const suburbsData: Suburb[] = [
     region: "jhb",
     landmark: "Mondeor hills & reserve trails",
     description: "Tucked in the south hills. We help Mondeor homeowners maintain gate motors, secure their perimeters, and restore power to backup batteries after load-shedding cycles.",
+    descriptionInstall: "Tucked into the southern hills, Mondeor homeowners come to us to automate older manual gates. We check the gate rolls smoothly first, fit the right motor for the weight, and add a backup battery to ride out the load shedding.",
     image: "/images/areas/mondeor_hills.png",
     icon: (props) => <MountainTrailIcon {...props} />,
   },
@@ -274,13 +288,14 @@ const suburbsData: Suburb[] = [
     region: "jhb",
     landmark: "Winchester Mosque & high ridges",
     description: "From the high ridges looking over the south. Winchester Hills properties feature complex gate entries that we service, repair, and secure with modern intercom systems.",
+    descriptionInstall: "Up on the Winchester Hills ridges, plenty of gates are long and sit on a slope. We fit motors that match that load, program your remotes and a keypad at the gate, and can add an intercom so you see who is there before you open.",
     image: "/images/areas/winchester_mosque.png",
     icon: (props) => <MosqueIcon {...props} />,
   },
 ];
 
 interface AreasServedProps {
-  mode?: "general" | "repair";
+  mode?: "general" | "repair" | "installation";
   customTitle?: string;
   customSubtitle?: string;
 }
@@ -308,17 +323,27 @@ export default function AreasServed({
     suburbsData.find((s) => s.id === selectedAreaId) || suburbsData[0];
 
   // Title configurations based on page
-  const defaultTitle =
-    mode === "repair"
-      ? "Gate Motor Repairs in Your Neighborhood"
-      : "Professional Security in Your Neighborhood";
-  const defaultSubtitle =
-    mode === "repair"
-      ? "We are proud to provide fast, same-day gate motor repairs and diagnostic services across Alberton and Johannesburg. Choose your suburb below to check availability and book."
-      : "We are proud to bring reliable, prompt, and SABS-certified gate motor, electric fencing, and access control installations directly to your doorstep. Select your area to learn more.";
+  let defaultTitle = "Professional Security In Your Neighborhood";
+  if (mode === "repair") defaultTitle = "Gate Motor Repairs in Your Neighborhood";
+  if (mode === "installation") defaultTitle = "Gate Motor Installation In Your Neighborhood";
+
+  let defaultSubtitle =
+    "We are proud to bring reliable, prompt, and SABS-certified gate motor, electric fencing, and access control installations directly to your doorstep. Select your area to learn more.";
+  if (mode === "repair")
+    defaultSubtitle =
+      "We are proud to provide fast, same-day gate motor repairs and diagnostic services across Alberton and Johannesburg. Choose your suburb below to check availability and book.";
+  if (mode === "installation")
+    defaultSubtitle =
+      "We fit reliable Centurion gate motors for sliding and swing gates right across Alberton and Johannesburg, sized to your gate and set up properly from day one. Pick your suburb to get a quote.";
 
   const title = customTitle || defaultTitle;
   const subtitle = customSubtitle || defaultSubtitle;
+
+  // Repair descriptions are written around faults; installation gets its own copy
+  const activeDescription =
+    mode === "installation"
+      ? selectedSuburb.descriptionInstall
+      : selectedSuburb.description;
 
   return (
     <section className="py-20" style={{ backgroundColor: "#f8f7f4" }}>
@@ -347,7 +372,7 @@ export default function AreasServed({
                 </h3>
                 
                 <p className="text-gray-600 text-xs md:text-sm leading-relaxed mb-5 min-h-[64px]">
-                  {selectedSuburb.description}
+                  {activeDescription}
                 </p>
 
                 <button
@@ -383,8 +408,17 @@ export default function AreasServed({
                 Areas We Serve
               </span>
               <h2 className="text-3xl md:text-4xl font-bold font-display text-navy mb-4 leading-tight">
-                {title.split("In Your Neighborhood")[0]}
-                <span className="text-blue">In Your Neighborhood</span>
+                {(() => {
+                  const marker = "in your neighborhood";
+                  const idx = title.toLowerCase().lastIndexOf(marker);
+                  if (idx === -1) return title;
+                  return (
+                    <>
+                      {title.slice(0, idx)}
+                      <span className="text-blue">{title.slice(idx)}</span>
+                    </>
+                  );
+                })()}
               </h2>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed max-w-xl">
                 {subtitle}
