@@ -29,7 +29,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${barlow.variable} ${inter.variable}`}>
-      <body className="min-h-screen flex flex-col antialiased">{children}</body>
+      <body className="min-h-screen flex flex-col antialiased overflow-x-hidden">
+        <div className="flex flex-col flex-grow w-full overflow-x-hidden relative">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

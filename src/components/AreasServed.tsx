@@ -328,7 +328,7 @@ export default function AreasServed({
           {/* ── LEFT DETAIL CARD (DYNAMIC SCENERY BACKGROUND & DATA) ── */}
           <div className="lg:col-span-5 flex flex-col h-full justify-center">
             <div 
-              className="rounded-3xl text-white shadow-xl border border-white/5 relative overflow-hidden flex flex-col justify-end aspect-[4/5] min-h-[480px] max-w-md mx-auto w-full transition-all duration-500 bg-cover bg-center bg-no-repeat p-4 sm:p-6"
+              className="rounded-3xl text-white shadow-xl border border-white/5 relative overflow-hidden flex flex-col justify-end aspect-[4/5] sm:min-h-[480px] min-h-[380px] max-w-md mx-auto w-full transition-all duration-500 bg-cover bg-center bg-no-repeat p-4 sm:p-6"
               style={{ backgroundImage: `url('${selectedSuburb.image}')` }}
             >
               
