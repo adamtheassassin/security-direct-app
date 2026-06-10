@@ -20,48 +20,18 @@ export default function MonthlySpecial() {
 
             <h2
               style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-              className="text-3xl md:text-4xl font-bold mb-4 leading-tight"
+              className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white"
             >
-              Replace Your Old Centurion D3/D5
-              <br />
-              with the New
-              <span className="text-yellow-300"> D5 EVO Smart</span>
+              Swap your old Centurion D3 or D5 for the new D5 EVO Smart
             </h2>
 
-            <div className="mb-6">
-              <div className="flex items-baseline gap-2">
-                <span className="text-5xl font-bold text-white">R6 499</span>
-                <span className="text-xl text-blue-200">.00</span>
-              </div>
-              <p className="text-blue-200 text-sm mt-1 italic">
-                Fully installed – no hidden costs
-              </p>
-            </div>
+            <p className="text-xl text-yellow-300 font-bold mb-4">
+              Fully installed for R6 499 with nothing hidden.
+            </p>
 
-            <ul className="space-y-2 mb-8 text-blue-100">
-              {[
-                "Smart app control from anywhere",
-                "Enhanced security features",
-                "Quiet & smooth operation",
-                "Professional installation included",
-                "Covers Alberton & Johannesburg",
-              ].map((point) => (
-                <li key={point} className="flex items-center gap-2 text-sm">
-                  <svg
-                    className="w-4 h-4 text-green-400 flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  {point}
-                </li>
-              ))}
-            </ul>
+            <p className="text-blue-100 mb-8 leading-relaxed max-w-xl">
+              You open and close your gate from your phone wherever you are, it runs quietly, and we handle the whole install for you. This covers Alberton and Johannesburg.
+            </p>
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a
@@ -76,7 +46,7 @@ export default function MonthlySpecial() {
                 WhatsApp Us Now
               </a>
               <a
-                href="/gate-motors"
+                href="/gate-motor-installation"
                 className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-7 py-3.5 rounded-lg text-sm transition-colors backdrop-blur-sm"
               >
                 See All Specials

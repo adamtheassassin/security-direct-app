@@ -23,7 +23,7 @@ const reasons = [
     description:
       "Since 2008, we've delivered exceptional workmanship in every project. Attention to detail and dedication to quality is our standard.",
     cta: "Our Services",
-    href: "/gate-motors",
+    href: "/#services",
   },
   {
     icon: null,
@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
             style={{ color: "#094B92" }}
             className="text-sm font-semibold uppercase tracking-widest mb-3"
           >
-            Why Choose Security Direct
+            Why Choose Us
           </p>
           <h2
             style={{
@@ -54,11 +54,10 @@ export default function WhyChooseUs() {
             }}
             className="text-3xl md:text-4xl font-bold mb-4"
           >
-            The Security Direct Difference
+            Why people in Johannesburg call us
           </h2>
-          <p className="text-gray-500 max-w-xl mx-auto">
-            We combine expertise, quality materials, and professional
-            installation to deliver security solutions you can rely on.
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+            Spending money on security is a big decision, and we get that. We keep our prices fair and use good parts, so you feel like every Rand went somewhere worthwhile. When something breaks, we come out fast, because we know being left without a working gate or a live fence is not something you want to sit with. And since 2008 we have taken the time to get the small things right on every job, which is exactly the kind of care you want guarding your home.
           </p>
         </div>
 

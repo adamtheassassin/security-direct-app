@@ -3,17 +3,25 @@ import Link from "next/link";
 
 const services = [
   {
-    title: "Gate Motors",
+    title: "Gate Motor Installation",
     description:
-      "Centurion, FAAC, and more. Automatic sliding and swing gate motor installations, repairs, and upgrades for homes and businesses.",
+      "We fit gate motors that keep working for years. Sliding & swing gates, battery backups, and trusted brands like Centurion and FAAC.",
     image: "/images/gate-motor-feature.jpg",
-    href: "/gate-motors",
+    href: "/gate-motor-installation",
     alt: "Gate motor installation",
+  },
+  {
+    title: "Gate Motor Repair",
+    description:
+      "We fix gate motors fast, whatever the brand. Urgent diagnostic and on-site troubleshooting for Centurion, FAAC, ET, Gemini, and more.",
+    image: "/images/Centurion D10 Installation 260605.jpg",
+    href: "/gate-motor-repair",
+    alt: "Gate motor repair",
   },
   {
     title: "Electric Fencing",
     description:
-      "6, 8, 10, and 12-strand electric fence installations and repairs. SABS compliant perimeter security for any property type.",
+      "We put up electric fencing that keeps people out. 6 to 12-strand setups meeting SABS standards with certificates, and fence repairs.",
     image: "/images/electric-fence.jpg",
     href: "/electric-fencing",
     alt: "10 strand electric fencing",
@@ -21,7 +29,7 @@ const services = [
   {
     title: "CCTV Systems",
     description:
-      "AHD and IP CCTV camera installation and repairs. Keep an eye on your property 24/7 with professional surveillance systems.",
+      "AHD and IP CCTV camera installation and repairs. Watch your property from your phone, day or night, and keep your home secure.",
     image: "/images/gallery-1.png",
     href: "/cctv",
     alt: "CCTV security camera",
@@ -29,7 +37,7 @@ const services = [
   {
     title: "Garage Doors & Motors",
     description:
-      "Professional installation, repair, and automation for all types of garage doors. Manual and automated systems available.",
+      "Professional installation, repair, and automation for garage doors of every kind. Get your door running smoothly.",
     image: "/images/garage-door.jpg",
     href: "/garage-doors-motors",
     alt: "Garage door motor",
@@ -38,7 +46,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-20 bg-white">
+    <section id="services" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
           <p
@@ -62,7 +70,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
           {services.map((service) => (
             <Link
               key={service.href}

@@ -2,7 +2,8 @@ import Link from "next/link";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Gate Motors", href: "/gate-motors" },
+  { label: "Gate Motor Installation", href: "/gate-motor-installation" },
+  { label: "Gate Motor Repair", href: "/gate-motor-repair" },
   { label: "Electric Fencing", href: "/electric-fencing" },
   { label: "Garage Doors & Motors", href: "/garage-doors-motors" },
   { label: "CCTV", href: "/cctv" },

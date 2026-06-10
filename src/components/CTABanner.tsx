@@ -19,17 +19,12 @@ export default function CTABanner() {
       <div className="relative max-w-4xl mx-auto px-6 text-center text-white">
         <h2
           style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-          className="text-3xl md:text-4xl font-bold mb-4"
+          className="text-3xl md:text-4xl font-bold mb-6"
         >
-          Protect What Matters Most
+          Let&apos;s get your property protected
         </h2>
-        <p className="text-blue-200 text-lg mb-2">
-          Professional gate motor, electric fence, CCTV, or garage door
-          installation in Alberton.
-        </p>
-        <p className="text-blue-300 text-sm mb-8">
-          Contact Security Direct today for a free quote and expert security
-          solutions.
+        <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+          Whether you need a gate motor repaired, a new gate motor installed, electric fencing put up, or your CCTV and garage door sorted, we are ready to help. Call us today for a free quote and we will get you taken care of.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

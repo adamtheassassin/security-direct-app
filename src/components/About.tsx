@@ -28,23 +28,14 @@ export default function About() {
               }}
               className="text-3xl md:text-4xl font-bold mb-5 leading-tight"
             >
-              Alberton&apos;s Gate Motor &amp;
-              <br />
-              Electric Fence Specialists
+              We are Alberton&apos;s gate motor and electric fencing specialists
             </h2>
             <div className="w-16 h-1 rounded-full mb-6" style={{ backgroundColor: "#094B92" }} />
             <p className="text-gray-600 leading-relaxed mb-5">
-              Established in 2008, Security Direct has been providing reliable
-              security solutions for homes and businesses in Alberton and
-              surrounding areas. With years of experience, we pride ourselves on{" "}
-              <strong>professional workmanship</strong> and{" "}
-              <strong>great value for money</strong>, ensuring every installation
-              or repair meets <strong>SABS standards</strong>.
+              Most people only think about their gate motor when it stops working, usually when they are running late and stuck in the driveway. We started Security Direct in 2008 to take that headache off your hands. Since then we have helped thousands of homes and businesses across Alberton and Johannesburg keep their gates running and their properties safe.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              At Security Direct, we combine expertise, quality materials, and
-              professional installation to deliver solutions that protect your
-              property and give you peace of mind.
+              When you call us, you get someone who knows the work, uses good parts, and does the job properly the first time so you are not calling us back in a month. Every gate motor installation and every electric fence we put up meets SABS standards, so you have nothing to second guess. You get your property sorted, and you get on with your day.
             </p>
 
             {/* Trust badges */}

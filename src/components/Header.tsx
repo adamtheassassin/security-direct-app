@@ -3,9 +3,27 @@
 import { useState } from "react";
 import Link from "next/link";
 
-const navLinks = [
+interface SubLink {
+  label: string;
+  href: string;
+}
+
+interface NavLink {
+  label: string;
+  href: string;
+  subLinks?: SubLink[];
+}
+
+const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "Gate Motors", href: "/gate-motors" },
+  {
+    label: "Gate Motors",
+    href: "#",
+    subLinks: [
+      { label: "Gate Motor Installation", href: "/gate-motor-installation" },
+      { label: "Gate Motor Repair", href: "/gate-motor-repair" },
+    ],
+  },
   { label: "Electric Fencing", href: "/electric-fencing" },
   { label: "Garage Doors & Motors", href: "/garage-doors-motors" },
   { label: "CCTV", href: "/cctv" },
@@ -13,6 +31,7 @@ const navLinks = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [gateMotorsOpen, setGateMotorsOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -36,16 +55,45 @@ export default function Header() {
             {/* Desktop nav & Contact options */}
             <div className="hidden lg:flex items-center gap-6">
               <ul className="flex items-center gap-1">
-                {navLinks.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-white text-sm font-medium px-3 py-2 rounded hover:bg-white/10 transition-colors whitespace-nowrap"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+                {navLinks.map((link) => {
+                  if (link.subLinks) {
+                    return (
+                      <li key={link.label} className="relative group py-2">
+                        <button
+                          className="text-white text-sm font-medium px-3 py-2 rounded hover:bg-white/10 transition-colors whitespace-nowrap flex items-center gap-1 cursor-default focus:outline-none"
+                        >
+                          {link.label}
+                          <svg className="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        {/* Dropdown Menu */}
+                        <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-xl py-2 border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+                          {link.subLinks.map((sub) => (
+                            <Link
+                              key={sub.href}
+                              href={sub.href}
+                              className="block px-4 py-2 text-sm font-medium text-navy hover:bg-blue-pale hover:text-blue transition-colors"
+                            >
+                              {sub.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </li>
+                    );
+                  }
+
+                  return (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-white text-sm font-medium px-3 py-2 rounded hover:bg-white/10 transition-colors whitespace-nowrap"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
 
               {/* Divider */}
@@ -98,17 +146,57 @@ export default function Header() {
         {menuOpen && (
           <div style={{ backgroundColor: "#001d3b" }} className="lg:hidden border-t border-white/10">
             <ul className="py-2 px-4 divide-y divide-white/5">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="block text-white py-2.5 text-sm hover:text-blue-300 transition-colors"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {navLinks.map((link) => {
+                if (link.subLinks) {
+                  return (
+                    <li key={link.label} className="py-2.5">
+                      <button
+                        onClick={() => setGateMotorsOpen(!gateMotorsOpen)}
+                        className="w-full flex items-center justify-between text-white text-sm hover:text-blue-300 transition-colors focus:outline-none"
+                      >
+                        <span>{link.label}</span>
+                        <svg
+                          className={`w-4 h-4 transform transition-transform duration-200 ${
+                            gateMotorsOpen ? "rotate-180" : ""
+                          }`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      {gateMotorsOpen && (
+                        <ul className="mt-2 pl-4 space-y-2 border-l border-white/10">
+                          {link.subLinks.map((sub) => (
+                            <li key={sub.href}>
+                              <Link
+                                href={sub.href}
+                                className="block text-blue-200 py-1.5 text-sm hover:text-white transition-colors"
+                                onClick={() => setMenuOpen(false)}
+                              >
+                                {sub.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  );
+                }
+
+                return (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="block text-white py-2.5 text-sm hover:text-blue-300 transition-colors"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                );
+              })}
               
               {/* Mobile CTA section */}
               <li className="py-4 flex flex-col gap-3">

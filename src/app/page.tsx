@@ -6,6 +6,7 @@ import Services from "@/components/Services";
 import MonthlySpecial from "@/components/MonthlySpecial";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Gallery from "@/components/Gallery";
+import AreasServed from "@/components/AreasServed";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <MonthlySpecial />
         <WhyChooseUs />
         <Gallery />
+        <AreasServed />
         <CTABanner />
       </main>
       <Footer />

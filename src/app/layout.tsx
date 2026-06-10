@@ -16,11 +16,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Gate Motor Repair & Installation | Electric Fencing | Johannesburg & Alberton - Security Direct",
+  title:
+    "Gate Motor Repair & Installation | Electric Fencing & CCTV | Home Automation Company | Alberton & Johannesburg - Security Direct",
   description:
-    "Security Direct – certified installers of gate motors, electric fencing, CCTV, and garage door motors in Alberton and across Johannesburg since 2008. Call 082 498 1272.",
+    "Security Direct – certified home automation company and installers of gate motors, electric fencing, CCTV, and garage door motors in Alberton and across Johannesburg since 2008. Call 082 498 1272.",
   keywords:
-    "gate motors, electric fencing, CCTV, garage door motors, security, Alberton, Johannesburg",
+    "home automation company, gate motors, electric fencing, CCTV, garage door motors, security, Alberton, Johannesburg",
 };
 
 export default function RootLayout({

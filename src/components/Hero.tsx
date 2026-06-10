@@ -23,29 +23,21 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white pt-36 md:pt-48 pb-36 md:pb-48">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white pt-36 md:pt-48 pb-36 md:pb-48 flex flex-col items-center">
 
         <h1
           style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-          className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-5 text-white"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5 text-white order-1"
         >
-          Gate Motor Repair,
-          <br />
-          Installation &amp; Electric Fencing
-          <br />
+          Gate Motor Repair, Gate Motor Installation and Electric Fencing
           <span className="text-yellow-400 font-bold block mt-1">in Johannesburg</span>
         </h1>
 
-        <p className="text-base md:text-xl text-white/90 max-w-2xl mx-auto mb-4 leading-relaxed">
-          Professional installation &amp; repair of gate motors, electric fencing,
-          CCTV systems, and garage door motors across Alberton and Johannesburg.
+        <p className="text-base md:text-lg text-white/90 max-w-3xl mx-auto mb-0 md:mb-8 leading-relaxed order-3 md:order-2">
+          When your gate stops opening or you want your home better protected, you want someone reliable who actually shows up. We install and repair gate motors, put up electric fencing, fit CCTV, and sort out garage doors across Alberton and the whole of Johannesburg. We have been doing this since 2008, so you are dealing with people who have seen just about every gate and fence problem there is.
         </p>
 
-        <p className="text-yellow-400 font-bold text-xs md:text-sm mb-8 tracking-widest uppercase">
-          We Cover the Whole of Johannesburg
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 md:mb-0 order-2 md:order-3 w-full sm:w-auto items-center">
           <button
             onClick={() => setIsQuoteModalOpen(true)}
             className="flex items-center justify-center gap-2 bg-white text-navy font-bold px-8 py-4 rounded-lg text-base hover:bg-blue-pale hover:text-blue transition-colors shadow-xl cursor-pointer"
@@ -53,7 +45,7 @@ export default function Hero() {
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-            Get Free Quote
+            Get a Free Quote
           </button>
           <a
             href="https://wa.me/+27824981272"
@@ -69,18 +61,18 @@ export default function Hero() {
         </div>
 
         {/* Trust indicators */}
-        <div className="mt-12 grid grid-cols-3 gap-6 max-w-lg mx-auto border-t border-white/20 pt-8">
+        <div className="mt-12 grid grid-cols-3 gap-6 max-w-lg mx-auto border-t border-white/20 pt-8 order-4">
           <div className="text-center">
-            <div className="text-3xl font-bold text-white">17+</div>
-            <div className="text-blue-200 text-xs mt-1 uppercase tracking-wide">Years Experience</div>
+            <div className="text-2xl md:text-3xl font-bold text-white">17+ years</div>
+            <div className="text-blue-200 text-xs mt-1 uppercase tracking-wide">doing this</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-white">1000s</div>
-            <div className="text-blue-200 text-xs mt-1 uppercase tracking-wide">Installations</div>
+            <div className="text-2xl md:text-3xl font-bold text-white">Thousands</div>
+            <div className="text-blue-200 text-xs mt-1 uppercase tracking-wide">of installs</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-white">SABS</div>
-            <div className="text-blue-200 text-xs mt-1 uppercase tracking-wide">Certified</div>
+            <div className="text-2xl md:text-3xl font-bold text-white">SABS</div>
+            <div className="text-blue-200 text-xs mt-1 uppercase tracking-wide">certified</div>
           </div>
         </div>
       </div>
