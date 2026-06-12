@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:securitydirect.co.za)",
+      "Bash(curl -s -L -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0 Safari/537.36\" \"https://securitydirect.co.za/electric-fencing\" -o /tmp/ef.html -w \"HTTP %{http_code}\\\\n\")",
+      "Read(//tmp/**)",
+      "Bash(grep -oE \"url\\\\\\(['\\\\\"]?//files[^\\)'\\\\\"]*\" /tmp/ef.html)",
+      "Bash(pwd -W)",
+      "Read(//c/Users/adam/AppData/Local/Temp/ef_imgs/**)",
+      "Bash(npx next *)",
+      "Bash(npx tsc *)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(curl -s -L -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0 Safari/537.36\" \"https://securitydirect.co.za/garage-doors-motors\" -o /tmp/gd.html -w \"HTTP %{http_code}\\\\n\")",
+      "Bash(grep -oE \"url\\\\\\(['\\\\\"]?//files[^\\)'\\\\\"]*\" /tmp/gd.html)",
+      "Read(//c/Users/adam/AppData/Local/Temp/gd_imgs/**)",
+      "Bash(curl -s -L -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0 Safari/537.36\" \"https://securitydirect.co.za/cctv\" -o /tmp/cctv.html -w \"HTTP %{http_code}\\\\n\")",
+      "Bash(grep -oE \"url\\\\\\(['\\\\\"]?//files[^\\)'\\\\\"]*\" /tmp/cctv.html)",
+      "Read(//c/Users/adam/AppData/Local/Temp/cctv_imgs/**)",
+      "Bash(rm -rf src/app/electric-fencing)",
+      "Bash(rm -f src/components/ElectricFencingClient.tsx)",
+      "PowerShell(Get-Process node -ErrorAction SilentlyContinue)",
+      "PowerShell(\"done\")",
+      "Bash(npm run *)",
+      "PowerShell(foreach \\($pid_ in 19964, 24552\\) { try { Stop-Process -Id $pid_ -Force -ErrorAction Stop; \"killed $pid_\" } catch { \"could not kill $pid_ : $\\($_.Exception.Message\\)\" } })"
+    ]
+  }
+}

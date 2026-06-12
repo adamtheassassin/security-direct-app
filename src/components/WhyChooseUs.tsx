@@ -6,7 +6,7 @@ const reasons = [
     title: "Value for Money",
     description:
       "We understand investing in security is significant. Our competitive pricing reflects quality products – every Rand counts.",
-    cta: "Get a Free Quote",
+    cta: "Get Free Quote",
     href: "/contact-us",
   },
   {

@@ -19,12 +19,20 @@ const services = [
     alt: "Gate motor repair",
   },
   {
-    title: "Electric Fencing",
+    title: "Electric Fence Installation",
     description:
-      "We put up electric fencing that keeps people out. 6 to 12-strand setups meeting SABS standards with certificates, and fence repairs.",
+      "We put up electric fencing that keeps people out. 6 to 12-strand setups meeting SABS standards, with a certificate of compliance on every new fence.",
     image: "/images/electric-fence.jpg",
-    href: "/electric-fencing",
+    href: "/electric-fence-installation",
     alt: "10 strand electric fencing",
+  },
+  {
+    title: "Electric Fence Repair",
+    description:
+      "Fence stopped charging? We fix dead energizers, snapped strands, broken insulators, and false alarms on all brands, often the same day.",
+    image: "/images/electric-fencing/night-fence.jpg",
+    href: "/electric-fence-repair",
+    alt: "Electric fence repair on a boundary wall",
   },
   {
     title: "CCTV Systems",

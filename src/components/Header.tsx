@@ -24,14 +24,21 @@ const navLinks: NavLink[] = [
       { label: "Gate Motor Repair", href: "/gate-motor-repair" },
     ],
   },
-  { label: "Electric Fencing", href: "/electric-fencing" },
+  {
+    label: "Electric Fencing",
+    href: "#",
+    subLinks: [
+      { label: "Electric Fence Installation", href: "/electric-fence-installation" },
+      { label: "Electric Fence Repair", href: "/electric-fence-repair" },
+    ],
+  },
   { label: "Garage Doors & Motors", href: "/garage-doors-motors" },
   { label: "CCTV", href: "/cctv" },
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [gateMotorsOpen, setGateMotorsOpen] = useState(false);
+  const [openMobileMenu, setOpenMobileMenu] = useState<string | null>(null);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -148,16 +155,17 @@ export default function Header() {
             <ul className="py-2 px-4 divide-y divide-white/5">
               {navLinks.map((link) => {
                 if (link.subLinks) {
+                  const isOpen = openMobileMenu === link.label;
                   return (
                     <li key={link.label} className="py-2.5">
                       <button
-                        onClick={() => setGateMotorsOpen(!gateMotorsOpen)}
+                        onClick={() => setOpenMobileMenu(isOpen ? null : link.label)}
                         className="w-full flex items-center justify-between text-white text-sm hover:text-blue-300 transition-colors focus:outline-none"
                       >
                         <span>{link.label}</span>
                         <svg
                           className={`w-4 h-4 transform transition-transform duration-200 ${
-                            gateMotorsOpen ? "rotate-180" : ""
+                            isOpen ? "rotate-180" : ""
                           }`}
                           fill="none"
                           stroke="currentColor"
@@ -166,7 +174,7 @@ export default function Header() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
                       </button>
-                      {gateMotorsOpen && (
+                      {isOpen && (
                         <ul className="mt-2 pl-4 space-y-2 border-l border-white/10">
                           {link.subLinks.map((sub) => (
                             <li key={sub.href}>

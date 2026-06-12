@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Barlow, Inter } from "next/font/google";
 import "./globals.css";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const barlow = Barlow({
   variable: "--font-display",
@@ -30,8 +31,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${barlow.variable} ${inter.variable}`}>
       <body className="min-h-screen flex flex-col antialiased overflow-x-hidden">
-        <div className="flex flex-col flex-grow w-full overflow-x-hidden relative">
+        <div className="flex flex-col flex-grow w-full overflow-x-hidden relative pb-20 lg:pb-0">
           {children}
+          <FloatingWhatsApp />
         </div>
       </body>
     </html>

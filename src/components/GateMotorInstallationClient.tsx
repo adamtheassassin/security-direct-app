@@ -275,7 +275,7 @@ export default function GateMotorInstallationClient() {
                 <svg className="w-5 h-5 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                Get a Free Quote
+                Get Free Quote
               </button>
               <a
                 href="tel:0824981272"
@@ -415,12 +415,19 @@ export default function GateMotorInstallationClient() {
                         <span className="block text-2xl font-bold text-navy font-display leading-none">{m.price}</span>
                         <span className="text-gray-400 text-xs">{m.note}</span>
                       </div>
-                      <button
-                        onClick={() => setIsQuoteModalOpen(true)}
-                        className="bg-blue hover:bg-blue-light text-white font-bold text-xs px-4 py-2.5 rounded-lg transition-colors cursor-pointer shrink-0"
+                      <a
+                        href={`https://wa.me/+27824981272?text=${encodeURIComponent(
+                          `Hi Security Direct, I am interested in the ${m.name} (${m.price} installed).`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-green-600 hover:bg-green-700 text-white font-bold text-xs px-4 py-2.5 rounded-lg transition-colors flex items-center justify-center gap-1.5 shrink-0"
                       >
-                        Get a Quote
-                      </button>
+                        <svg className="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.761.459 3.475 1.332 4.987L2 22l5.176-1.358a9.92 9.92 0 004.836 1.246c5.506 0 9.988-4.482 9.988-9.988C22 6.482 17.518 2 12.012 2zm5.522 14.072c-.225.63-.884 1.15-1.523 1.275-.54.105-1.24.165-3.6-.825-3.04-1.275-5.01-4.38-5.16-4.59-.15-.21-1.21-1.605-1.21-3.06 0-1.455.765-2.175 1.035-2.46.225-.24.585-.33.885-.33h.84c.255 0 .48.015.69.525.27.645.93 2.265 1.005 2.415.075.15.135.33.03.54-.105.21-.21.345-.375.525-.15.18-.33.405-.45.54-.15.15-.3.315-.12.615.18.3.795 1.29 1.71 2.1 1.185 1.05 2.19 1.38 2.505 1.53.315.15.495.12.675-.09.18-.21.78-.9 1-1.215.18-.225.435-.18.705-.075.27.105 1.71.81 2.01.96.3.15.495.225.57.345.075.12.075.69-.15 1.365z" />
+                        </svg>
+                        WhatsApp
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -555,7 +562,7 @@ export default function GateMotorInstallationClient() {
             <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
               {[
                 { href: "/gate-motor-repair", title: "Gate Motor Repair", desc: "Already have a motor that is playing up? We repair all brands across Alberton and Johannesburg, often the same day." },
-                { href: "/electric-fencing", title: "Electric Fencing", desc: "Pair your new gate with a secure perimeter. Installation and repairs for homes across the area." },
+                { href: "/electric-fence-installation", title: "Electric Fencing", desc: "Pair your new gate with a secure perimeter. New, certified electric fencing for homes across the area." },
               ].map((s) => (
                 <Link
                   key={s.href}

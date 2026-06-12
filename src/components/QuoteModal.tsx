@@ -129,7 +129,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
             style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}
             className="text-2xl font-bold tracking-wide"
           >
-            Get A Free Quote
+            Get Free Quote
           </h3>
           <p className="text-blue-200 text-xs mt-1">
             Fill in the details below and we&apos;ll get back to you shortly
