@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         destination: "/electric-fence-installation",
         permanent: true,
       },
+      {
+        source: "/garage-doors-motors",
+        destination: "/garage-door-installation",
+        permanent: true,
+      },
     ];
   },
 };

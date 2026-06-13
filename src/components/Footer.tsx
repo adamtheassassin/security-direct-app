@@ -6,8 +6,12 @@ const navLinks = [
   { label: "Gate Motor Repair", href: "/gate-motor-repair" },
   { label: "Electric Fence Installation", href: "/electric-fence-installation" },
   { label: "Electric Fence Repair", href: "/electric-fence-repair" },
-  { label: "Garage Doors & Motors", href: "/garage-doors-motors" },
+  { label: "Garage Door Installation", href: "/garage-door-installation" },
+  { label: "Garage Door Repair", href: "/garage-door-repair" },
   { label: "CCTV", href: "/cctv" },
+  { label: "Alarm System Installation", href: "/alarm-system-installation" },
+  { label: "Alarm System Repair", href: "/alarm-system-repair" },
+  { label: "Areas We Serve", href: "/areas" },
   { label: "Contact Us", href: "/contact-us" },
 ];
 

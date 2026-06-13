@@ -10,26 +10,8 @@ import AreasServed from "./AreasServed";
 
 const faults = [
   {
-    title: "Dead Battery",
-    desc: "The most common call-out after load shedding. Frequent outage cycles drain batteries far faster than normal use.",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Burned Control Board",
-    desc: "Power surges when Eskom restores electricity hit the board directly. One of the most common reasons motors fail completely.",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
-      </svg>
-    ),
-  },
-  {
-    title: "Worn Drive Gears",
-    desc: "Years of daily cycling wear down the drive gear and rack. The gate slows down, starts slipping, then stops short.",
+    title: "Motor runs but the door stays put",
+    desc: "Usually a snapped spring. The springs carry most of the door's weight, and once one goes the motor cannot lift the door on its own.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -37,139 +19,139 @@ const faults = [
     ),
   },
   {
-    title: "Limit Switch Drift",
-    desc: "These switches tell the motor where to stop. When they drift, the gate stops short or slams the end stops on every cycle.",
+    title: "Broken or stretched springs",
+    desc: "A loud bang from the garage is often a spring letting go. The door turns dead heavy and unsafe to run until the spring is replaced.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 13c4 0 4 3 8 3s4-3 8-3M4 18h16" />
       </svg>
     ),
   },
   {
-    title: "Obstruction Sensor Faults",
-    desc: "When the sensor drifts or takes a surge hit, the gate reverses for no reason. It reads a blockage that is not there.",
+    title: "Frayed or snapped cables",
+    desc: "The cables lift the door evenly on each side. When one frays or breaks, the door hangs skew and can jam in the track.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 7.89M9 11l3-3 3 3m-3-3v12" />
       </svg>
     ),
   },
   {
-    title: "Water Ingress",
-    desc: "Older underground swing gate mechanisms in Alberton properties suffer from this. Water gets into a worn housing and corrodes the internals.",
+    title: "Door jams or runs crooked",
+    desc: "Bent tracks, worn rollers, or a loose bracket pull the door off line. We straighten it up and swap out the worn parts.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 6l2 14h12l2-14M9 10v6M15 10v6" />
+      </svg>
+    ),
+  },
+  {
+    title: "Dead backup battery",
+    desc: "The door will not open during load shedding. A battery that no longer holds its charge is the usual reason, and it is a quick swap.",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Remotes or limits playing up",
+    desc: "The door stops short, slams down, or the remote has stopped working. We reset the limits and reprogram or replace the remotes.",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
       </svg>
     ),
   },
 ];
 
 const processSteps = [
-  { num: "01", title: "We arrive on time", desc: "A confirmed call-out window, not a vague 'sometime today' slot." },
-  { num: "02", title: "Full diagnostic first", desc: "We check the battery, board, gears, limits, and motor before touching anything." },
-  { num: "03", title: "Clear quote upfront", desc: "You hear exactly what is wrong and what it will cost before any work begins." },
-  { num: "04", title: "Repair on the spot", desc: "We carry spares for CENTURION, ET Systems, BFT and Nice. Most faults are sorted same day." },
-  { num: "05", title: "Tested before we leave", desc: "We cycle the gate multiple times to confirm everything is running correctly." },
-  { num: "06", title: "Walkthrough with you", desc: "We explain what was wrong, what was replaced, and flag anything worth watching going forward." },
+  { num: "01", title: "We arrive on time", desc: "A confirmed call-out window, not a vague 'sometime today' slot that has you waiting around." },
+  { num: "02", title: "We check the whole door", desc: "We test the springs, cables, tracks, rollers, motor, and limits to find what is actually causing the trouble." },
+  { num: "03", title: "Clear quote upfront", desc: "You hear exactly what is wrong and what it will cost before we start. No work begins without your go-ahead." },
+  { num: "04", title: "Repair on the spot", desc: "We carry spare springs, cables, rollers, batteries, and motor parts for the common brands, so most jobs are sorted the same day." },
+  { num: "05", title: "We test the door", desc: "We run the door several times, check the balance and the auto-reverse, and make sure it stops in the right spot." },
+  { num: "06", title: "Walkthrough", desc: "We show you what was wrong and what we changed, and flag anything worth keeping an eye on going forward." },
 ];
 
 const repairReasons = [
-  "Motor is under 5 years old",
-  "Fault is a battery, board, or gear issue",
-  "First or second time it has been looked at",
-  "Repair cost is well under half the replacement cost",
+  "A snapped spring or a frayed cable",
+  "A flat backup battery",
+  "Worn rollers or a track knocked out of line",
+  "Limits or remotes that need resetting",
 ];
 
 const replaceReasons = [
-  "Motor is 8 years old or more",
-  "Two or more repairs in the past 18 months",
-  "Direct lightning strike or severe water damage",
-  "Repair cost is approaching the replacement cost",
-];
-
-const loadshedTips = [
-  {
-    num: "1",
-    title: "Replace the battery on a 3-year cycle",
-    desc: "Do it before it fails during an outage, not after you are stuck in the driveway.",
-  },
-  {
-    num: "2",
-    title: "Fit a surge protector on the mains supply",
-    desc: "A small, inexpensive step that protects the control board from switching surges.",
-  },
-  {
-    num: "3",
-    title: "Test your backup every month",
-    desc: "Switch off the mains and open the gate. No movement means the battery needs replacing.",
-  },
+  "A motor many years old with parts no longer made",
+  "Repeated breakdowns on the same motor",
+  "A repair bill creeping up near the price of a new motor",
+  "A door panel that is rusted or warped out of shape",
 ];
 
 const maintenanceTips = [
-  { num: "1", title: "Test the battery monthly", desc: "Switch off mains at the DB board and open the gate. No movement means the battery needs replacing." },
-  { num: "2", title: "Clean the rack and gear", desc: "Brush off grit every few months and apply a light coat of gear lubricant. Grit accelerates wear more than most people realise." },
-  { num: "3", title: "Listen for new sounds", desc: "Grinding or straining usually means something mechanical needs attention before it becomes a bigger fault." },
-  { num: "4", title: "Check the end stops", desc: "If the gate hits the end stops hard on every cycle, the limits need adjusting before the damage adds up." },
-  { num: "5", title: "Keep the housing sealed", desc: "A cracked or open cover lets dust and water reach the electronics. A replacement cover costs very little." },
-  { num: "6", title: "Check gate alignment yearly", desc: "A gate that has shifted on its foundation puts extra load on the motor on every single cycle." },
+  { num: "1", title: "Oil the moving parts", desc: "A light coat on the tracks, rollers, springs, and hinges every few months keeps the door running quietly and cuts down on wear." },
+  { num: "2", title: "Test the balance", desc: "Pull the manual release and lift the door halfway by hand. If it drops or shoots up, the springs are out and need attention." },
+  { num: "3", title: "Listen for new sounds", desc: "Grinding, banging, or a new rattle usually means something mechanical needs a look before it turns into a bigger fault." },
+  { num: "4", title: "Check the auto-reverse", desc: "Put something low in the doorway and close the door. It should stop and pull back. If it does not, the safety needs setting." },
+  { num: "5", title: "Replace the backup battery on time", desc: "Most last around two to three years. Swap it before it dies during an outage and leaves you stuck on the driveway." },
+  { num: "6", title: "Keep the tracks clear", desc: "Grit and stones in the track make the door jam and wear the rollers. A quick brush-out now and then goes a long way." },
 ];
 
 const whyUs = [
   {
     title: "We arrive when we say we will",
-    desc: "A gate stuck open or closed is a safety issue. We give you a real time window, not a four-hour wait.",
+    desc: "A door stuck open or shut is a real problem. We give you a proper time window, not a four-hour wait that swallows your day.",
   },
   {
     title: "A quote before we touch anything",
-    desc: "You know the cost upfront. If a repair is not worth it, we will tell you that before starting.",
+    desc: "You know the cost upfront. If a motor is past saving, we tell you that before spending your money on a repair that will not last.",
   },
   {
-    title: "Common parts always in the vehicle",
-    desc: "We carry batteries, boards, and gears for CENTURION, ET Systems, BFT and Nice. Same-day repairs happen because we come prepared.",
+    title: "Common spares in the vehicle",
+    desc: "We carry springs, cables, rollers, batteries, and motor parts for the brands found on doors around here, so most repairs happen on the first visit.",
   },
   {
-    title: "We know what local conditions do",
-    desc: "Load shedding, Highveld lightning, and heavy daily usage are the norm here. Every recommendation is based on real experience in these conditions.",
+    title: "We work on every brand and door",
+    desc: "Sectional, roll-up, or tip-up, and whatever motor is on it, we have seen it. You do not need to track down the original installer.",
   },
 ];
 
 const faqs = [
   {
-    q: "How much does gate motor repair cost in Alberton?",
-    a: "The cost depends on the specific fault. A battery replacement sits at the lower end. Replacing a burned control board costs more. A diagnostic call-out gives you the exact number before any work starts, and in most cases the call-out fee is included in the repair cost if you go ahead.",
+    q: "My motor runs but the door will not open. What is wrong?",
+    a: "This is almost always a broken spring. The springs carry most of the door's weight, so when one snaps the motor is left trying to lift the full door on its own and cannot manage it. Running the motor like that strips the gears, so it is best to stop and let us replace the spring first.",
   },
   {
-    q: "How long does a gate motor repair take?",
-    a: "Most repairs are completed on the same day. We carry common spares for the brands most widely installed in this area, so parts are rarely the delay. When a specific component needs to be ordered in, it usually takes one to two days.",
+    q: "How much does a garage door repair cost?",
+    a: "It depends on the fault. A backup battery or a set of rollers sits at the lower end. A pair of springs or a new motor board costs more. A call-out gives you the exact figure before any work starts, and in most cases the call-out fee comes off the repair if you go ahead.",
   },
   {
-    q: "Can you repair a gate motor during a load shedding slot?",
-    a: "Yes. We do not need mains power for the diagnostic or the repair. We test and confirm the work using the motor's battery backup.",
+    q: "How fast can you come out?",
+    a: "We aim for a same-day or next-day call-out across Alberton and Johannesburg. A door stuck shut can trap your car inside, so we treat it as urgent and give you a confirmed time window rather than leaving you guessing.",
   },
   {
-    q: "My gate reverses for no reason after load shedding. What is causing it?",
-    a: "This is usually one of two things: a battery that is no longer holding proper voltage, which causes erratic behaviour, or an obstruction sensor fault triggered by a surge event. A diagnostic call-out will identify which one it is.",
+    q: "Can you repair a door another company installed?",
+    a: "Yes. We work on every type of door and the common motor brands found around here, no matter who fitted it. We replace springs and cables, sort out jammed and crooked doors, swap dead batteries, and fix motors and remotes.",
   },
   {
-    q: "How do I know when my gate motor battery needs replacing?",
-    a: "Switch the mains off at your distribution board and try to open the gate. If it moves slowly or not at all, the battery is weak or has failed. A battery that cannot power the gate through an outage needs replacing before the next one catches you out.",
+    q: "Why does my door jam or run crooked?",
+    a: "It usually comes down to a frayed cable lifting one side unevenly, a bent track, or worn rollers pulling the door off line. We find which one it is, replace the worn parts, and line the door back up so it runs straight again.",
   },
   {
-    q: "My motor is 7 years old and has developed a fault. Is it worth repairing?",
-    a: "At 7 years it depends on the fault and the history. A battery or limit switch issue on a motor with no previous work is generally worth repairing. A second or third control board on the same motor in two years is a closer call. We will give you a straight recommendation after the diagnostic.",
+    q: "How do I know when the backup battery needs replacing?",
+    a: "If the door will not open during load shedding but runs fine on mains power, the backup battery has had it. They generally last two to three years. Replacing it on time keeps the door working right through an outage.",
   },
   {
-    q: "Which gate motor brands do you work on?",
-    a: "We work on CENTURION Systems, ET Systems, Nice, BFT, and most other brands in the South African market. CENTURION is the most common across Alberton and the East Rand and we carry spares for the popular models.",
+    q: "Is my motor worth repairing or should I replace it?",
+    a: "A spring, cable, battery, or limit fault on a motor that is otherwise sound is well worth fixing. A motor many years old with parts no longer made, or one breaking down again and again, is usually better replaced. We give you a straight recommendation after we have looked at it.",
   },
   {
-    q: "Do you give a warranty on repair work?",
-    a: "Yes. All repairs come with a workmanship warranty. Parts carry the relevant manufacturer's warranty. If something we repaired fails, call us and we will come back and sort it out.",
+    q: "Which areas do you cover?",
+    a: "We cover Alberton, the East Rand, and Johannesburg South. From Brackenhurst and Meyersdal through to Glenvista, Mulbarton, and Germiston, our team is out there every week. Not sure if we reach you? Give us a quick call.",
   },
 ];
 
-export default function GateMotorRepairClient() {
+export default function GarageDoorRepairClient() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
@@ -185,8 +167,8 @@ export default function GateMotorRepairClient() {
         <section className="relative bg-navy py-20 md:py-32 overflow-hidden text-white">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/gate-motors/install-hero.jpg"
-              alt="Centurion gate motors for repair and troubleshooting"
+              src="/images/garage-doors/repair-hero.png"
+              alt="Centurion garage door motor installed on a garage ceiling during a repair job"
               fill
               className="object-cover opacity-45"
               priority
@@ -200,10 +182,10 @@ export default function GateMotorRepairClient() {
               Alberton &amp; Johannesburg
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 font-display max-w-2xl order-2 mx-auto md:mx-0">
-              Gate Motor Repair
+              Garage Door Repair
             </h1>
             <p className="text-lg text-blue-200 mb-0 md:mb-10 max-w-lg leading-relaxed order-4 md:order-3 mx-auto md:mx-0">
-              All brands. Same-day call-outs. A clear quote before we touch anything.
+              All brands, fast call-outs, and a clear quote before we touch anything. We fix broken springs, frayed cables, jammed doors, and dead motors, and get your garage opening properly again.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10 md:mb-0 order-3 md:order-4 w-full sm:w-auto items-center sm:items-start justify-center sm:justify-start">
               <button
@@ -213,7 +195,7 @@ export default function GateMotorRepairClient() {
                 <svg className="w-5 h-5 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                 </svg>
-                Get Free Quote
+                Get a Free Quote
               </button>
               <a
                 href="tel:0824981272"
@@ -233,10 +215,10 @@ export default function GateMotorRepairClient() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { label: "Same-Day Repairs", icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" },
-                { label: "All Brands", icon: "M5 13l4 4L19 7" },
+                { label: "Same-Day Call-Outs", icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" },
+                { label: "All Brands & Doors", icon: "M5 13l4 4L19 7" },
                 { label: "Quote Before Work", icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" },
-                { label: "Local Experts", icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" },
+                { label: "Spares On the Van", icon: "M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1" },
               ].map(({ label, icon }) => (
                 <div key={label} className="flex items-center gap-2.5 text-white">
                   <svg className="w-5 h-5 opacity-90 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -254,9 +236,9 @@ export default function GateMotorRepairClient() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14 max-w-2xl mx-auto">
               <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">What We Fix</span>
-              <h2 className="text-3xl font-bold text-navy font-display mb-3">Common Gate Motor Faults</h2>
+              <h2 className="text-3xl font-bold text-navy font-display mb-3">Common Garage Door Faults</h2>
               <p className="text-gray-500 text-sm leading-relaxed">
-                Most faults are sorted on the same day. These are the ones we deal with most often across Alberton and Johannesburg.
+                These are the problems we get called out for most often across Alberton and Johannesburg. Most of them we sort out on the same visit.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -279,7 +261,7 @@ export default function GateMotorRepairClient() {
             <div className="text-center mb-14 max-w-xl mx-auto">
               <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">The Process</span>
               <h2 className="text-3xl font-bold text-navy font-display mb-3">How a Repair Call-Out Works</h2>
-              <p className="text-gray-500 text-sm">No surprises, no unnecessary parts, no work started without your go-ahead.</p>
+              <p className="text-gray-500 text-sm">No surprises, no parts you do not need, and no work started without your say-so.</p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {processSteps.map((s) => (
@@ -300,116 +282,109 @@ export default function GateMotorRepairClient() {
         {/* ── Repair vs Replace ── */}
         <section className="py-20 bg-[#f8f7f4]">
           <div className="max-w-7xl mx-auto px-6">
-            
-            {/* Header info */}
             <div className="text-center mb-16 max-w-2xl mx-auto">
               <span className="bg-blue-pale text-blue font-bold tracking-widest text-xs uppercase px-3.5 py-1.5 rounded-full w-fit mb-4 inline-block">
-                Repair vs Replace
+                Repair or Replace
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-navy font-display mb-4">
-                How to Know Which Way to Go
+                When to Fix It and When to Replace
               </h2>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                If you are not sure whether your motor is worth fixing, a diagnostic call-out gives you the answer before you spend a rand.
+                Most doors are well worth fixing. A few have a motor so old or a panel so far gone that good money keeps going into something that will keep failing. A call-out tells you which one you are dealing with before you spend a rand.
               </p>
             </div>
 
-            {/* Comparison panels */}
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-
-              {/* Repair Option Card */}
-              <div className="bg-white border border-emerald-100/50 border-t-4 border-t-emerald-500 rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
-                <div>
-                  <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-emerald-200/20 mb-6">
-                    <svg className="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Repair Option
-                  </span>
-                  <h3 className="text-xl font-bold text-navy font-display mb-6">Repair makes more sense when...</h3>
-                  <div className="space-y-4">
-                    {repairReasons.map((r, i) => (
-                      <div key={i} className="flex items-start gap-4 pb-4 border-b border-gray-100/80 last:border-b-0 last:pb-0">
-                        <div className="w-6 h-6 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
-                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                          </svg>
-                        </div>
-                        <span className="text-sm font-semibold text-gray-700 leading-snug">{r}</span>
+              {/* Repair */}
+              <div className="bg-white border border-emerald-100/50 border-t-4 border-t-emerald-500 rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-emerald-200/20 mb-6">
+                  <svg className="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                  </svg>
+                  A Repair Makes Sense
+                </span>
+                <h3 className="text-xl font-bold text-navy font-display mb-6">Fixing it is the right call when...</h3>
+                <div className="space-y-4">
+                  {repairReasons.map((r, i) => (
+                    <div key={i} className="flex items-start gap-4 pb-4 border-b border-gray-100/80 last:border-b-0 last:pb-0">
+                      <div className="w-6 h-6 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
                       </div>
-                    ))}
-                  </div>
+                      <span className="text-sm font-semibold text-gray-700 leading-snug">{r}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Replace Option Card */}
-              <div className="bg-white border border-amber-100/50 border-t-4 border-t-amber-500 rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
-                <div>
-                  <span className="inline-flex items-center gap-1.5 bg-amber-50 text-amber-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-amber-200/20 mb-6">
-                    <svg className="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.706 9H18.5" />
-                    </svg>
-                    Replace Option
-                  </span>
-                  <h3 className="text-xl font-bold text-navy font-display mb-6">Replacement makes more sense when...</h3>
-                  <div className="space-y-4">
-                    {replaceReasons.map((r, i) => (
-                      <div key={i} className="flex items-start gap-4 pb-4 border-b border-gray-100/80 last:border-b-0 last:pb-0">
-                        <div className="w-6 h-6 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 mt-0.5">
-                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.706 9H18.5" />
-                          </svg>
-                        </div>
-                        <span className="text-sm font-semibold text-gray-700 leading-snug">{r}</span>
+              {/* Replace */}
+              <div className="bg-white border border-amber-100/50 border-t-4 border-t-amber-500 rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <span className="inline-flex items-center gap-1.5 bg-amber-50 text-amber-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-amber-200/20 mb-6">
+                  <svg className="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.706 9H18.5" />
+                  </svg>
+                  A New Motor Makes Sense
+                </span>
+                <h3 className="text-xl font-bold text-navy font-display mb-6">Replacing it is the right call when...</h3>
+                <div className="space-y-4">
+                  {replaceReasons.map((r, i) => (
+                    <div key={i} className="flex items-start gap-4 pb-4 border-b border-gray-100/80 last:border-b-0 last:pb-0">
+                      <div className="w-6 h-6 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 mt-0.5">
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.706 9H18.5" />
+                        </svg>
                       </div>
-                    ))}
-                  </div>
+                      <span className="text-sm font-semibold text-gray-700 leading-snug">{r}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
-
             </div>
 
-            {/* Diagnostic CTA Block */}
+            {/* CTA block */}
             <div className="mt-16 max-w-3xl mx-auto bg-gradient-to-r from-navy to-[#00274f] rounded-3xl p-8 md:p-10 text-white relative overflow-hidden shadow-lg border border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
               <div className="absolute -top-16 -right-16 w-36 h-36 rounded-full bg-blue/20 blur-2xl pointer-events-none" />
               <div className="relative z-10 max-w-lg text-left">
-                <h4 className="text-lg font-bold font-display text-white mb-2">Still Not Sure Which Path to Take?</h4>
+                <h4 className="text-lg font-bold font-display text-white mb-2">Not Sure Which Way to Go?</h4>
                 <p className="text-blue-200 text-xs md:text-sm leading-relaxed">
-                  Let our professional technicians run a full diagnostic on your gate motor. We will provide a clear, upfront recommendation on whether to repair or replace before any work begins.
+                  We come out, check the whole door, and give you a straight answer on whether it is worth fixing or due for a new motor, with the cost laid out before any work starts.
                 </p>
               </div>
               <button
                 onClick={() => setIsQuoteModalOpen(true)}
                 className="relative z-10 bg-white hover:bg-blue-pale text-navy font-bold py-3.5 px-7 rounded-xl text-xs md:text-sm transition-all duration-300 shadow-md whitespace-nowrap cursor-pointer hover:shadow-lg active:scale-95 shrink-0"
               >
-                Book Diagnostic Now
+                Book a Call-Out
               </button>
             </div>
-
           </div>
         </section>
 
-        {/* ── Load Shedding ── */}
+        {/* ── Conditions ── */}
         <section className="py-20 bg-navy text-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-start">
-
               <div>
                 <span className="text-blue-300 text-xs font-bold uppercase tracking-widest block mb-3">South African Conditions</span>
-                <h2 className="text-3xl font-bold font-display mb-5">What Load Shedding Does to Your Gate Motor</h2>
+                <h2 className="text-3xl font-bold font-display mb-5">Why Garage Doors Give Trouble Here</h2>
                 <p className="text-blue-200 text-sm leading-relaxed mb-4">
-                  Gate motors in Gauteng deal with conditions most manufacturer guidelines were not written for. Load shedding puts your motor under strain in two specific ways.
+                  A garage door motor in Gauteng works harder than most. A couple of local conditions are behind a good share of the repair calls we get.
                 </p>
                 <p className="text-blue-200 text-sm leading-relaxed mb-4">
-                  Every outage is a deep discharge cycle for the battery. Frequent load shedding burns through those charge cycles far faster than normal use. A battery that might last four years can fail in under two.
+                  Load shedding runs the backup battery flat and charges it again, day after day. All that cycling wears the battery out far faster than normal use, so one that should last years can give up in months.
                 </p>
                 <p className="text-blue-200 text-sm leading-relaxed">
-                  When Eskom restores power, the voltage does not always return cleanly. Those switching surges hit the control board directly if there is no surge protector on the supply line. After enough of them, the board fails.
+                  When the power comes back, the spike can hit the motor board. Highveld lightning does the same. Without surge protection in place, that is often what kills the board and leaves the door dead.
                 </p>
               </div>
 
               <div className="space-y-4">
-                {loadshedTips.map((t) => (
+                {[
+                  { num: "1", title: "Replace the battery on time", desc: "Swap it before it dies during an outage and traps your car in the garage." },
+                  { num: "2", title: "Fit surge protection", desc: "A small, cheap step that guards the motor board from the spikes that come with storms and power cuts." },
+                  { num: "3", title: "Have the door serviced yearly", desc: "We oil the moving parts, check the springs and balance, and catch small faults before they leave you stuck." },
+                ].map((t) => (
                   <div key={t.num} className="flex gap-4 items-start bg-white/5 border border-white/10 rounded-xl p-5">
                     <div className="w-9 h-9 rounded-lg bg-blue text-white font-bold text-sm flex items-center justify-center shrink-0">
                       {t.num}
@@ -421,7 +396,6 @@ export default function GateMotorRepairClient() {
                   </div>
                 ))}
               </div>
-
             </div>
           </div>
         </section>
@@ -431,8 +405,8 @@ export default function GateMotorRepairClient() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14 max-w-xl mx-auto">
               <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">Maintenance</span>
-              <h2 className="text-3xl font-bold text-navy font-display mb-3">Keep Your Gate Motor Running Longer</h2>
-              <p className="text-gray-500 text-sm">Six straightforward habits that add years to the life of your motor.</p>
+              <h2 className="text-3xl font-bold text-navy font-display mb-3">Keep Your Door Running Longer</h2>
+              <p className="text-gray-500 text-sm">Six easy habits that add years to the life of your door and motor.</p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {maintenanceTips.map((t) => (
@@ -455,7 +429,7 @@ export default function GateMotorRepairClient() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14 max-w-xl mx-auto">
               <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">Why Us</span>
-              <h2 className="text-3xl font-bold text-navy font-display">Why Homeowners in Alberton Call Us First</h2>
+              <h2 className="text-3xl font-bold text-navy font-display">Why Homeowners Call Us First</h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {whyUs.map((w, i) => (
@@ -474,7 +448,7 @@ export default function GateMotorRepairClient() {
           <div className="max-w-3xl mx-auto px-6">
             <div className="text-center mb-12">
               <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">FAQ</span>
-              <h2 className="text-3xl font-bold text-navy font-display">Questions We Hear Most Often</h2>
+              <h2 className="text-3xl font-bold text-navy font-display">Questions About Garage Door Repairs</h2>
             </div>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
@@ -507,13 +481,13 @@ export default function GateMotorRepairClient() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-10">
               <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">Also Available</span>
-              <h2 className="text-2xl font-bold text-navy font-display mb-2">Other Services for Your Property</h2>
-              <p className="text-gray-500 text-sm">A lot of our clients ask about these once their gate is sorted.</p>
+              <h2 className="text-2xl font-bold text-navy font-display mb-2">Other Work We Can Do at the Same Time</h2>
+              <p className="text-gray-500 text-sm">A lot of our customers sort the whole property out in one go.</p>
             </div>
             <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
               {[
-                { href: "/electric-fence-repair", title: "Electric Fence Repair", desc: "Fence stopped charging? We fix all brands across Alberton and Johannesburg, often the same day." },
-                { href: "/cctv", title: "CCTV Cameras", desc: "Watch your property from your phone with AHD and IP cameras, day or night." },
+                { href: "/garage-door-installation", title: "Garage Door Installation", desc: "Past fixing, or want to automate a manual door? We fit new Centurion and ET motors with battery backup." },
+                { href: "/gate-motor-repair", title: "Gate Motor Repair", desc: "Gate motor playing up too? We repair all brands across Alberton and Johannesburg, often the same day." },
               ].map((s) => (
                 <Link
                   key={s.href}
@@ -532,15 +506,16 @@ export default function GateMotorRepairClient() {
             </div>
           </div>
         </section>
+
         {/* ── Areas ── */}
-        <AreasServed mode="repair" />
+        <AreasServed mode="general" />
 
         {/* ── Final CTA ── */}
         <section className="py-16 bg-gradient-to-r from-navy to-blue text-white text-center">
           <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">Ready to Get Your Gate Sorted?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">Garage Door Giving You Trouble?</h2>
             <p className="text-blue-200 mb-8 max-w-xl mx-auto text-sm md:text-base">
-              Call us or send a WhatsApp and we will confirm a call-out time quickly. We bring the right parts for your motor brand.
+              Call us or send a WhatsApp and we will confirm a call-out time quickly. We bring the right spares for your door and give you the cost before any work starts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

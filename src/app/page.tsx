@@ -7,6 +7,7 @@ import MonthlySpecial from "@/components/MonthlySpecial";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Gallery from "@/components/Gallery";
 import AreasServed from "@/components/AreasServed";
+import ContactSection from "@/components/ContactSection";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
 
@@ -23,9 +24,11 @@ export default function Home() {
         <WhyChooseUs />
         <Gallery />
         <AreasServed />
+        <ContactSection />
         <CTABanner />
       </main>
       <Footer />
     </>
   );
 }
+

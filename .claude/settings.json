@@ -21,7 +21,10 @@
       "PowerShell(Get-Process node -ErrorAction SilentlyContinue)",
       "PowerShell(\"done\")",
       "Bash(npm run *)",
-      "PowerShell(foreach \\($pid_ in 19964, 24552\\) { try { Stop-Process -Id $pid_ -Force -ErrorAction Stop; \"killed $pid_\" } catch { \"could not kill $pid_ : $\\($_.Exception.Message\\)\" } })"
+      "PowerShell(foreach \\($pid_ in 19964, 24552\\) { try { Stop-Process -Id $pid_ -Force -ErrorAction Stop; \"killed $pid_\" } catch { \"could not kill $pid_ : $\\($_.Exception.Message\\)\" } })",
+      "Bash(rm -rf src/app/garage-doors-motors)",
+      "Bash(rm -f src/components/GarageDoorsClient.tsx)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3000/garage-door-repair\")"
     ]
   }
 }

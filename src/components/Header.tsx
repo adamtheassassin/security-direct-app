@@ -32,8 +32,37 @@ const navLinks: NavLink[] = [
       { label: "Electric Fence Repair", href: "/electric-fence-repair" },
     ],
   },
-  { label: "Garage Doors & Motors", href: "/garage-doors-motors" },
+  {
+    label: "Garage Doors",
+    href: "#",
+    subLinks: [
+      { label: "Garage Door Installation", href: "/garage-door-installation" },
+      { label: "Garage Door Repair", href: "/garage-door-repair" },
+    ],
+  },
   { label: "CCTV", href: "/cctv" },
+  {
+    label: "Alarms",
+    href: "#",
+    subLinks: [
+      { label: "Alarm System Installation", href: "/alarm-system-installation" },
+      { label: "Alarm System Repair", href: "/alarm-system-repair" },
+    ],
+  },
+  {
+    label: "Areas We Serve",
+    href: "/areas",
+    subLinks: [
+      { label: "All Areas", href: "/areas" },
+      { label: "Alberton Central", href: "/areas/alberton-central" },
+      { label: "Brackenhurst", href: "/areas/brackenhurst" },
+      { label: "Brackendowns", href: "/areas/brackendowns" },
+      { label: "Meyersdal", href: "/areas/meyersdal" },
+      { label: "Randhart", href: "/areas/randhart" },
+      { label: "Verwoerdpark", href: "/areas/verwoerdpark" },
+      { label: "Mayberry Park", href: "/areas/mayberry-park" },
+    ],
+  },
 ];
 
 export default function Header() {

@@ -331,7 +331,7 @@ export default function AreasServed({
     "We are proud to bring reliable, prompt, and SABS-certified gate motor, electric fencing, and access control installations directly to your doorstep. Select your area to learn more.";
   if (mode === "repair")
     defaultSubtitle =
-      "We are proud to provide fast, same-day gate motor repairs and diagnostic services across Alberton and Johannesburg. Choose your suburb below to check availability and book.";
+      "We are proud to provide fast, same-day gate motor repairs and diagnostic services across Alberton and Johannesburg. Choose your suburb below to check availability and get a free quote.";
   if (mode === "installation")
     defaultSubtitle =
       "We fit reliable Centurion gate motors for sliding and swing gates right across Alberton and Johannesburg, sized to your gate and set up properly from day one. Pick your suburb to get a quote.";
@@ -379,21 +379,10 @@ export default function AreasServed({
                   onClick={() => setIsQuoteModalOpen(true)}
                   className="w-full bg-blue hover:bg-blue-light text-white font-bold py-3 px-6 rounded-xl text-xs md:text-sm transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-md hover:shadow-lg active:scale-[0.98]"
                 >
-                  {mode === "repair" ? (
-                    <>
-                      Book Repair in {selectedSuburb.name}
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                      </svg>
-                    </>
-                  ) : (
-                    <>
-                      Get Free Quote
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
-                    </>
-                  )}
+                  Get Free Quote in {selectedSuburb.name}
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
                 </button>
               </div>
             </div>

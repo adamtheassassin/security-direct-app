@@ -8,7 +8,7 @@ import Footer from "./Footer";
 import QuoteModal from "./QuoteModal";
 import AreasServed from "./AreasServed";
 
-const services = [
+const included = [
   {
     title: "Automate a manual door",
     desc: "We fit a motor to your manual door so it opens from the car with a remote. No more climbing out in the rain to lift it by hand.",
@@ -20,7 +20,7 @@ const services = [
   },
   {
     title: "New motor installs",
-    desc: "Old motor given up? We fit a new Centurion or ET motor matched to the size and weight of your door, set the limits, and program your remotes.",
+    desc: "Old motor given up? We fit a new Centurion or ET motor matched to your door, set the limits, and program your remotes so it runs right from day one.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -28,26 +28,17 @@ const services = [
     ),
   },
   {
-    title: "Broken spring replacement",
-    desc: "A snapped spring makes the door dead heavy and unsafe to run. We supply and fit the right tension springs for roll-up and sectional doors on site.",
+    title: "A motor sized to your door",
+    desc: "We weigh up your door first and fit a motor with the strength to lift it easily. A motor that never strains is one that keeps running for years.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Cables, pulleys, and tracks",
-    desc: "Frayed cables and bent tracks make the door jam or hang skew. We replace the worn parts and line the door back up so it runs straight.",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 7.89M9 11l3-3 3 3m-3-3v12" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
       </svg>
     ),
   },
   {
     title: "Backup battery fitted",
-    desc: "The door keeps working through load shedding. Every motor we install runs off a battery when the power is down.",
+    desc: "The door keeps working through load shedding. Every motor we install runs off a battery when the power is down, so you are never stuck on the driveway.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m-6 4h6m-6 4h4M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" />
@@ -55,11 +46,20 @@ const services = [
     ),
   },
   {
-    title: "Yearly service",
-    desc: "We tension the springs, reset the motor limits, tighten the brackets, and oil the moving parts so small problems get caught before they leave you stuck.",
+    title: "Safety auto-reverse",
+    desc: "The door stops and pulls back the moment it meets something on the way down, so it can never come down on a car, a pet, or a child.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Remotes and keypad set up",
+    desc: "We program your remotes and can add a keypad by the door, so you still get in with a code on the day you leave the remote behind.",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
       </svg>
     ),
   },
@@ -68,17 +68,17 @@ const services = [
 const doorTypes = [
   {
     title: "Sectional doors",
-    desc: "The panelled door that lifts up and folds flat under the ceiling. We automate and repair these every week, and most homes built in the last twenty years have one.",
+    desc: "The panelled door that lifts up and folds flat under the ceiling. We automate these every week, and most homes built in the last twenty years have one.",
     icon: "M4 6h16M4 10h16M4 14h16M4 18h16",
   },
   {
     title: "Roll-up doors",
-    desc: "The single sheet that rolls into a drum above the opening. Common on older homes and many double garages. We fit roll-up motors and replace the springs inside the drum.",
+    desc: "The single sheet that rolls into a drum above the opening. Common on older homes and many double garages. We fit roll-up motors that drive them smoothly off the drum.",
     icon: "M4 7h16M4 7a2 2 0 012-2h12a2 2 0 012 2M4 7v0M7 11h10M7 15h10M7 19h10",
   },
   {
     title: "Tip-up doors",
-    desc: "The one-piece door that swings out and up as a single panel. Older, but still around on plenty of homes. We can automate a sound one or repair the mechanism.",
+    desc: "The one-piece door that swings out and up as a single panel. Older, but still around on plenty of homes. We can automate a sound one so it opens on its own.",
     icon: "M4 18h16M6 18l3-9 3 4 3-7 3 12",
   },
 ];
@@ -115,79 +115,22 @@ const steps = [
   {
     num: "01",
     title: "Free on-site visit",
-    desc: "We come out, measure your door, check how it runs, and see what it weighs. Then we tell you what it needs and what it will cost. The visit is free.",
+    desc: "We come out, measure your door, check how it runs, and see what it weighs. Then we tell you which motor suits it and what it will cost. The visit is free.",
   },
   {
     num: "02",
     title: "A clear, fixed quote",
-    desc: "You get the full price in writing. The motor, any parts, the battery, and the labour are all listed. The number you see is the number you pay.",
+    desc: "You get the full price in writing. The motor, the battery, the remotes, and the labour are all listed. The number you see is the number you pay.",
   },
   {
     num: "03",
     title: "Neat installation",
-    desc: "We mount the motor, fit or replace the springs and cables where needed, wire it in, and set the limits so the door stops in the right spot every time.",
+    desc: "We mount the motor, fit the rail and bracket, wire it in, and set the open and close limits so the door stops in the right spot every time.",
   },
   {
     num: "04",
     title: "Test and hand over",
     desc: "We run the door a few times, program your remotes, and show you the manual release. We make sure you are happy with it before we go.",
-  },
-];
-
-const faults = [
-  {
-    title: "Motor clicks but the door stays put",
-    desc: "Usually a snapped spring. The springs carry most of the door's weight, and once one goes the motor cannot lift the door on its own.",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-      </svg>
-    ),
-  },
-  {
-    title: "Broken or stretched springs",
-    desc: "A loud bang from the garage is often a spring letting go. The door turns heavy and unsafe to run until it is replaced.",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 13c4 0 4 3 8 3s4-3 8-3M4 18h16" />
-      </svg>
-    ),
-  },
-  {
-    title: "Frayed or snapped cables",
-    desc: "The cables lift the door evenly on each side. When one frays or breaks, the door hangs skew and can jam in the track.",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 7.89M9 11l3-3 3 3m-3-3v12" />
-      </svg>
-    ),
-  },
-  {
-    title: "Door jams or runs crooked",
-    desc: "Bent tracks, worn rollers, or a loose bracket pull the door off line. We straighten it up and swap out the worn parts.",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 6l2 14h12l2-14M9 10v6M15 10v6" />
-      </svg>
-    ),
-  },
-  {
-    title: "Dead backup battery",
-    desc: "The door will not open during load shedding. A battery that no longer holds its charge is the usual reason, and it is a quick swap.",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Remotes or limits playing up",
-    desc: "The door stops short, slams down, or the remote stops working. We reset the limits and reprogram or replace the remotes.",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-      </svg>
-    ),
   },
 ];
 
@@ -211,12 +154,12 @@ const backupTips = [
 
 const whyUs = [
   {
-    title: "We work on every type of door",
-    desc: "Sectional, roll-up, or tip-up, we automate and repair all of them. You do not need to hunt for a specialist for your kind of door.",
+    title: "We size the motor to your door",
+    desc: "We weigh the door first and fit a motor that lifts it with room to spare, so it runs easily and lasts for years instead of burning out early.",
   },
   {
     title: "One clear price, fitted and done",
-    desc: "The quote covers the motor, the parts, the battery, and the labour. Nothing extra appears once the work is under way.",
+    desc: "The quote covers the motor, the battery, the remotes, and the labour. Nothing extra appears once the work is under way.",
   },
   {
     title: "New parts carry a 12 month warranty",
@@ -224,38 +167,38 @@ const whyUs = [
   },
   {
     title: "We have done this since 2008",
-    desc: "Garage doors across Alberton and the East Rand are part of our week. You get people who know how these doors fail and how to keep them running.",
+    desc: "Garage doors across Alberton and the East Rand are part of our week. You get people who know how to set a door up so it runs smoothly.",
   },
 ];
 
 const faqs = [
   {
     q: "Can you automate my existing manual garage door?",
-    a: "In most cases, yes. As long as the door is in good shape, balanced, and slides smoothly in its tracks, we can fit a motor and automate it. We do this for roll-up, sectional, and tip-up doors. If the springs or rollers need work first, we sort that out as part of the job.",
+    a: "In most cases, yes. As long as the door is in good shape, balanced, and slides smoothly in its tracks, we can fit a motor and automate it. We do this for roll-up, sectional, and tip-up doors. If the springs or rollers need attention first, we sort that out as part of the job.",
   },
   {
-    q: "My motor clicks but the door will not open. What is wrong?",
-    a: "This is almost always a broken spring. The springs carry most of the door's weight, so when one snaps the motor is left trying to lift the full door on its own and cannot manage it. Running the motor like this strips the gears, so it is best to stop and let us replace the spring first.",
+    q: "Which motor suits my door?",
+    a: "It comes down to whether your door is a sectional or a roll-up and how heavy it is. We weigh it up on the free site visit and fit the Centurion or ET motor that suits, so the door runs quietly and the motor is never left straining.",
   },
   {
     q: "Will my garage door work during load shedding?",
     a: "Yes. Every motor we fit runs on a backup battery, so the door keeps opening and closing through an outage. The motors we use draw very little power, which gives you a good run of trips before the battery needs the mains again. If it ever does go flat, every door has a manual release cord so you can lift it by hand.",
   },
   {
-    q: "How often should I service my garage door?",
-    a: "Once a year is a good rule. A service covers checking the spring tension, resetting the motor limits, tightening the hinges and brackets, and oiling the tracks, springs, and bearings. It catches the small things before they turn into a door that will not open.",
+    q: "How long does an installation take?",
+    a: "A straightforward fit on a door that already runs well takes a couple of hours. That covers mounting the motor, wiring it in, setting the open and close limits, programming your remotes, and showing you the manual release.",
   },
   {
-    q: "What warranty do you give on garage door work?",
-    a: "All new materials carry a 12 month manufacturer warranty, and we back our installation work for 12 months as well. Batteries and repair work do not carry a warranty, since a battery's life depends on how hard the power cuts run it, and a repair deals with parts that are already worn.",
+    q: "What warranty do you give on a new motor?",
+    a: "All new materials carry a 12 month manufacturer warranty, and we back our installation work for 12 months as well. The backup battery is not covered by a warranty, since its life depends on how hard the power cuts run it.",
   },
   {
     q: "How much does a garage door motor cost?",
-    a: "It comes down to the size and weight of your door, whether it is a roll-up or a sectional, and whether you need a fresh motor or a repair. We measure on the free site visit and give you a fixed price before any work starts.",
+    a: "It comes down to the size and weight of your door and whether it is a roll-up or a sectional. We measure on the free site visit and give you a fixed price before any work starts.",
   },
   {
-    q: "Which brands do you fit and repair?",
-    a: "We fit Centurion and ET DC Blue motors on new installs, both with battery backup. For repairs we work on all the common garage door motor brands found in this area, so you do not need to track down the original installer.",
+    q: "Which brands do you fit?",
+    a: "We fit Centurion and ET DC Blue motors on new installs, both with battery backup. They are reliable, easy to get parts for, and well suited to the doors we see across the area.",
   },
   {
     q: "Which areas do you cover?",
@@ -263,7 +206,7 @@ const faqs = [
   },
 ];
 
-export default function GarageDoorsClient() {
+export default function GarageDoorInstallationClient() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
@@ -294,10 +237,10 @@ export default function GarageDoorsClient() {
               Alberton &amp; Johannesburg
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 font-display max-w-2xl order-2 mx-auto md:mx-0">
-              Garage Door Automation &amp; Repair
+              Garage Door Installation &amp; Automation
             </h1>
             <p className="text-lg text-blue-200 mb-0 md:mb-10 max-w-lg leading-relaxed order-4 md:order-3 mx-auto md:mx-0">
-              We automate manual garage doors and fix motors that have packed up, on sectional, roll-up, and tip-up doors across Alberton and Johannesburg. Every install comes with a backup battery so the door still opens when the power is off.
+              We automate manual garage doors and fit new motors on sectional, roll-up, and tip-up doors across Alberton and Johannesburg. Every install comes with a backup battery, so the door still opens when the power is off.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10 md:mb-0 order-3 md:order-4 w-full sm:w-auto items-center sm:items-start justify-center sm:justify-start">
               <button
@@ -307,7 +250,7 @@ export default function GarageDoorsClient() {
                 <svg className="w-5 h-5 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                Get Free Quote
+                Get a Free Quote
               </button>
               <a
                 href="tel:0824981272"
@@ -330,7 +273,7 @@ export default function GarageDoorsClient() {
                 { label: "Free Site Assessment", icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" },
                 { label: "All Door Types", icon: "M5 13l4 4L19 7" },
                 { label: "Battery Backup Standard", icon: "M13 10V3L4 14h7v7l9-11h-7z" },
-                { label: "Install & Repair", icon: "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" },
+                { label: "Fitted Since 2008", icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" },
               ].map(({ label, icon }) => (
                 <div key={label} className="flex items-center gap-2.5 text-white">
                   <svg className="w-5 h-5 opacity-90 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -343,18 +286,18 @@ export default function GarageDoorsClient() {
           </div>
         </div>
 
-        {/* ── What We Do ── */}
+        {/* ── What's Included ── */}
         <section className="py-20 bg-[#f8f7f4]">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14 max-w-2xl mx-auto">
-              <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">What We Do</span>
-              <h2 className="text-3xl font-bold text-navy font-display mb-3">Everything Your Garage Door Needs</h2>
+              <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">What You Get</span>
+              <h2 className="text-3xl font-bold text-navy font-display mb-3">What Goes Into a Proper Install</h2>
               <p className="text-gray-500 text-sm leading-relaxed">
-                A new motor, a snapped spring, or a door that has started jamming. We handle the lot, and most jobs are sorted in a single visit.
+                A good install is the difference between a door that runs quietly for years and one that gives trouble from the first month. Here is what we fit and set up on every job.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {services.map((f) => (
+              {included.map((f) => (
                 <div key={f.title} className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-md transition-shadow">
                   <div className="w-10 h-10 rounded-xl bg-blue-pale flex items-center justify-center mb-4 text-blue">
                     {f.icon}
@@ -372,8 +315,8 @@ export default function GarageDoorsClient() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14 max-w-xl mx-auto">
               <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">Doors We Work On</span>
-              <h2 className="text-3xl font-bold text-navy font-display mb-3">We Automate and Repair Every Kind of Door</h2>
-              <p className="text-gray-500 text-sm">Sectional, roll-up, or tip-up. We have the right motor and the right parts for each one.</p>
+              <h2 className="text-3xl font-bold text-navy font-display mb-3">We Automate Every Kind of Door</h2>
+              <p className="text-gray-500 text-sm">Sectional, roll-up, or tip-up. We have the right motor for each one.</p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {doorTypes.map((g) => (
@@ -434,7 +377,7 @@ export default function GarageDoorsClient() {
                       onClick={() => setIsQuoteModalOpen(true)}
                       className="bg-blue hover:bg-blue-light text-white font-bold text-xs px-4 py-2.5 rounded-lg transition-colors cursor-pointer w-full"
                     >
-                      Get Free Quote
+                      Get a Quote
                     </button>
                   </div>
                 </div>
@@ -465,30 +408,6 @@ export default function GarageDoorsClient() {
                   </div>
                   <h3 className="text-lg font-bold text-navy mb-3 font-display">{s.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed max-w-xs">{s.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── Common Faults ── */}
-        <section className="py-20 bg-[#f8f7f4]">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-14 max-w-2xl mx-auto">
-              <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">What We Fix</span>
-              <h2 className="text-3xl font-bold text-navy font-display mb-3">Common Garage Door Faults</h2>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                These are the problems we get called out for most often across Alberton and Johannesburg. Most of them we sort out on the same visit.
-              </p>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {faults.map((f) => (
-                <div key={f.title} className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-md transition-shadow">
-                  <div className="w-10 h-10 rounded-xl bg-blue-pale flex items-center justify-center mb-4 text-blue">
-                    {f.icon}
-                  </div>
-                  <h3 className="font-bold text-navy mb-2 font-display">{f.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
                 </div>
               ))}
             </div>
@@ -535,7 +454,7 @@ export default function GarageDoorsClient() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14 max-w-xl mx-auto">
               <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">Why Us</span>
-              <h2 className="text-3xl font-bold text-navy font-display">Why People Pick Us for Their Garage Door</h2>
+              <h2 className="text-3xl font-bold text-navy font-display">Why People Pick Us for a New Motor</h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {whyUs.map((w, i) => (
@@ -554,7 +473,7 @@ export default function GarageDoorsClient() {
           <div className="max-w-3xl mx-auto px-6">
             <div className="text-center mb-12">
               <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">FAQ</span>
-              <h2 className="text-3xl font-bold text-navy font-display">Questions About Garage Doors</h2>
+              <h2 className="text-3xl font-bold text-navy font-display">Questions About a New Motor</h2>
             </div>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
@@ -592,8 +511,8 @@ export default function GarageDoorsClient() {
             </div>
             <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
               {[
-                { href: "/gate-motor-installation", title: "Gate Motor Installation", desc: "New Centurion motors fitted to your gate, sized right and set up to run from day one." },
-                { href: "/electric-fence-installation", title: "Electric Fencing", desc: "Secure the perimeter with a live fence on your boundary wall, installed with a SABS certificate." },
+                { href: "/garage-door-repair", title: "Garage Door Repair", desc: "Already have a door that is jamming, dropping, or refusing to lift? We fix springs, cables, and motors on all brands." },
+                { href: "/gate-motor-installation", title: "Gate Motor Installation", desc: "Automate your gate while we are on site. New Centurion motors fitted and set up to run from day one." },
               ].map((s) => (
                 <Link
                   key={s.href}
@@ -619,7 +538,7 @@ export default function GarageDoorsClient() {
         {/* ── Final CTA ── */}
         <section className="py-16 bg-gradient-to-r from-navy to-blue text-white text-center">
           <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">Ready to Sort Your Garage Door?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">Ready to Automate Your Garage Door?</h2>
             <p className="text-blue-200 mb-8 max-w-xl mx-auto text-sm md:text-base">
               Call us or send a WhatsApp and we will set up a free site visit. You get the right motor for your door and a fixed price before any work starts.
             </p>

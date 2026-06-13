@@ -10,166 +10,148 @@ import AreasServed from "./AreasServed";
 
 const faults = [
   {
-    title: "Dead Battery",
-    desc: "The most common call-out after load shedding. Frequent outage cycles drain batteries far faster than normal use.",
+    title: "The alarm keeps going off for nothing",
+    desc: "False alarms at all hours wear everyone down and get ignored. It is usually a low battery, a faulty sensor, or an insect in a beam, and we track down which one.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
       </svg>
     ),
   },
   {
-    title: "Burned Control Board",
-    desc: "Power surges when Eskom restores electricity hit the board directly. One of the most common reasons motors fail completely.",
+    title: "Beeping or a trouble light on the keypad",
+    desc: "That steady beep or warning light almost always means the backup battery is low or a zone has a fault. We read the panel and clear what is causing it.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m-6-8h6M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" />
       </svg>
     ),
   },
   {
-    title: "Worn Drive Gears",
-    desc: "Years of daily cycling wear down the drive gear and rack. The gate slows down, starts slipping, then stops short.",
+    title: "A zone that has stopped detecting",
+    desc: "One sensor or beam no longer picks anything up, which leaves a blind spot in your cover. We test the zone and replace the part that has failed.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
       </svg>
     ),
   },
   {
-    title: "Limit Switch Drift",
-    desc: "These switches tell the motor where to stop. When they drift, the gate stops short or slams the end stops on every cycle.",
+    title: "The alarm will not arm",
+    desc: "The panel refuses to set, often because a zone is open or playing up. We find what is holding it and get the alarm arming properly again.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
       </svg>
     ),
   },
   {
-    title: "Obstruction Sensor Faults",
-    desc: "When the sensor drifts or takes a surge hit, the gate reverses for no reason. It reads a blockage that is not there.",
+    title: "Not signalling your armed response",
+    desc: "The siren sounds at the house but no signal reaches your security company. We check the communicator and the line so help actually gets called.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.111 16.404a5.5 5.5 0 010-7.778m7.778 0a5.5 5.5 0 010 7.778M5.282 19.232a9.5 9.5 0 010-13.436m13.436 0a9.5 9.5 0 010 13.436M12 12h.01" />
       </svg>
     ),
   },
   {
-    title: "Water Ingress",
-    desc: "Older underground swing gate mechanisms in Alberton properties suffer from this. Water gets into a worn housing and corrodes the internals.",
+    title: "Dead after a power cut",
+    desc: "The alarm is silent and the keypad is blank. A backup battery that has given up is almost always the reason, and it is a quick swap.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
   },
 ];
 
 const processSteps = [
-  { num: "01", title: "We arrive on time", desc: "A confirmed call-out window, not a vague 'sometime today' slot." },
-  { num: "02", title: "Full diagnostic first", desc: "We check the battery, board, gears, limits, and motor before touching anything." },
-  { num: "03", title: "Clear quote upfront", desc: "You hear exactly what is wrong and what it will cost before any work begins." },
-  { num: "04", title: "Repair on the spot", desc: "We carry spares for CENTURION, ET Systems, BFT and Nice. Most faults are sorted same day." },
-  { num: "05", title: "Tested before we leave", desc: "We cycle the gate multiple times to confirm everything is running correctly." },
-  { num: "06", title: "Walkthrough with you", desc: "We explain what was wrong, what was replaced, and flag anything worth watching going forward." },
+  { num: "01", title: "We arrive on time", desc: "A confirmed call-out window, not a vague 'sometime today' slot that has you waiting around." },
+  { num: "02", title: "We test the panel and every zone", desc: "We read the panel's fault log and walk each sensor, beam, and panic button to find what is actually wrong." },
+  { num: "03", title: "Clear quote upfront", desc: "You hear exactly what is wrong and what it will cost before we start. No work begins without your go-ahead." },
+  { num: "04", title: "Repair on the spot", desc: "We carry spare sensors, beams, batteries, and panel parts for the common brands, so most faults are sorted the same day." },
+  { num: "05", title: "We test the whole system", desc: "We arm the alarm, trip each zone, and confirm the signal reaches your armed response company." },
+  { num: "06", title: "Walkthrough", desc: "We show you what was wrong and what we changed, and reset your codes if you need us to." },
 ];
 
 const repairReasons = [
-  "Motor is under 5 years old",
-  "Fault is a battery, board, or gear issue",
-  "First or second time it has been looked at",
-  "Repair cost is well under half the replacement cost",
+  "A single faulty sensor, beam, or keypad",
+  "A flat backup battery",
+  "No signal getting through to armed response",
+  "False alarms coming from one zone",
 ];
 
 const replaceReasons = [
-  "Motor is 8 years old or more",
-  "Two or more repairs in the past 18 months",
-  "Direct lightning strike or severe water damage",
-  "Repair cost is approaching the replacement cost",
-];
-
-const loadshedTips = [
-  {
-    num: "1",
-    title: "Replace the battery on a 3-year cycle",
-    desc: "Do it before it fails during an outage, not after you are stuck in the driveway.",
-  },
-  {
-    num: "2",
-    title: "Fit a surge protector on the mains supply",
-    desc: "A small, inexpensive step that protects the control board from switching surges.",
-  },
-  {
-    num: "3",
-    title: "Test your backup every month",
-    desc: "Switch off the mains and open the gate. No movement means the battery needs replacing.",
-  },
+  "A panel so old that spare parts are no longer made",
+  "Faults popping up across several zones at once",
+  "A dead keypad on a system nobody still supports",
+  "You want more zones or cover the old panel cannot handle",
 ];
 
 const maintenanceTips = [
-  { num: "1", title: "Test the battery monthly", desc: "Switch off mains at the DB board and open the gate. No movement means the battery needs replacing." },
-  { num: "2", title: "Clean the rack and gear", desc: "Brush off grit every few months and apply a light coat of gear lubricant. Grit accelerates wear more than most people realise." },
-  { num: "3", title: "Listen for new sounds", desc: "Grinding or straining usually means something mechanical needs attention before it becomes a bigger fault." },
-  { num: "4", title: "Check the end stops", desc: "If the gate hits the end stops hard on every cycle, the limits need adjusting before the damage adds up." },
-  { num: "5", title: "Keep the housing sealed", desc: "A cracked or open cover lets dust and water reach the electronics. A replacement cover costs very little." },
-  { num: "6", title: "Check gate alignment yearly", desc: "A gate that has shifted on its foundation puts extra load on the motor on every single cycle." },
+  { num: "1", title: "Test the alarm every month", desc: "Arm it and walk a zone to set it off. It is the simplest way to know the sensors and the siren still work." },
+  { num: "2", title: "Replace the backup battery on time", desc: "Most alarm batteries last around two to three years. Swap it before it dies during an outage and leaves the house open." },
+  { num: "3", title: "Keep sensors and beams clean", desc: "Dust and cobwebs across a sensor are a top cause of false alarms. A quick wipe every few months saves a call-out." },
+  { num: "4", title: "Trim plants near outdoor beams", desc: "A branch swaying in the wind across a beam will trip the alarm again and again. Keep the beam line clear." },
+  { num: "5", title: "Test your panic buttons", desc: "Press them now and then to be sure they still send. Let your armed response company know first so they do not dispatch." },
+  { num: "6", title: "Check the armed response signal", desc: "Make sure a real trip actually reaches your security company, not just the siren at the house. We can test this for you." },
 ];
 
 const whyUs = [
   {
     title: "We arrive when we say we will",
-    desc: "A gate stuck open or closed is a safety issue. We give you a real time window, not a four-hour wait.",
+    desc: "An alarm that is down leaves your home open. We give you a real time window, not a four-hour wait that swallows your day.",
   },
   {
     title: "A quote before we touch anything",
-    desc: "You know the cost upfront. If a repair is not worth it, we will tell you that before starting.",
+    desc: "You know the cost upfront. If a part of the system is past saving, we tell you that before spending your money on it.",
   },
   {
-    title: "Common parts always in the vehicle",
-    desc: "We carry batteries, boards, and gears for CENTURION, ET Systems, BFT and Nice. Same-day repairs happen because we come prepared.",
+    title: "Common spares in the vehicle",
+    desc: "We carry sensors, beams, batteries, and panel parts for the brands found on walls around here, so most repairs happen on the first visit.",
   },
   {
-    title: "We know what local conditions do",
-    desc: "Load shedding, Highveld lightning, and heavy daily usage are the norm here. Every recommendation is based on real experience in these conditions.",
+    title: "We know what the conditions do",
+    desc: "Load shedding and Highveld lightning are behind most of the faults we see. Every fix is based on real experience in these conditions.",
   },
 ];
 
 const faqs = [
   {
-    q: "How much does gate motor repair cost in Alberton?",
-    a: "The cost depends on the specific fault. A battery replacement sits at the lower end. Replacing a burned control board costs more. A diagnostic call-out gives you the exact number before any work starts, and in most cases the call-out fee is included in the repair cost if you go ahead.",
+    q: "Why does my alarm keep going off?",
+    a: "False alarms usually come down to a few things: a low backup battery, dust or a cobweb across a sensor, an insect inside a beam, a pet moving through a zone, or a sensor that is simply on its way out. We walk the system, find the zone that is tripping it, and put it right so the alarm only goes off when it should.",
   },
   {
-    q: "How long does a gate motor repair take?",
-    a: "Most repairs are completed on the same day. We carry common spares for the brands most widely installed in this area, so parts are rarely the delay. When a specific component needs to be ordered in, it usually takes one to two days.",
+    q: "Can you repair an alarm another company installed?",
+    a: "Yes. We work on the common alarm brands found in homes and businesses around here, no matter who put the system in. We replace faulty sensors and beams, swap dead batteries, sort out false alarms, and get the signal to your armed response working again.",
   },
   {
-    q: "Can you repair a gate motor during a load shedding slot?",
-    a: "Yes. We do not need mains power for the diagnostic or the repair. We test and confirm the work using the motor's battery backup.",
+    q: "My keypad is beeping or showing a trouble light. What does it mean?",
+    a: "A steady beep or a warning light on the keypad is the panel telling you something is off. Most often it is a low backup battery or a fault on one of the zones. We read the panel, find the cause, and clear it so the keypad goes quiet again.",
   },
   {
-    q: "My gate reverses for no reason after load shedding. What is causing it?",
-    a: "This is usually one of two things: a battery that is no longer holding proper voltage, which causes erratic behaviour, or an obstruction sensor fault triggered by a surge event. A diagnostic call-out will identify which one it is.",
+    q: "How do I know when the backup battery needs replacing?",
+    a: "If the alarm goes dead the moment the power cuts, or the keypad has started beeping with a battery warning, the backup battery is on its way out. They generally last two to three years. Replacing it on time keeps the alarm armed right through load shedding.",
   },
   {
-    q: "How do I know when my gate motor battery needs replacing?",
-    a: "Switch the mains off at your distribution board and try to open the gate. If it moves slowly or not at all, the battery is weak or has failed. A battery that cannot power the gate through an outage needs replacing before the next one catches you out.",
+    q: "Can you get my alarm signalling armed response again?",
+    a: "Yes. If your siren sounds but no car arrives, the communicator that sends the signal to your security company has usually failed or come loose. We test it, fix or replace it, and confirm a real trip gets through before we leave.",
   },
   {
-    q: "My motor is 7 years old and has developed a fault. Is it worth repairing?",
-    a: "At 7 years it depends on the fault and the history. A battery or limit switch issue on a motor with no previous work is generally worth repairing. A second or third control board on the same motor in two years is a closer call. We will give you a straight recommendation after the diagnostic.",
+    q: "How much does an alarm repair cost?",
+    a: "It depends on the fault. A backup battery or a single sensor sits at the lower end. A new keypad or communicator costs more. A call-out gives you the exact figure before any work starts, and in most cases the call-out fee comes off the repair if you go ahead.",
   },
   {
-    q: "Which gate motor brands do you work on?",
-    a: "We work on CENTURION Systems, ET Systems, Nice, BFT, and most other brands in the South African market. CENTURION is the most common across Alberton and the East Rand and we carry spares for the popular models.",
+    q: "How fast can you come out?",
+    a: "We aim for a same-day or next-day call-out across Alberton and Johannesburg. An alarm that is down leaves your home unprotected, so we treat it as urgent and give you a confirmed time window rather than leaving you guessing.",
   },
   {
-    q: "Do you give a warranty on repair work?",
-    a: "Yes. All repairs come with a workmanship warranty. Parts carry the relevant manufacturer's warranty. If something we repaired fails, call us and we will come back and sort it out.",
+    q: "Which areas do you cover?",
+    a: "We cover Alberton, the East Rand, and Johannesburg South. From Brackenhurst and Meyersdal through to Glenvista, Mulbarton, and Germiston, our team is out there every week. Not sure if we reach you? Give us a quick call.",
   },
 ];
 
-export default function GateMotorRepairClient() {
+export default function AlarmRepairClient() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
@@ -185,8 +167,8 @@ export default function GateMotorRepairClient() {
         <section className="relative bg-navy py-20 md:py-32 overflow-hidden text-white">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/gate-motors/install-hero.jpg"
-              alt="Centurion gate motors for repair and troubleshooting"
+              src="/images/alarms/repair-hero.png"
+              alt="Paradox alarm system keypad showing warning indicators for troubleshooting and repair"
               fill
               className="object-cover opacity-45"
               priority
@@ -200,10 +182,10 @@ export default function GateMotorRepairClient() {
               Alberton &amp; Johannesburg
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 font-display max-w-2xl order-2 mx-auto md:mx-0">
-              Gate Motor Repair
+              Alarm System Repair
             </h1>
             <p className="text-lg text-blue-200 mb-0 md:mb-10 max-w-lg leading-relaxed order-4 md:order-3 mx-auto md:mx-0">
-              All brands. Same-day call-outs. A clear quote before we touch anything.
+              All brands, fast call-outs, and a clear quote before we touch anything. We track down false alarms, dead zones, and panels that will not arm, and get your home properly covered again.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10 md:mb-0 order-3 md:order-4 w-full sm:w-auto items-center sm:items-start justify-center sm:justify-start">
               <button
@@ -213,7 +195,7 @@ export default function GateMotorRepairClient() {
                 <svg className="w-5 h-5 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                 </svg>
-                Get Free Quote
+                Get a Free Quote
               </button>
               <a
                 href="tel:0824981272"
@@ -233,10 +215,10 @@ export default function GateMotorRepairClient() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { label: "Same-Day Repairs", icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" },
+                { label: "Same-Day Call-Outs", icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" },
                 { label: "All Brands", icon: "M5 13l4 4L19 7" },
                 { label: "Quote Before Work", icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" },
-                { label: "Local Experts", icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" },
+                { label: "False Alarms Fixed", icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" },
               ].map(({ label, icon }) => (
                 <div key={label} className="flex items-center gap-2.5 text-white">
                   <svg className="w-5 h-5 opacity-90 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -254,9 +236,9 @@ export default function GateMotorRepairClient() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14 max-w-2xl mx-auto">
               <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">What We Fix</span>
-              <h2 className="text-3xl font-bold text-navy font-display mb-3">Common Gate Motor Faults</h2>
+              <h2 className="text-3xl font-bold text-navy font-display mb-3">Common Alarm Faults</h2>
               <p className="text-gray-500 text-sm leading-relaxed">
-                Most faults are sorted on the same day. These are the ones we deal with most often across Alberton and Johannesburg.
+                These are the problems we get called out for most often across Alberton and Johannesburg. Most of them we sort out on the same visit.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -279,7 +261,7 @@ export default function GateMotorRepairClient() {
             <div className="text-center mb-14 max-w-xl mx-auto">
               <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">The Process</span>
               <h2 className="text-3xl font-bold text-navy font-display mb-3">How a Repair Call-Out Works</h2>
-              <p className="text-gray-500 text-sm">No surprises, no unnecessary parts, no work started without your go-ahead.</p>
+              <p className="text-gray-500 text-sm">No surprises, no parts you do not need, and no work started without your say-so.</p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {processSteps.map((s) => (
@@ -300,116 +282,109 @@ export default function GateMotorRepairClient() {
         {/* ── Repair vs Replace ── */}
         <section className="py-20 bg-[#f8f7f4]">
           <div className="max-w-7xl mx-auto px-6">
-            
-            {/* Header info */}
             <div className="text-center mb-16 max-w-2xl mx-auto">
               <span className="bg-blue-pale text-blue font-bold tracking-widest text-xs uppercase px-3.5 py-1.5 rounded-full w-fit mb-4 inline-block">
-                Repair vs Replace
+                Repair or Replace
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-navy font-display mb-4">
-                How to Know Which Way to Go
+                When to Fix It and When to Upgrade
               </h2>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                If you are not sure whether your motor is worth fixing, a diagnostic call-out gives you the answer before you spend a rand.
+                Most alarms are well worth fixing. A few are so old that parts are hard to find and good money keeps going into a system that will keep failing. A call-out tells you which one you are dealing with before you spend a rand.
               </p>
             </div>
 
-            {/* Comparison panels */}
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-
-              {/* Repair Option Card */}
-              <div className="bg-white border border-emerald-100/50 border-t-4 border-t-emerald-500 rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
-                <div>
-                  <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-emerald-200/20 mb-6">
-                    <svg className="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Repair Option
-                  </span>
-                  <h3 className="text-xl font-bold text-navy font-display mb-6">Repair makes more sense when...</h3>
-                  <div className="space-y-4">
-                    {repairReasons.map((r, i) => (
-                      <div key={i} className="flex items-start gap-4 pb-4 border-b border-gray-100/80 last:border-b-0 last:pb-0">
-                        <div className="w-6 h-6 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
-                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                          </svg>
-                        </div>
-                        <span className="text-sm font-semibold text-gray-700 leading-snug">{r}</span>
+              {/* Repair */}
+              <div className="bg-white border border-emerald-100/50 border-t-4 border-t-emerald-500 rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-emerald-200/20 mb-6">
+                  <svg className="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                  </svg>
+                  A Repair Makes Sense
+                </span>
+                <h3 className="text-xl font-bold text-navy font-display mb-6">Fixing it is the right call when...</h3>
+                <div className="space-y-4">
+                  {repairReasons.map((r, i) => (
+                    <div key={i} className="flex items-start gap-4 pb-4 border-b border-gray-100/80 last:border-b-0 last:pb-0">
+                      <div className="w-6 h-6 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
                       </div>
-                    ))}
-                  </div>
+                      <span className="text-sm font-semibold text-gray-700 leading-snug">{r}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Replace Option Card */}
-              <div className="bg-white border border-amber-100/50 border-t-4 border-t-amber-500 rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
-                <div>
-                  <span className="inline-flex items-center gap-1.5 bg-amber-50 text-amber-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-amber-200/20 mb-6">
-                    <svg className="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.706 9H18.5" />
-                    </svg>
-                    Replace Option
-                  </span>
-                  <h3 className="text-xl font-bold text-navy font-display mb-6">Replacement makes more sense when...</h3>
-                  <div className="space-y-4">
-                    {replaceReasons.map((r, i) => (
-                      <div key={i} className="flex items-start gap-4 pb-4 border-b border-gray-100/80 last:border-b-0 last:pb-0">
-                        <div className="w-6 h-6 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 mt-0.5">
-                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.706 9H18.5" />
-                          </svg>
-                        </div>
-                        <span className="text-sm font-semibold text-gray-700 leading-snug">{r}</span>
+              {/* Replace */}
+              <div className="bg-white border border-amber-100/50 border-t-4 border-t-amber-500 rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <span className="inline-flex items-center gap-1.5 bg-amber-50 text-amber-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-amber-200/20 mb-6">
+                  <svg className="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.706 9H18.5" />
+                  </svg>
+                  An Upgrade Makes Sense
+                </span>
+                <h3 className="text-xl font-bold text-navy font-display mb-6">A new system is the right call when...</h3>
+                <div className="space-y-4">
+                  {replaceReasons.map((r, i) => (
+                    <div key={i} className="flex items-start gap-4 pb-4 border-b border-gray-100/80 last:border-b-0 last:pb-0">
+                      <div className="w-6 h-6 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 mt-0.5">
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.706 9H18.5" />
+                        </svg>
                       </div>
-                    ))}
-                  </div>
+                      <span className="text-sm font-semibold text-gray-700 leading-snug">{r}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
-
             </div>
 
-            {/* Diagnostic CTA Block */}
+            {/* CTA block */}
             <div className="mt-16 max-w-3xl mx-auto bg-gradient-to-r from-navy to-[#00274f] rounded-3xl p-8 md:p-10 text-white relative overflow-hidden shadow-lg border border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
               <div className="absolute -top-16 -right-16 w-36 h-36 rounded-full bg-blue/20 blur-2xl pointer-events-none" />
               <div className="relative z-10 max-w-lg text-left">
-                <h4 className="text-lg font-bold font-display text-white mb-2">Still Not Sure Which Path to Take?</h4>
+                <h4 className="text-lg font-bold font-display text-white mb-2">Not Sure Which Way to Go?</h4>
                 <p className="text-blue-200 text-xs md:text-sm leading-relaxed">
-                  Let our professional technicians run a full diagnostic on your gate motor. We will provide a clear, upfront recommendation on whether to repair or replace before any work begins.
+                  We come out, test the whole system, and give you a straight answer on whether your alarm is worth fixing or due for an upgrade, with the cost laid out before any work starts.
                 </p>
               </div>
               <button
                 onClick={() => setIsQuoteModalOpen(true)}
                 className="relative z-10 bg-white hover:bg-blue-pale text-navy font-bold py-3.5 px-7 rounded-xl text-xs md:text-sm transition-all duration-300 shadow-md whitespace-nowrap cursor-pointer hover:shadow-lg active:scale-95 shrink-0"
               >
-                Book Diagnostic Now
+                Book a Call-Out
               </button>
             </div>
-
           </div>
         </section>
 
-        {/* ── Load Shedding ── */}
+        {/* ── Conditions ── */}
         <section className="py-20 bg-navy text-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-start">
-
               <div>
                 <span className="text-blue-300 text-xs font-bold uppercase tracking-widest block mb-3">South African Conditions</span>
-                <h2 className="text-3xl font-bold font-display mb-5">What Load Shedding Does to Your Gate Motor</h2>
+                <h2 className="text-3xl font-bold font-display mb-5">Why Alarms Act Up Here</h2>
                 <p className="text-blue-200 text-sm leading-relaxed mb-4">
-                  Gate motors in Gauteng deal with conditions most manufacturer guidelines were not written for. Load shedding puts your motor under strain in two specific ways.
+                  An alarm in Gauteng takes a beating that the manuals never planned for. Two things are behind most of the repair calls we get.
                 </p>
                 <p className="text-blue-200 text-sm leading-relaxed mb-4">
-                  Every outage is a deep discharge cycle for the battery. Frequent load shedding burns through those charge cycles far faster than normal use. A battery that might last four years can fail in under two.
+                  Load shedding runs the backup battery flat and charges it again, over and over. All that cycling wears the battery out far faster than normal use, so one that should last years can give up in months.
                 </p>
                 <p className="text-blue-200 text-sm leading-relaxed">
-                  When Eskom restores power, the voltage does not always return cleanly. Those switching surges hit the control board directly if there is no surge protector on the supply line. After enough of them, the board fails.
+                  When the power comes back, the spike can hit the panel and the communicator. Highveld lightning does the same through the line. Without surge protection in place, that is often what kills the system for good.
                 </p>
               </div>
 
               <div className="space-y-4">
-                {loadshedTips.map((t) => (
+                {[
+                  { num: "1", title: "Replace the battery on time", desc: "Swap it before it dies during an outage and leaves the house open for the night." },
+                  { num: "2", title: "Fit surge protection", desc: "A small, cheap step that guards the panel from the spikes that come with storms and power cuts." },
+                  { num: "3", title: "Have the system checked yearly", desc: "We test the zones, the battery, and the signal to armed response so a small fault is caught early." },
+                ].map((t) => (
                   <div key={t.num} className="flex gap-4 items-start bg-white/5 border border-white/10 rounded-xl p-5">
                     <div className="w-9 h-9 rounded-lg bg-blue text-white font-bold text-sm flex items-center justify-center shrink-0">
                       {t.num}
@@ -421,7 +396,6 @@ export default function GateMotorRepairClient() {
                   </div>
                 ))}
               </div>
-
             </div>
           </div>
         </section>
@@ -431,8 +405,8 @@ export default function GateMotorRepairClient() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14 max-w-xl mx-auto">
               <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">Maintenance</span>
-              <h2 className="text-3xl font-bold text-navy font-display mb-3">Keep Your Gate Motor Running Longer</h2>
-              <p className="text-gray-500 text-sm">Six straightforward habits that add years to the life of your motor.</p>
+              <h2 className="text-3xl font-bold text-navy font-display mb-3">Keep Your Alarm Working Right</h2>
+              <p className="text-gray-500 text-sm">Six easy habits that cut down on false alarms and keep the system doing its job.</p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {maintenanceTips.map((t) => (
@@ -455,7 +429,7 @@ export default function GateMotorRepairClient() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-14 max-w-xl mx-auto">
               <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">Why Us</span>
-              <h2 className="text-3xl font-bold text-navy font-display">Why Homeowners in Alberton Call Us First</h2>
+              <h2 className="text-3xl font-bold text-navy font-display">Why Homeowners Call Us First</h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {whyUs.map((w, i) => (
@@ -474,7 +448,7 @@ export default function GateMotorRepairClient() {
           <div className="max-w-3xl mx-auto px-6">
             <div className="text-center mb-12">
               <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">FAQ</span>
-              <h2 className="text-3xl font-bold text-navy font-display">Questions We Hear Most Often</h2>
+              <h2 className="text-3xl font-bold text-navy font-display">Questions About Alarm Repairs</h2>
             </div>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
@@ -507,13 +481,13 @@ export default function GateMotorRepairClient() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-10">
               <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">Also Available</span>
-              <h2 className="text-2xl font-bold text-navy font-display mb-2">Other Services for Your Property</h2>
-              <p className="text-gray-500 text-sm">A lot of our clients ask about these once their gate is sorted.</p>
+              <h2 className="text-2xl font-bold text-navy font-display mb-2">Other Work We Can Do at the Same Time</h2>
+              <p className="text-gray-500 text-sm">A lot of our customers sort the whole property out in one go.</p>
             </div>
             <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
               {[
-                { href: "/electric-fence-repair", title: "Electric Fence Repair", desc: "Fence stopped charging? We fix all brands across Alberton and Johannesburg, often the same day." },
-                { href: "/cctv", title: "CCTV Cameras", desc: "Watch your property from your phone with AHD and IP cameras, day or night." },
+                { href: "/alarm-system-installation", title: "Alarm System Installation", desc: "Past fixing, or want more cover? We fit new alarms with indoor sensors, outdoor beams, and panic buttons." },
+                { href: "/cctv", title: "CCTV Cameras", desc: "Pair your alarm with cameras so you can see what set it off, day or night." },
               ].map((s) => (
                 <Link
                   key={s.href}
@@ -532,15 +506,16 @@ export default function GateMotorRepairClient() {
             </div>
           </div>
         </section>
+
         {/* ── Areas ── */}
-        <AreasServed mode="repair" />
+        <AreasServed mode="general" />
 
         {/* ── Final CTA ── */}
         <section className="py-16 bg-gradient-to-r from-navy to-blue text-white text-center">
           <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">Ready to Get Your Gate Sorted?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">Alarm Giving You Trouble?</h2>
             <p className="text-blue-200 mb-8 max-w-xl mx-auto text-sm md:text-base">
-              Call us or send a WhatsApp and we will confirm a call-out time quickly. We bring the right parts for your motor brand.
+              Call us or send a WhatsApp and we will confirm a call-out time quickly. We bring the right spares for your system and give you the cost before any work starts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

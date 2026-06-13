@@ -14,9 +14,25 @@ const services = [
     title: "Gate Motor Repair",
     description:
       "We fix gate motors fast, whatever the brand. Urgent diagnostic and on-site troubleshooting for Centurion, FAAC, ET, Gemini, and more.",
-    image: "/images/Centurion D10 Installation 260605.jpg",
+    image: "/images/gate-motors/install-hero.jpg",
     href: "/gate-motor-repair",
-    alt: "Gate motor repair",
+    alt: "Centurion gate motors for repair and troubleshooting",
+  },
+  {
+    title: "Alarm System Installation",
+    description:
+      "We fit alarm systems with indoor motion sensors, outdoor beams, and panic buttons, fully linked to your armed response and backed up for load shedding.",
+    image: "/images/alarms/installation-hero.png",
+    href: "/alarm-system-installation",
+    alt: "Ajax alarm system keypad installation",
+  },
+  {
+    title: "Alarm System Repair",
+    description:
+      "Keypad beeping or alarm triggering for no reason? We diagnose false alarms, swap dead backup batteries, and repair sensors on all major brands.",
+    image: "/images/alarms/repair-hero.png",
+    href: "/alarm-system-repair",
+    alt: "Paradox alarm system repair and troubleshooting",
   },
   {
     title: "Electric Fence Installation",
@@ -43,12 +59,20 @@ const services = [
     alt: "CCTV security camera",
   },
   {
-    title: "Garage Doors & Motors",
+    title: "Garage Door Installation",
     description:
-      "Professional installation, repair, and automation for garage doors of every kind. Get your door running smoothly.",
+      "We automate manual doors and fit new Centurion and ET motors on sectional, roll-up, and tip-up doors, with battery backup.",
     image: "/images/garage-door.jpg",
-    href: "/garage-doors-motors",
-    alt: "Garage door motor",
+    href: "/garage-door-installation",
+    alt: "Garage door motor installation",
+  },
+  {
+    title: "Garage Door Repair",
+    description:
+      "Door jamming, dropping, or refusing to lift? We fix broken springs, frayed cables, and dead motors on all brands, often same day.",
+    image: "/images/garage-doors/repair-hero.png",
+    href: "/garage-door-repair",
+    alt: "Garage door repair on a Centurion motor",
   },
 ];
 
