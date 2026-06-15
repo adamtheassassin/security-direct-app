@@ -61,6 +61,13 @@ const navLinks: NavLink[] = [
       { label: "Randhart", href: "/areas/randhart" },
       { label: "Verwoerdpark", href: "/areas/verwoerdpark" },
       { label: "Mayberry Park", href: "/areas/mayberry-park" },
+      { label: "Glenvista", href: "/areas/glenvista" },
+      { label: "Bassonia", href: "/areas/bassonia" },
+      { label: "Mulbarton", href: "/areas/mulbarton" },
+      { label: "Kibler Park", href: "/areas/kibler-park" },
+      { label: "Germiston", href: "/areas/germiston" },
+      { label: "Mondeor", href: "/areas/mondeor" },
+      { label: "Winchester Hills", href: "/areas/winchester-hills" },
     ],
   },
 ];
@@ -104,7 +111,7 @@ export default function Header() {
                           </svg>
                         </button>
                         {/* Dropdown Menu */}
-                        <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-xl py-2 border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+                        <div className="absolute top-full left-0 mt-1 w-56 max-h-[75vh] overflow-y-auto bg-white rounded-lg shadow-xl py-2 border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
                           {link.subLinks.map((sub) => (
                             <Link
                               key={sub.href}

@@ -510,8 +510,9 @@ export default function GateMotorRepairClient() {
               <h2 className="text-2xl font-bold text-navy font-display mb-2">Other Services for Your Property</h2>
               <p className="text-gray-500 text-sm">A lot of our clients ask about these once their gate is sorted.</p>
             </div>
-            <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
               {[
+                { href: "/garage-door-repair", title: "Garage Door Repair", desc: "Garage door jamming or refusing to lift? We fix springs, cables, and motors on all brands, often the same day." },
                 { href: "/electric-fence-repair", title: "Electric Fence Repair", desc: "Fence stopped charging? We fix all brands across Alberton and Johannesburg, often the same day." },
                 { href: "/cctv", title: "CCTV Cameras", desc: "Watch your property from your phone with AHD and IP cameras, day or night." },
               ].map((s) => (

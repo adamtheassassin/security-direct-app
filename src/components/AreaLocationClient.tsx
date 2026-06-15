@@ -7,6 +7,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import QuoteModal from "./QuoteModal";
 import { areaPages } from "@/data/areaPages";
+import { NAP, addressLine, buildBusinessJsonLd } from "@/lib/nap";
 
 // Structural catalogue for the service cards. The title, link and icon stay the
 // same, but the description is pulled per suburb from area.serviceBlurbs so no two
@@ -44,7 +45,7 @@ const serviceCatalog: { id: string; title: string; href: string; icon: string; f
   {
     id: "garage",
     title: "Garage Doors",
-    href: "/garage-door-installation",
+    href: "/garage-door-repair",
     fallback: "Garage door motors fitted and repaired so the whole house opens at the press of a button.",
     icon: "M4 21V9l8-4 8 4v12M4 21h16M8 21v-5h8v5M8 13h8",
   },
@@ -66,7 +67,7 @@ const serviceCatalog: { id: string; title: string; href: string; icon: string; f
 
 const trustItems = [
   { label: "Same-Day Call-Outs", icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" },
-  { label: "Local to Alberton", icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" },
+  { label: "Alberton-Based Team", icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" },
   { label: "Quote Before Work", icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" },
   { label: "Power-Cut Backup", icon: "M13 10V3L4 14h7v7l9-11h-7z" },
 ];
@@ -78,30 +79,25 @@ export default function AreaLocationClient({ slug }: { slug: string }) {
 
   const toggleFaq = (i: number) => setActiveFaq(activeFaq === i ? null : i);
 
+  // Region-aware labels so JHB South & East pages don't read as "Alberton".
+  const localityLabel = area.localityLabel ?? "Alberton";
+  const region = area.region ?? "alberton";
+  const serviceCity = region === "jhb" ? "Johannesburg" : "Alberton";
+
   const nearbyAreas = area.nearby
     .map((s) => areaPages[s])
     .filter(Boolean);
 
   // LocalBusiness schema with areaServed so Google ties us to this suburb.
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    name: "Security Direct",
+  // NAP comes from the shared source of truth so it always matches the GBP.
+  const jsonLd = buildBusinessJsonLd({
+    url: `${NAP.url}/areas/${area.slug}`,
     description: area.metaDescription,
-    telephone: "+27824981272",
-    email: "securitydirect2@gmail.com",
-    url: `https://securitydirect.co.za/areas/${area.slug}`,
     areaServed: [
       { "@type": "City", name: area.name },
-      { "@type": "City", name: "Alberton" },
+      { "@type": "City", name: serviceCity },
     ],
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Alberton",
-      addressRegion: "Gauteng",
-      addressCountry: "ZA",
-    },
-  };
+  });
 
   return (
     <>
@@ -182,7 +178,7 @@ export default function AreaLocationClient({ slug }: { slug: string }) {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-3">
-                  {area.name}, Alberton
+                  {area.name}, {localityLabel}
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold text-navy font-display mb-6 leading-tight">
                   {area.intro.heading}
@@ -291,12 +287,17 @@ export default function AreaLocationClient({ slug }: { slug: string }) {
                 <div className="mt-8 bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
                   <h3 className="font-bold text-navy font-display text-sm mb-3">Security Direct</h3>
                   <ul className="space-y-2.5 text-sm text-gray-600">
-                    <li className="flex items-center gap-3">
-                      <svg className="w-4 h-4 text-blue shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <li className="flex items-start gap-3">
+                      <svg className="w-4 h-4 text-blue shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
-                      Serving {area.name} and all of Alberton
+                      <span>
+                        {addressLine}
+                        <span className="block text-gray-400">
+                          Serving {area.name} and the surrounding {localityLabel} area
+                        </span>
+                      </span>
                     </li>
                     <li>
                       <a href="tel:0824981272" className="flex items-center gap-3 hover:text-blue transition-colors">
@@ -376,7 +377,7 @@ export default function AreaLocationClient({ slug }: { slug: string }) {
               <span className="text-blue text-xs font-bold uppercase tracking-widest block mb-2">Nearby</span>
               <h2 className="text-2xl font-bold text-navy font-display mb-2">Other Areas We Serve</h2>
               <p className="text-gray-500 text-sm">
-                We look after these suburbs right next to {area.name} as well.
+                We look after these suburbs near {area.name} as well.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">

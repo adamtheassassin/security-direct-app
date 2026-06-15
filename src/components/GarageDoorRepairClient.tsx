@@ -167,7 +167,7 @@ export default function GarageDoorRepairClient() {
         <section className="relative bg-navy py-20 md:py-32 overflow-hidden text-white">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/garage-doors/repair-hero.png"
+              src="/images/garage-doors/repair-hero-white-tech.png"
               alt="Centurion garage door motor installed on a garage ceiling during a repair job"
               fill
               className="object-cover opacity-45"

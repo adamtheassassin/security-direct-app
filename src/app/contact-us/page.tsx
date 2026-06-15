@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Header from "@/components/Header";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import { buildBusinessJsonLd } from "@/lib/nap";
 
 export const metadata: Metadata = {
   title: "Contact Us | Security Direct | Gate Motors & Electric Fencing Alberton",
@@ -14,6 +15,14 @@ export const metadata: Metadata = {
 export default function ContactUsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildBusinessJsonLd({ url: "https://securitydirect.co.za/contact-us" })
+          ),
+        }}
+      />
       <Header />
       <main className="flex-grow pt-16">
         <ContactSection />

@@ -7,12 +7,17 @@ import { areaPages, areaSlugs } from "@/data/areaPages";
 
 export const metadata: Metadata = {
   title:
-    "Areas We Serve in Alberton | Gate Motors, Electric Fencing & Security | Security Direct",
+    "Areas We Serve | Gate Motors, Electric Fencing & Security Across Alberton & Johannesburg South | Security Direct",
   description:
-    "Security Direct fits and repairs gate motors, electric fencing, CCTV and alarms across Alberton. See the suburbs we cover and get a free quote. Call 082 498 1272.",
+    "Security Direct fits and repairs gate motors, electric fencing, CCTV and alarms across Alberton and Johannesburg South. See the suburbs we cover and get a free quote. Call 082 498 1272.",
   keywords:
-    "gate motor Alberton, electric fence Alberton, security Alberton, areas served Alberton, gate motor repair near me",
+    "gate motor Alberton, gate motor Johannesburg South, electric fence Alberton, security Johannesburg South, areas served, gate motor repair near me",
 };
+
+const regionGroups: { region: "alberton" | "jhb"; label: string }[] = [
+  { region: "alberton", label: "Alberton & Surrounds" },
+  { region: "jhb", label: "Johannesburg South & East" },
+];
 
 export default function AreasHubPage() {
   const areas = areaSlugs.map((s) => areaPages[s]);
@@ -40,11 +45,12 @@ export default function AreasHubPage() {
               Areas We Serve
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 font-display max-w-3xl">
-              The Alberton Suburbs We Cover
+              The Suburbs We Cover
             </h1>
             <p className="text-lg text-blue-200 max-w-xl leading-relaxed mx-auto md:mx-0">
               We fit and repair gate motors, electric fencing, CCTV and alarms right across
-              Alberton. Pick your suburb to see how we help and get a free quote.
+              Alberton and Johannesburg South. Pick your suburb to see how we help and get a
+              free quote.
             </p>
           </div>
         </section>
@@ -52,41 +58,55 @@ export default function AreasHubPage() {
         {/* ── Area Grid ── */}
         <section className="py-20 bg-[#f8f7f4]">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {areas.map((area) => (
-                <Link
-                  key={area.slug}
-                  href={`/areas/${area.slug}`}
-                  className="group bg-white border border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1"
-                >
-                  <div className="relative aspect-[4/3] w-full overflow-hidden">
-                    <Image
-                      src={area.image}
-                      alt={`Gate motors and security in ${area.name}, Alberton`}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 1024px) 100vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent" />
-                    <h2 className="absolute bottom-4 left-5 text-white text-xl font-bold font-display">
-                      {area.name}
-                    </h2>
+            {regionGroups.map((group) => {
+              const groupAreas = areas.filter(
+                (a) => (a.region ?? "alberton") === group.region
+              );
+              if (groupAreas.length === 0) return null;
+              return (
+                <div key={group.region} className="mb-16 last:mb-0">
+                  <h2 className="text-2xl font-bold text-navy font-display mb-8 flex items-center gap-3">
+                    <span className="w-8 h-1 bg-blue rounded-full" />
+                    {group.label}
+                  </h2>
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {groupAreas.map((area) => (
+                      <Link
+                        key={area.slug}
+                        href={`/areas/${area.slug}`}
+                        className="group bg-white border border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1"
+                      >
+                        <div className="relative aspect-[4/3] w-full overflow-hidden">
+                          <Image
+                            src={area.image}
+                            alt={`Gate motors and security in ${area.name}, ${area.localityLabel ?? "Alberton"}`}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                            sizes="(max-width: 1024px) 100vw, 33vw"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent" />
+                          <h3 className="absolute bottom-4 left-5 text-white text-xl font-bold font-display">
+                            {area.name}
+                          </h3>
+                        </div>
+                        <div className="p-6">
+                          <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                            Gate motors, electric fencing, garage doors, CCTV and alarms for
+                            homes and businesses around {area.name}.
+                          </p>
+                          <span className="text-blue font-semibold text-sm flex items-center gap-1.5">
+                            See {area.name}
+                            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </span>
+                        </div>
+                      </Link>
+                    ))}
                   </div>
-                  <div className="p-6">
-                    <p className="text-gray-500 text-sm leading-relaxed mb-4">
-                      Gate motors, electric fencing, garage doors, CCTV and alarms for homes
-                      and businesses around {area.name}.
-                    </p>
-                    <span className="text-blue font-semibold text-sm flex items-center gap-1.5">
-                      See {area.name}
-                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </div>
+                </div>
+              );
+            })}
 
             <p className="text-gray-400 text-sm italic text-center mt-12">
               Don&apos;t see your suburb? We cover most of Alberton and Johannesburg South.{" "}

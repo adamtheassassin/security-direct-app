@@ -25,6 +25,25 @@ export default function ContactSection() {
 
             {/* Contact Cards */}
             <div className="space-y-4 mb-8">
+              {/* Address Card */}
+              <a
+                href="https://www.google.com/maps?q=33+Waboom+St,+Alberton,+1449"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 rounded-2xl border border-gray-100 bg-[#f8f7f4] hover:border-blue/30 hover:shadow-sm transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-xl bg-blue text-white flex items-center justify-center shrink-0">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <span className="text-xs text-gray-400 block font-semibold uppercase tracking-wider">Visit Us</span>
+                  <span className="font-bold text-navy text-base">33 Waboom St, Alberton, Gauteng, 1449</span>
+                </div>
+              </a>
+
               {/* Phone Card */}
               <a
                 href="tel:0824981272"

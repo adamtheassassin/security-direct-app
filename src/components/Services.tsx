@@ -70,7 +70,7 @@ const services = [
     title: "Garage Door Repair",
     description:
       "Door jamming, dropping, or refusing to lift? We fix broken springs, frayed cables, and dead motors on all brands, often same day.",
-    image: "/images/garage-doors/repair-hero.png",
+    image: "/images/garage-doors/repair-hero-white-tech.png",
     href: "/garage-door-repair",
     alt: "Garage door repair on a Centurion motor",
   },
