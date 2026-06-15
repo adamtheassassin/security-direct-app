@@ -19,6 +19,7 @@ const services = [
   "CCTV System Repair & Maintenance",
   "Garage Door Repair / Installation",
   "Garage Door Motor Automation",
+  "Other",
 ];
 
 export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
@@ -68,17 +69,48 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
     return Object.keys(tempErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
 
     setIsSubmitting(true);
+    
+    // Clear any previous submit error
+    if (errors.submit) {
+      const { submit, ...rest } = errors;
+      setErrors(rest);
+    }
 
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch("https://hook.eu2.make.com/bgx65kb3frkp2ngel6tr4tbvzdgb3q8c", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name.trim(),
+          phone: phone.trim(),
+          email: email.trim(),
+          service: selectedService,
+          message: message.trim(),
+          submittedAt: new Date().toISOString(),
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
       setSubmitSuccess(true);
-    }, 1200);
+    } catch (err) {
+      console.error("Submission error:", err);
+      setErrors((prev) => ({
+        ...prev,
+        submit: "Something went wrong. Please try again or call us direct.",
+      }));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const resetForm = () => {
@@ -285,6 +317,11 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
 
               {/* Submit Button */}
               <div className="pt-2">
+                {errors.submit && (
+                  <p className="text-red-500 text-sm text-center mb-3 font-medium">
+                    {errors.submit}
+                  </p>
+                )}
                 <button
                   type="submit"
                   disabled={isSubmitting}
