@@ -61,7 +61,9 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
       tempErrors.phone = "Please enter a valid phone number";
     }
     if (!selectedService) tempErrors.service = "Please select a service";
-    if (email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+    if (!email.trim()) {
+      tempErrors.email = "Email address is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
       tempErrors.email = "Please enter a valid email address";
     }
 
@@ -239,7 +241,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                 {/* Email */}
                 <div>
                   <label className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1.5">
-                    Email Address <span className="text-gray-400">(Optional)</span>
+                    Email Address <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
