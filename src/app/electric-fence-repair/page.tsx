@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import ElectricFenceRepairClient from "@/components/ElectricFenceRepairClient";
 
+import { buildBusinessJsonLd } from "@/lib/nap";
+
 export const metadata: Metadata = {
   title: "Electric Fence Repair in Alberton & Johannesburg | All Brands, Same-Day Fault-Finding | Security Direct",
   description:
@@ -13,5 +15,18 @@ export const metadata: Metadata = {
 };
 
 export default function ElectricFenceRepairPage() {
-  return <ElectricFenceRepairClient />;
+  const jsonLd = buildBusinessJsonLd({
+    url: "https://securitydirect.co.za/electric-fence-repair",
+    description: "Same-day electric fence repair services in Alberton and Johannesburg. We troubleshoot dead energizers, broken strands, flat batteries, and false alarms on Nemtek and other brands.",
+  });
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ElectricFenceRepairClient />
+    </>
+  );
 }

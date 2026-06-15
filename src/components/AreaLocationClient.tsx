@@ -93,10 +93,7 @@ export default function AreaLocationClient({ slug }: { slug: string }) {
   const jsonLd = buildBusinessJsonLd({
     url: `${NAP.url}/areas/${area.slug}`,
     description: area.metaDescription,
-    areaServed: [
-      { "@type": "City", name: area.name },
-      { "@type": "City", name: serviceCity },
-    ],
+    suburbSlug: area.slug,
   });
 
   return (

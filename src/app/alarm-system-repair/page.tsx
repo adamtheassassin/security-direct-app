@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import AlarmRepairClient from "@/components/AlarmRepairClient";
 
+import { buildBusinessJsonLd } from "@/lib/nap";
+
 export const metadata: Metadata = {
   title: "Alarm System Repair in Alberton & Johannesburg | All Brands, False Alarms & Faults Fixed | Security Direct",
   description:
@@ -13,5 +15,18 @@ export const metadata: Metadata = {
 };
 
 export default function AlarmRepairPage() {
-  return <AlarmRepairClient />;
+  const jsonLd = buildBusinessJsonLd({
+    url: "https://securitydirect.co.za/alarm-system-repair",
+    description: "Same-day home and business alarm system repair services in Alberton and Johannesburg. We resolve false alarms, flat batteries, and sensor faults. Call 082 498 1272.",
+  });
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <AlarmRepairClient />
+    </>
+  );
 }

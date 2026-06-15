@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import ElectricFenceInstallationClient from "@/components/ElectricFenceInstallationClient";
 
+import { buildBusinessJsonLd } from "@/lib/nap";
+
 export const metadata: Metadata = {
   title: "Electric Fence Installation in Alberton & Johannesburg | 6 to 12 Strand, SABS COC, Nemtek | Security Direct",
   description:
@@ -13,5 +15,18 @@ export const metadata: Metadata = {
 };
 
 export default function ElectricFenceInstallationPage() {
-  return <ElectricFenceInstallationClient />;
+  const jsonLd = buildBusinessJsonLd({
+    url: "https://securitydirect.co.za/electric-fence-installation",
+    description: "Certified electric fence installations in Alberton and Johannesburg. We fit 6 to 12-strand wall-top fences, Nemtek energizers, and issue SABS COC certificates. Call 082 498 1272.",
+  });
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ElectricFenceInstallationClient />
+    </>
+  );
 }

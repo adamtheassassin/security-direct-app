@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import GarageDoorRepairClient from "@/components/GarageDoorRepairClient";
 
+import { buildBusinessJsonLd } from "@/lib/nap";
+
 export const metadata: Metadata = {
   title: "Garage Door Repair in Alberton & Johannesburg | Springs, Cables & Motors, All Brands | Security Direct",
   description:
@@ -13,5 +15,18 @@ export const metadata: Metadata = {
 };
 
 export default function GarageDoorRepairPage() {
-  return <GarageDoorRepairClient />;
+  const jsonLd = buildBusinessJsonLd({
+    url: "https://securitydirect.co.za/garage-door-repair",
+    description: "Expert garage door repairs in Alberton and Johannesburg. We replace broken springs, frayed cables, fix tracks, and repair motors same-day. Upfront quotes.",
+  });
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <GarageDoorRepairClient />
+    </>
+  );
 }

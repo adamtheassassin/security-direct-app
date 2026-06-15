@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import GateMotorInstallationClient from "@/components/GateMotorInstallationClient";
 
+import { buildBusinessJsonLd } from "@/lib/nap";
+
 export const metadata: Metadata = {
   title: "Gate Motor Installation in Alberton & Johannesburg | Centurion from R6 600 Installed",
   description:
@@ -13,5 +15,18 @@ export const metadata: Metadata = {
 };
 
 export default function GateMotorInstallationPage() {
-  return <GateMotorInstallationClient />;
+  const jsonLd = buildBusinessJsonLd({
+    url: "https://securitydirect.co.za/gate-motor-installation",
+    description: "Get professional Centurion gate motor installations in Alberton and Johannesburg. Prices from R6 600 installed. Backup battery and anti-theft bracket included. Call 082 498 1272.",
+  });
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <GateMotorInstallationClient />
+    </>
+  );
 }

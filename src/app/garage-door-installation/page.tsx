@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import GarageDoorInstallationClient from "@/components/GarageDoorInstallationClient";
 
+import { buildBusinessJsonLd } from "@/lib/nap";
+
 export const metadata: Metadata = {
   title: "Garage Door Installation & Automation in Alberton & Johannesburg | Centurion & ET, Battery Backup | Security Direct",
   description:
@@ -13,5 +15,18 @@ export const metadata: Metadata = {
 };
 
 export default function GarageDoorInstallationPage() {
-  return <GarageDoorInstallationClient />;
+  const jsonLd = buildBusinessJsonLd({
+    url: "https://securitydirect.co.za/garage-door-installation",
+    description: "Professional garage door motor installation and automation services in Alberton and Johannesburg. Sized and fitted for sectional, roll-up, and tip-up doors with backup battery. Call 082 498 1272.",
+  });
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <GarageDoorInstallationClient />
+    </>
+  );
 }

@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import CCTVClient from "@/components/CCTVClient";
 
+import { buildBusinessJsonLd } from "@/lib/nap";
+
 export const metadata: Metadata = {
   title: "CCTV Installation & Repair in Alberton & Johannesburg | AHD & IP Cameras, View on Your Phone | Security Direct",
   description:
@@ -13,5 +15,18 @@ export const metadata: Metadata = {
 };
 
 export default function CCTVPage() {
-  return <CCTVClient />;
+  const jsonLd = buildBusinessJsonLd({
+    url: "https://securitydirect.co.za/cctv",
+    description: "CCTV camera installation and repair services in Alberton and Johannesburg. High-definition AHD and IP systems from Provision-ISR, featuring night vision and mobile app viewing.",
+  });
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <CCTVClient />
+    </>
+  );
 }

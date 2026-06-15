@@ -4,6 +4,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { areaPages, areaSlugs } from "@/data/areaPages";
+import { buildBusinessJsonLd } from "@/lib/nap";
 
 export const metadata: Metadata = {
   title:
@@ -24,9 +25,14 @@ const regionGroups: { region: "alberton" | "jhb"; label: string }[] = [
 
 export default function AreasHubPage() {
   const areas = areaSlugs.map((s) => areaPages[s]);
+  const jsonLd = buildBusinessJsonLd({ url: "https://securitydirect.co.za/areas" });
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       <main className="flex-grow pt-16">
