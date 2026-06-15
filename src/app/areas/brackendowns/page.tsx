@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: data.metaTitle,
   description: data.metaDescription,
   keywords: data.keywords,
+  alternates: {
+    canonical: "/areas/brackendowns",
+  },
 };
 
 export default function BrackendownsPage() {

@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     "Security Direct fits and repairs gate motors, electric fencing, CCTV and alarms across Alberton and Johannesburg South. See the suburbs we cover and get a free quote. Call 082 498 1272.",
   keywords:
     "gate motor Alberton, gate motor Johannesburg South, electric fence Alberton, security Johannesburg South, areas served, gate motor repair near me",
+  alternates: {
+    canonical: "/areas",
+  },
 };
 
 const regionGroups: { region: "alberton" | "jhb"; label: string }[] = [

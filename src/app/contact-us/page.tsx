@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     "Get in touch with Security Direct. Call 082 498 1272 or WhatsApp us for gate motor installation, repairs, electric fencing, and CCTV in Alberton and Johannesburg.",
   keywords:
     "contact security direct, gate motor repair contact, electric fence installer phone, Security Direct Alberton contact",
+  alternates: {
+    canonical: "/contact-us",
+  },
 };
 
 export default function ContactUsPage() {

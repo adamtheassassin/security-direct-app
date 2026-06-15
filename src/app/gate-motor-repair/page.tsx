@@ -7,6 +7,9 @@ export const metadata: Metadata = {
     "We repair all gate motor brands across Alberton and Johannesburg. Same-day call-outs, a full diagnostic on arrival, and a clear quote before any work starts. Call 082 498 1272.",
   keywords:
     "gate motor repair, gate motor repair near me, gate motor repair Alberton, gate motor repair Johannesburg, CENTURION repair, ET Systems repair, same day gate motor repair",
+  alternates: {
+    canonical: "/gate-motor-repair",
+  },
 };
 
 export default function GateMotorRepairPage() {
