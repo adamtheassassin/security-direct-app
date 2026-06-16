@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 interface SubLink {
@@ -75,6 +75,17 @@ const navLinks: NavLink[] = [
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openMobileMenu, setOpenMobileMenu] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -187,7 +198,10 @@ export default function Header() {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div style={{ backgroundColor: "#001d3b" }} className="lg:hidden border-t border-white/10">
+          <div
+            style={{ backgroundColor: "#001d3b" }}
+            className="lg:hidden border-t border-white/10 max-h-[calc(100vh-4rem)] overflow-y-auto"
+          >
             <ul className="py-2 px-4 divide-y divide-white/5">
               {navLinks.map((link) => {
                 if (link.subLinks) {

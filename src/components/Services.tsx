@@ -98,7 +98,7 @@ export default function Services() {
           </h2>
           <p className="text-gray-500 max-w-xl mx-auto">
             Professional installations, repairs, and maintenance across
-            Alberton and the whole of Johannesburg.
+            Alberton, Johannesburg and surrounding areas.
           </p>
         </div>
 

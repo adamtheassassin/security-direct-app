@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import QuoteModal from "./QuoteModal";
 
 // ── CUSTOM SVG ICON COMPONENTS FOR LOCAL LANDMARKS (FOR SMALL GRID TABS) ──
@@ -443,33 +444,64 @@ export default function AreasServed({
               {visibleSuburbs.map((suburb) => {
                 const isSelected = suburb.id === selectedAreaId;
                 return (
-                  <button
+                  <div
                     key={suburb.id}
-                    onClick={() => setSelectedAreaId(suburb.id)}
-                    className={`flex items-center gap-3.5 p-4 rounded-xl border text-left w-full transition-all duration-300 cursor-pointer ${
+                    className={`relative flex items-center justify-between p-4 rounded-xl border text-left w-full transition-all duration-300 group ${
                       isSelected
                         ? "bg-white border-blue shadow-md ring-2 ring-blue/10"
                         : "bg-white border-gray-100 hover:border-blue/30 hover:shadow-sm"
                     }`}
                   >
-                    {/* Small Icon Container */}
-                    <div
-                      className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${
-                        isSelected
-                          ? "bg-blue text-white"
-                          : "bg-gray-50 text-gray-400 group-hover:text-blue"
-                      }`}
-                    >
-                      {suburb.icon({ className: "w-5 h-5" })}
-                    </div>
+                    {/* Mobile Link Overlay */}
+                    <Link
+                      href={`/areas/${suburb.id}`}
+                      className="absolute inset-0 z-10 md:hidden rounded-xl"
+                    />
 
-                    {/* Suburb Name Only (Landmark subtext removed) */}
-                    <div>
-                      <span className="font-bold text-sm text-navy block leading-tight">
-                        {suburb.name}
+                    {/* Suburb Selection Button (Desktop/Tablet) */}
+                    <button
+                      onClick={() => setSelectedAreaId(suburb.id)}
+                      className="flex items-center gap-3.5 text-left flex-1 cursor-pointer focus:outline-none relative z-20"
+                    >
+                      {/* Small Icon Container */}
+                      <div
+                        className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${
+                          isSelected
+                            ? "bg-blue text-white"
+                            : "bg-gray-50 text-gray-400 group-hover:text-blue"
+                        }`}
+                      >
+                        {suburb.icon({ className: "w-5 h-5" })}
+                      </div>
+
+                      {/* Suburb Name Only */}
+                      <div>
+                        <span className="font-bold text-sm text-navy block leading-tight">
+                          {suburb.name}
+                        </span>
+                      </div>
+                    </button>
+
+                    {/* Go to Area Page Link (Desktop) */}
+                    <Link
+                      href={`/areas/${suburb.id}`}
+                      className="relative z-20 flex items-center gap-2 group/arrow shrink-0 ml-2"
+                    >
+                      <span className="text-[10px] text-blue font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-1 group-hover:translate-x-0 hidden md:inline whitespace-nowrap">
+                        View Page
                       </span>
-                    </div>
-                  </button>
+                      <div className="w-8 h-8 rounded-full bg-navy group-hover/arrow:bg-blue text-white flex items-center justify-center transition-all duration-300 shadow-sm">
+                        <svg
+                          className="w-4 h-4 transform group-hover/arrow:translate-x-0.5 transition-transform"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                    </Link>
+                  </div>
                 );
               })}
             </div>

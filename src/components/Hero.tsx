@@ -34,7 +34,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-base md:text-lg text-white/90 max-w-3xl mx-auto mb-0 md:mb-8 leading-relaxed order-3 md:order-2">
-          When your gate stops opening or you want your home better protected, you want someone reliable who actually shows up. We install and repair gate motors, put up electric fencing, fit CCTV, and sort out garage doors across Alberton and the whole of Johannesburg. We have been doing this since 2008, so you are dealing with people who have seen just about every gate and fence problem there is.
+          When your gate stops opening or you want your home better protected, you want someone reliable who actually shows up. We install and repair gate motors, put up electric fencing, fit CCTV, and sort out garage doors across Alberton, Johannesburg and surrounding areas. We have been doing this since 2008, so you are dealing with people who have seen just about every gate and fence problem there is.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 md:mb-0 order-2 md:order-3 w-full sm:w-auto items-center">
