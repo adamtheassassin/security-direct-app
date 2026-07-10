@@ -5,11 +5,11 @@ import Footer from "@/components/Footer";
 import { buildBusinessJsonLd } from "@/lib/nap";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Security Direct | Gate Motors & Electric Fencing Alberton",
+  title: "Contact Us | Security Direct Gate Motor Repair and Garage Door Repair",
   description:
-    "Get in touch with Security Direct. Call 082 498 1272 or WhatsApp us for gate motor installation, repairs, electric fencing, and CCTV in Alberton and Johannesburg.",
+    "Get in touch with Security Direct Gate Motor Repair and Garage Door Repair. Call 082 498 1272 or WhatsApp us for gate motor installation, repairs, electric fencing, and CCTV in Alberton and Johannesburg.",
   keywords:
-    "contact security direct, gate motor repair contact, electric fence installer phone, Security Direct Alberton contact",
+    "contact security direct, gate motor repair contact, garage door repair contact, Security Direct Gate Motor Repair and Garage Door Repair",
   alternates: {
     canonical: "/contact-us",
   },

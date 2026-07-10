@@ -300,13 +300,7 @@ export function buildBusinessJsonLd(options: JsonLdOptions = {}) {
           "https://schema.org/Friday",
         ],
         opens: "07:00",
-        closes: "17:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["https://schema.org/Saturday"],
-        opens: "08:00",
-        closes: "13:00",
+        closes: "19:00",
       },
     ],
     aggregateRating: {

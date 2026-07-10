@@ -16,8 +16,8 @@ export default function ContactSection() {
             <span className="bg-blue-pale text-blue font-bold tracking-widest text-xs uppercase px-3.5 py-1.5 rounded-full w-fit mb-4 inline-block">
               Contact Us
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-navy mb-4 leading-tight">
-              Get in Touch with <span className="text-blue">Security Direct</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-navy mb-6 leading-tight">
+              Get in Touch with <span className="text-blue">Security Direct Gate Motor Repair and Garage Door Repair</span>
             </h2>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-8">
               Whether you need an urgent gate motor repair, a brand new electric fence installation, or just have a question, our team is ready to help. Reach out via phone, WhatsApp, email, or request a free quote below.
@@ -101,11 +101,11 @@ export default function ContactSection() {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex justify-between border-b border-gray-200/50 pb-2">
                   <span>Monday - Friday</span>
-                  <span className="font-semibold text-navy">07:00 - 17:00</span>
+                  <span className="font-semibold text-navy">07:00 - 19:00</span>
                 </li>
                 <li className="flex justify-between border-b border-gray-200/50 pb-2">
                   <span>Saturday</span>
-                  <span className="font-semibold text-navy">08:00 - 13:00</span>
+                  <span className="font-semibold text-red-600">Closed</span>
                 </li>
                 <li className="flex justify-between pb-1">
                   <span>Sunday &amp; Public Holidays</span>
