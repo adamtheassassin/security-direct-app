@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -22,18 +23,17 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
-            <h3
-              style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}
-              className="text-xl font-semibold mb-1"
-            >
-              Security Direct
-            </h3>
-            <p className="text-blue-300 text-xs uppercase tracking-widest mb-4">
-              Electric Fence &amp; Gate Motors
-            </p>
+            <Link href="/" className="inline-block mb-4 bg-white px-5 py-2.5 rounded-2xl shadow-md transition-transform hover:scale-[1.02]">
+              <Image
+                src="/images/security direct logo.png"
+                alt="Security Direct Logo"
+                width={900}
+                height={300}
+                className="h-16 w-auto object-contain"
+              />
+            </Link>
             <p className="text-blue-200 text-sm leading-relaxed mb-5">
-              Certified installers of gate motors, electric fencing, CCTV, and
-              garage door motors. Serving Alberton and Johannesburg since 2008.
+              <strong>Security Direct Gate Motor Repair and Garage Door Repair</strong> is a certified installer of gate motors, electric fencing, CCTV, and garage door motors. Serving Alberton and Johannesburg since 2008.
             </p>
             <a
               href="https://www.facebook.com/gatemotors123"
@@ -154,7 +154,7 @@ export default function Footer() {
       >
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-blue-400 text-xs">
-            &copy; {new Date().getFullYear()} Security Direct. All rights reserved.
+            &copy; {new Date().getFullYear()} Security Direct Gate Motor Repair and Garage Door Repair. All rights reserved.
             Serving Alberton &amp; Johannesburg since 2008.
           </p>
         </div>

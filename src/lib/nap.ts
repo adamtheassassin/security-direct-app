@@ -1,12 +1,12 @@
 // Single source of truth for NAP (Name, Address, Phone).
 // Must match the Google Business Profile exactly for local SEO consistency.
-// GBP: "Security direct - Gate motors and electric fence specialists est 2008"
+// GBP: "Security Direct Gate Motor Repair and Garage Door Repair"
 //      33 Waboom St, Alberton, Johannesburg, 1449 — 082 498 1272
 
 export const NAP = {
   // Exact Google Business Profile name — used for schema/citations so the
   // entity matches the GBP. Do not "tidy" the casing; it must match verbatim.
-  name: "Security direct - Gate motors and electric fence specialists est 2008",
+  name: "Security Direct Gate Motor Repair and Garage Door Repair",
   // Short brand label for visible UI / headings only.
   displayName: "Security Direct",
   streetAddress: "33 Waboom St",

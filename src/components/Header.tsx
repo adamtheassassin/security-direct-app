@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface SubLink {
   label: string;
@@ -94,16 +95,15 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link href="/" className="flex flex-col leading-tight shrink-0">
-              <span
-                style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}
-                className="text-white text-lg xl:text-xl font-semibold tracking-wide whitespace-nowrap"
-              >
-                Security Direct
-              </span>
-              <span className="text-blue-200 text-[10px] xl:text-xs font-medium tracking-widest uppercase whitespace-nowrap">
-                Electric Fence &amp; Gate Motors
-              </span>
+            <Link href="/" className="flex items-center shrink-0 bg-white px-3 py-1.5 rounded-xl shadow-md transition-transform hover:scale-[1.02]">
+              <Image
+                src="/images/security direct logo.png"
+                alt="Security Direct Logo"
+                width={900}
+                height={100}
+                className="h-10 w-auto object-contain"
+                priority
+              />
             </Link>
 
             {/* Desktop nav & Contact options */}
@@ -214,9 +214,8 @@ export default function Header() {
                       >
                         <span>{link.label}</span>
                         <svg
-                          className={`w-4 h-4 transform transition-transform duration-200 ${
-                            isOpen ? "rotate-180" : ""
-                          }`}
+                          className={`w-4 h-4 transform transition-transform duration-200 ${isOpen ? "rotate-180" : ""
+                            }`}
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -255,7 +254,7 @@ export default function Header() {
                   </li>
                 );
               })}
-              
+
               {/* Mobile CTA section */}
               <li className="py-4 flex flex-col gap-3">
                 <a

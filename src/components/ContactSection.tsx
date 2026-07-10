@@ -130,7 +130,7 @@ export default function ContactSection() {
             <div className="rounded-3xl overflow-hidden shadow-xl border border-gray-100 h-[400px] sm:h-[500px] lg:h-[580px] relative">
               <iframe
                 title="Security Direct Google Business Profile Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.208329901349!2d28.08473147625867!3d-26.319752768691615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9504e0223defc3%3A0xe5abc6e2fb2ad3f4!2sSecurity%20direct%20-%20Gate%20motors%20and%20electric%20fence%20specialists%20est%202008!5e0!3m2!1sen!2sza!4v1781355977408!5m2!1sen!2sza"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.208329901349!2d28.08473147625867!3d-26.319752768691615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9504e0223defc3%3A0xe5abc6e2fb2ad3f4!2sSecurity%20Direct%20Gate%20Motor%20Repair%20and%20Garage%20Door%20Repair!5e0!3m2!1sen!2sza!4v1781355977408!5m2!1sen!2sza"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -140,7 +140,7 @@ export default function ContactSection() {
               />
             </div>
             <p className="text-gray-400 text-xs italic text-center mt-4">
-              Security Direct — Gate motors and electric fence specialists, est 2008. Located in Alberton, Gauteng.
+              Security Direct Gate Motor Repair and Garage Door Repair — Gate motors, garage doors, and electric fence specialists, est 2008. Located in Alberton, Gauteng.
             </p>
           </div>
 
