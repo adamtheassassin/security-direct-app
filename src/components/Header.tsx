@@ -97,7 +97,7 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center shrink-0 bg-white px-3 py-1.5 rounded-xl shadow-md transition-transform hover:scale-[1.02]">
               <Image
-                src="/images/security direct logo.png"
+                src="/images/secuirty direct logo full name.png"
                 alt="Security Direct Logo"
                 width={900}
                 height={100}
