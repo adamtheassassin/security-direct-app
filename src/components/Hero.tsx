@@ -29,7 +29,7 @@ export default function Hero() {
           style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5 text-white order-1"
         >
-          Gate Motor Repair, Electric Fencing &amp; Garage Door Repair
+          Gate Motor, Garage Door &amp; Electric Fence Installation &amp; Repair
           <span className="text-yellow-400 font-bold block mt-1">in Alberton &amp; Johannesburg</span>
         </h1>
 
