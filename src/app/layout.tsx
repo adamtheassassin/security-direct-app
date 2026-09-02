@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { NAP } from "@/lib/nap";
@@ -35,6 +36,21 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${barlow.variable} ${inter.variable}`}>
+      <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-950839845"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-950839845');
+          `}
+        </Script>
+      </head>
       <body className="min-h-screen flex flex-col antialiased overflow-x-hidden">
         <div className="flex flex-col flex-grow w-full overflow-x-hidden relative pb-20 lg:pb-0">
           {children}
