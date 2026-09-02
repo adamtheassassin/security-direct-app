@@ -29,6 +29,32 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  openGraph: {
+    title:
+      "Gate Motor Repair & Installation | Garage Door Repair, Electric Fencing & CCTV | Alberton & Johannesburg - Security Direct",
+    description:
+      "Security Direct installs and repairs gate motors, garage doors, electric fencing and CCTV across Alberton and Johannesburg since 2008. Same-day call-outs, quote before work. Call 082 498 1272.",
+    url: NAP.url,
+    siteName: NAP.displayName,
+    locale: "en_ZA",
+    type: "website",
+    images: [
+      {
+        url: `${NAP.url}/images/hero-bg.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Security Direct - Gate Motor Repair & Security Services Alberton & Johannesburg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Gate Motor Repair & Installation | Garage Door Repair, Electric Fencing & CCTV | Alberton & Johannesburg - Security Direct",
+    description:
+      "Security Direct installs and repairs gate motors, garage doors, electric fencing and CCTV across Alberton and Johannesburg since 2008. Call 082 498 1272.",
+    images: [`${NAP.url}/images/hero-bg.jpg`],
+  },
 };
 
 export default function RootLayout({

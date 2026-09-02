@@ -1,18 +1,17 @@
 import { Metadata } from "next";
 import GateMotorRepairClient from "@/components/GateMotorRepairClient";
-
 import { buildBusinessJsonLd } from "@/lib/nap";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createMetadata({
   title: "Gate Motor Repair in Alberton and Johannesburg | All Brands, Same Day",
   description:
     "We repair all gate motor brands across Alberton and Johannesburg. Same-day call-outs, a full diagnostic on arrival, and a clear quote before any work starts. Call 082 498 1272.",
   keywords:
     "gate motor repair, gate motor repair near me, gate motor repair Alberton, gate motor repair Johannesburg, CENTURION repair, ET Systems repair, same day gate motor repair",
-  alternates: {
-    canonical: "/gate-motor-repair",
-  },
-};
+  canonical: "/gate-motor-repair",
+  image: "/images/gate-motor-repair.png",
+});
 
 export default function GateMotorRepairPage() {
   const jsonLd = buildBusinessJsonLd({

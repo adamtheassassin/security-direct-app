@@ -1,18 +1,17 @@
 import { Metadata } from "next";
 import ElectricFenceRepairClient from "@/components/ElectricFenceRepairClient";
-
 import { buildBusinessJsonLd } from "@/lib/nap";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createMetadata({
   title: "Electric Fence Repair in Alberton & Johannesburg | All Brands, Same-Day Fault-Finding | Security Direct",
   description:
     "Electric fence repairs across Alberton and Johannesburg. We fix dead energizers, snapped strands, broken insulators, flat batteries, and false alarms on all brands, and re-issue a SABS COC where needed. Call 082 498 1272.",
   keywords:
     "electric fence repair, electric fence repair near me, electric fence repair Alberton, electric fence repair Johannesburg, electric fence fault finding, energizer replacement, electric fence not working, false alarm electric fence, Nemtek repair, electric fence battery replacement, COC after repair, Security Direct",
-  alternates: {
-    canonical: "/electric-fence-repair",
-  },
-};
+  canonical: "/electric-fence-repair",
+  image: "/images/electric-fence.jpg",
+});
 
 export default function ElectricFenceRepairPage() {
   const jsonLd = buildBusinessJsonLd({

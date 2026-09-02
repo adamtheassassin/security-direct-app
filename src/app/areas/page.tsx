@@ -5,18 +5,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { areaPages, areaSlugs } from "@/data/areaPages";
 import { buildBusinessJsonLd } from "@/lib/nap";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createMetadata({
   title:
     "Areas We Serve | Gate Motors, Electric Fencing & Security Across Alberton & Johannesburg South | Security Direct",
   description:
     "Security Direct fits and repairs gate motors, electric fencing, CCTV and alarms across Alberton and Johannesburg South. See the suburbs we cover and get a free quote. Call 082 498 1272.",
   keywords:
     "gate motor Alberton, gate motor Johannesburg South, electric fence Alberton, security Johannesburg South, areas served, gate motor repair near me",
-  alternates: {
-    canonical: "/areas",
-  },
-};
+  canonical: "/areas",
+  image: "/images/hero-bg.jpg",
+});
 
 const regionGroups: { region: "alberton" | "jhb"; label: string }[] = [
   { region: "alberton", label: "Alberton & Surrounds" },
