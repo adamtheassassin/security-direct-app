@@ -215,6 +215,8 @@ const allAreasServed = [
 ];
 
 const servicesList = [
+  { name: "Gate Motors", slug: "gate-motors" },
+  { name: "Centurion Gate Motors", slug: "gate-motors/centurion" },
   { name: "Gate Motor Installation", slug: "gate-motor-installation" },
   { name: "Gate Motor Repair", slug: "gate-motor-repair" },
   { name: "Garage Door Installation", slug: "garage-door-installation" },

@@ -7,6 +7,8 @@ const lastModified = new Date();
 
 // Core service pages — the money pages, highest priority after the homepage.
 const servicePaths = [
+  "/gate-motors",
+  "/gate-motors/centurion",
   "/gate-motor-installation",
   "/gate-motor-repair",
   "/garage-door-installation",

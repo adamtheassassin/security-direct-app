@@ -3,12 +3,12 @@ import Link from "next/link";
 
 const services = [
   {
-    title: "Gate Motor Installation",
+    title: "Gate Motors",
     description:
-      "We fit gate motors that keep working for years. Sliding & swing gates, battery backups, and trusted brands like Centurion and FAAC.",
-    image: "/images/gate-motor-feature.jpg",
-    href: "/gate-motor-installation",
-    alt: "Gate motor installation",
+      "We supply, fit, and service gate motors for sliding and swing gates. Sized for your gate weight, with battery backup for load shedding on Centurion, ET Nice, and Gemini.",
+    image: "/images/gate-motors/d5-evo-smart.jpg",
+    href: "/gate-motors",
+    alt: "Gate motors for sliding and swing driveway gates",
   },
   {
     title: "Gate Motor Repair",
@@ -17,22 +17,6 @@ const services = [
     image: "/images/gate-motors/install-hero.jpg",
     href: "/gate-motor-repair",
     alt: "Centurion gate motors for repair and troubleshooting",
-  },
-  {
-    title: "Alarm System Installation",
-    description:
-      "We fit alarm systems with indoor motion sensors, outdoor beams, and panic buttons, fully linked to your armed response and backed up for load shedding.",
-    image: "/images/alarms/installation-hero.png",
-    href: "/alarm-system-installation",
-    alt: "Ajax alarm system keypad installation",
-  },
-  {
-    title: "Alarm System Repair",
-    description:
-      "Keypad beeping or alarm triggering for no reason? We diagnose false alarms, swap dead backup batteries, and repair sensors on all major brands.",
-    image: "/images/alarms/repair-hero.png",
-    href: "/alarm-system-repair",
-    alt: "Paradox alarm system repair and troubleshooting",
   },
   {
     title: "Electric Fence Installation",
@@ -57,6 +41,14 @@ const services = [
     image: "/images/gallery-1.png",
     href: "/cctv",
     alt: "CCTV security camera",
+  },
+  {
+    title: "Alarm Systems",
+    description:
+      "We fit alarm systems with indoor motion sensors, outdoor beams, and panic buttons, fully linked to your armed response and backed up for load shedding.",
+    image: "/images/alarms/installation-hero.png",
+    href: "/alarm-system-installation",
+    alt: "Home alarm system keypad and sensors",
   },
   {
     title: "Garage Door Installation",

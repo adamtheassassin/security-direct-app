@@ -5,9 +5,12 @@ import { useEffect, useState } from "react";
 interface QuoteModalProps {
   isOpen: boolean;
   onClose: () => void;
+  defaultService?: string;
 }
 
 const services = [
+  "Gate Motors",
+  "Centurion Gate Motors",
   "Gate Motor Repair",
   "Gate Motor Installation",
   "Electric Fence Repair",
@@ -22,11 +25,11 @@ const services = [
   "Other",
 ];
 
-export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
+export default function QuoteModal({ isOpen, onClose, defaultService }: QuoteModalProps) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const [selectedService, setSelectedService] = useState("");
+  const [selectedService, setSelectedService] = useState(defaultService || "");
   const [message, setMessage] = useState("");
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
@@ -43,12 +46,15 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
     if (isOpen) {
       window.addEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "hidden"; // lock background scroll
+      if (defaultService) {
+        setSelectedService(defaultService);
+      }
     }
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = ""; // restore scroll
     };
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, defaultService]);
 
   if (!isOpen) return null;
 

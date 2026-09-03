@@ -63,6 +63,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${barlow.variable} ${inter.variable}`}>
       <head>
+        {/* Google Tag Manager */}
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-P8QTBMHN');
+          `}
+        </Script>
+        {/* End Google Tag Manager */}
         {/* Google tag (gtag.js) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-950839845"
@@ -78,6 +89,16 @@ export default function RootLayout({
         </Script>
       </head>
       <body className="min-h-screen flex flex-col antialiased overflow-x-hidden">
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P8QTBMHN"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         <div className="flex flex-col flex-grow w-full overflow-x-hidden relative pb-20 lg:pb-0">
           {children}
           <FloatingWhatsApp />

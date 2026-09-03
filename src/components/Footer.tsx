@@ -3,6 +3,8 @@ import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "/" },
+  { label: "Gate Motors Overview", href: "/gate-motors" },
+  { label: "Centurion Gate Motors", href: "/gate-motors/centurion" },
   { label: "Gate Motor Installation", href: "/gate-motor-installation" },
   { label: "Gate Motor Repair", href: "/gate-motor-repair" },
   { label: "Electric Fence Installation", href: "/electric-fence-installation" },
