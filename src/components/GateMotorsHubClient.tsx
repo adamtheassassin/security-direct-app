@@ -11,6 +11,7 @@ import AreasServed from "./AreasServed";
 const leadingBrands = [
   {
     name: "Centurion Systems",
+    logo: "/images/brands/centurion.png",
     popular: true,
     tagline: "South Africa's Most Fitted Brand",
     link: "/gate-motors/centurion",
@@ -20,6 +21,7 @@ const leadingBrands = [
   },
   {
     name: "ET Nice (ET Systems)",
+    logo: "/images/brands/nice.png",
     popular: false,
     tagline: "Strong Motors and Rolling Code Security",
     link: "/gate-motor-installation",
@@ -29,6 +31,7 @@ const leadingBrands = [
   },
   {
     name: "Gemini",
+    logo: "/images/brands/gemini.png",
     popular: false,
     tagline: "Simple and Dependable Domestic Power",
     link: "/gate-motor-repair",
@@ -38,6 +41,7 @@ const leadingBrands = [
   },
   {
     name: "Hansa",
+    logo: "/images/brands/hansa.svg",
     popular: false,
     tagline: "Legacy Repairs and Modern Upgrades",
     link: "/gate-motor-repair",
@@ -224,6 +228,12 @@ export default function GateMotorsHubClient() {
       {/* Quick Routing Action Cards */}
       <section className="py-10 bg-slate-100 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-slate-600">
+              Explore Gate Motor Services &amp; Options
+            </h2>
+            <span className="text-xs text-slate-500">Same-day services across Alberton &amp; Johannesburg</span>
+          </div>
           <div className="grid md:grid-cols-3 gap-6">
             <Link
               href="/gate-motors/centurion"
@@ -287,21 +297,35 @@ export default function GateMotorsHubClient() {
             {leadingBrands.map((brand, idx) => (
               <div
                 key={idx}
-                className={`p-8 rounded-2xl border flex flex-col justify-between ${
-                  brand.popular ? "border-blue-500 bg-blue-50/20 ring-2 ring-blue-500/20" : "border-slate-200 bg-white"
+                className={`p-8 rounded-2xl border flex flex-col justify-between transition hover:shadow-lg ${
+                  brand.popular ? "border-blue-500 bg-blue-50/20 ring-2 ring-blue-500/20" : "border-slate-200 bg-white hover:border-slate-300"
                 }`}
               >
                 <div>
-                  <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                    <h3 className="text-2xl font-bold text-slate-900">{brand.name}</h3>
+                  <div className="flex items-start justify-between gap-4 mb-6">
+                    <div className="h-14 bg-white border border-slate-200/80 rounded-xl px-3.5 py-2 flex items-center shadow-xs">
+                      <Image
+                        src={brand.logo}
+                        alt={`${brand.name} logo`}
+                        width={140}
+                        height={42}
+                        className="h-9 w-auto object-contain"
+                      />
+                    </div>
                     {brand.popular && (
-                      <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                      <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-xs">
                         Most Popular in SA
                       </span>
                     )}
                   </div>
-                  <p className="text-xs text-blue-600 font-semibold uppercase tracking-wide mb-4">{brand.tagline}</p>
+
+                  <div className="mb-2">
+                    <h3 className="text-2xl font-bold text-slate-900">{brand.name}</h3>
+                    <p className="text-xs text-blue-600 font-semibold uppercase tracking-wide mt-1">{brand.tagline}</p>
+                  </div>
+
                   <p className="text-slate-600 text-sm leading-relaxed mb-6">{brand.desc}</p>
+
                   <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 text-xs text-slate-700 mb-6">
                     <span className="text-slate-400 block mb-1">Common Models:</span>
                     <strong className="text-slate-900">{brand.popularModels}</strong>
@@ -311,9 +335,10 @@ export default function GateMotorsHubClient() {
                 <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-slate-100">
                   <Link
                     href={brand.link}
-                    className="text-blue-600 font-semibold text-sm hover:text-blue-700 flex items-center gap-1"
+                    className="text-blue-600 font-semibold text-sm hover:text-blue-700 flex items-center gap-1 group"
                   >
-                    {brand.linkText} &rarr;
+                    <span>{brand.linkText}</span>
+                    <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
                   </Link>
                   <button
                     onClick={() => openQuote(`${brand.name} Gate Motor Quote`)}

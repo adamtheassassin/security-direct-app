@@ -74,19 +74,6 @@ export default function RootLayout({
           `}
         </Script>
         {/* End Google Tag Manager */}
-        {/* Google tag (gtag.js) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-950839845"
-          strategy="afterInteractive"
-        />
-        <Script id="google-tag-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-950839845');
-          `}
-        </Script>
       </head>
       <body className="min-h-screen flex flex-col antialiased overflow-x-hidden">
         {/* Google Tag Manager (noscript) */}

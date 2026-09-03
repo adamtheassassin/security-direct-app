@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <!-- Gemini Emblem -->
+  <g transform="translate(6, 6)">
+    <rect width="48" height="48" rx="10" fill="#1E3A8A"/>
+    <!-- Twin pillars / gates mark -->
+    <path d="M 17 14 L 21 14 L 21 34 L 17 34 Z M 27 14 L 31 14 L 31 34 L 27 34 Z M 14 14 C 14 14 24 9 34 14" stroke="#F97316" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="24" cy="24" r="3" fill="#F97316"/>
+  </g>
+  <!-- Text -->
+  <text x="64" y="32" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="20" fill="#1E3A8A" letter-spacing="0.5">GEMINI</text>
+  <text x="65" y="46" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="9" fill="#F97316" letter-spacing="2">AUTOMATION</text>
+</svg>
