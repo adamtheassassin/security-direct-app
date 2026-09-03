@@ -52,9 +52,9 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-widest text-blue-300 mb-5">
+            <p className="text-sm font-semibold uppercase tracking-widest text-blue-300 mb-5">
               Navigation
-            </h4>
+            </p>
             <ul className="space-y-2.5">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -71,9 +71,9 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-widest text-blue-300 mb-5">
+            <p className="text-sm font-semibold uppercase tracking-widest text-blue-300 mb-5">
               Contact Us
-            </h4>
+            </p>
             <ul className="space-y-4">
               <li>
                 <a

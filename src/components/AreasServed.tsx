@@ -452,16 +452,12 @@ export default function AreasServed({
                         : "bg-white border-gray-100 hover:border-blue/30 hover:shadow-sm"
                     }`}
                   >
-                    {/* Mobile Link Overlay */}
-                    <Link
-                      href={`/areas/${suburb.id}`}
-                      className="absolute inset-0 z-10 md:hidden rounded-xl"
-                    />
-
-                    {/* Suburb Selection Button (Desktop/Tablet) */}
+                    {/* Suburb Selection Button */}
                     <button
+                      type="button"
                       onClick={() => setSelectedAreaId(suburb.id)}
-                      className="flex items-center gap-3.5 text-left flex-1 cursor-pointer focus:outline-none relative z-20"
+                      aria-label={`Select ${suburb.name} coverage details`}
+                      className="flex items-center gap-3.5 text-left flex-1 cursor-pointer focus:outline-none min-h-[48px] py-1"
                     >
                       {/* Small Icon Container */}
                       <div
@@ -482,10 +478,11 @@ export default function AreasServed({
                       </div>
                     </button>
 
-                    {/* Go to Area Page Link (Desktop) */}
+                    {/* Go to Area Page Link */}
                     <Link
                       href={`/areas/${suburb.id}`}
-                      className="relative z-20 flex items-center gap-2 group/arrow shrink-0 ml-2"
+                      aria-label={`View full details for ${suburb.name}`}
+                      className="flex items-center gap-2 group/arrow shrink-0 ml-2 p-1.5 min-w-[44px] min-h-[44px] justify-center"
                     >
                       <span className="text-[10px] text-blue font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-1 group-hover:translate-x-0 hidden md:inline whitespace-nowrap">
                         View Page

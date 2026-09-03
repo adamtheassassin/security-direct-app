@@ -160,6 +160,7 @@ export default function Header() {
               <div className="flex items-center gap-2 xl:gap-4 shrink-0">
                 <a
                   href="tel:0824981272"
+                  aria-label="Call Security Direct on 082 498 1272"
                   className="flex items-center justify-center gap-1.5 bg-white hover:bg-blue-pale text-blue text-xs font-semibold p-2.5 xl:px-4 xl:py-2 rounded-full transition-colors shadow-sm whitespace-nowrap"
                 >
                   <svg className="w-3.5 h-3.5 text-blue" fill="currentColor" viewBox="0 0 20 20">
@@ -171,6 +172,7 @@ export default function Header() {
                   href="https://wa.me/+27824981272"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Chat with Security Direct on WhatsApp"
                   className="flex items-center justify-center gap-1.5 bg-green-600 hover:bg-green-700 text-white text-xs font-semibold p-2.5 xl:px-4 xl:py-2 rounded-full transition-colors shadow-sm whitespace-nowrap"
                 >
                   <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
