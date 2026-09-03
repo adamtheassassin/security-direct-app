@@ -24,8 +24,8 @@ const leadingBrands = [
     logo: "/images/brands/nice.png",
     popular: false,
     tagline: "Strong Motors and Rolling Code Security",
-    link: "/gate-motor-installation",
-    linkText: "Book an ET Nice Installation",
+    link: "/gate-motors/et-nice",
+    linkText: "View ET Nice Range & Specs",
     desc: "ET Nice motors offer durable gearboxes, smooth soft start and stop mechanisms, and secure code hopping remotes. They are a solid choice for residential driveways and busy commercial properties alike.",
     popularModels: "ET Drive 500, ET Drive 600, ET Drive 1000",
   },
@@ -34,8 +34,8 @@ const leadingBrands = [
     logo: "/images/brands/gemini.png",
     popular: false,
     tagline: "Simple and Dependable Domestic Power",
-    link: "/gate-motor-repair",
-    linkText: "Gemini Repairs & Upgrades",
+    link: "/gate-motors/gemini",
+    linkText: "View Gemini Range & Specs",
     desc: "Gemini gate motors have powered South African homes for decades. They feature straightforward 24V power systems, quiet operation, and simple battery maintenance. We service all Gemini sliding and swing gate units.",
     popularModels: "Gemini 24V Sliding, Gemini Swing",
   },
@@ -259,7 +259,7 @@ export default function GateMotorsHubClient() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">Gate Motor Installation</h3>
               <p className="text-sm text-slate-600">
-                Complete fitment packages from R6 600 with steel rack, base plate, battery backup, and anti-theft brackets.
+                Complete fitment packages for all leading brands with steel rack, base plate, battery backup, and anti-theft brackets.
               </p>
             </Link>
 

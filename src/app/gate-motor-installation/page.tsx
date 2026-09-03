@@ -4,11 +4,11 @@ import { buildBusinessJsonLd } from "@/lib/nap";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
-  title: "Gate Motor Installation in Alberton & Johannesburg | Centurion from R6 600 Installed",
+  title: "Gate Motor Installation in Alberton & Johannesburg | Centurion, ET Nice, Gemini & Hansa",
   description:
-    "New Centurion gate motors fitted for sliding and swing gates across Alberton and Johannesburg. Prices from R6 600 installed, backup battery and anti-theft bracket included. Fitting since 2008. Call 082 498 1272.",
+    "Professional gate motor installation for sliding and swing gates across Alberton and Johannesburg. We supply and fit Centurion, ET Nice, Gemini, and Hansa motors with battery backup and anti-theft brackets. Call 082 498 1272.",
   keywords:
-    "gate motor installation, gate motor installation Alberton, gate motor installation Johannesburg, sliding gate motor, swing gate motor, Centurion D5 Evo Smart, Centurion D3 Smart, Centurion D10, gate automation, Security Direct",
+    "gate motor installation, gate motor installation Alberton, gate motor installation Johannesburg, sliding gate motor, swing gate motor, Centurion gate motors, ET Nice, Gemini, Hansa, gate automation, Security Direct",
   canonical: "/gate-motor-installation",
   image: "/images/gate-motor-d5-evo.png",
 });
@@ -16,7 +16,7 @@ export const metadata: Metadata = createMetadata({
 export default function GateMotorInstallationPage() {
   const jsonLd = buildBusinessJsonLd({
     url: "https://securitydirect.co.za/gate-motor-installation",
-    description: "Get professional Centurion gate motor installations in Alberton and Johannesburg. Prices from R6 600 installed. Backup battery and anti-theft bracket included. Call 082 498 1272.",
+    description: "Professional gate motor installation for sliding and swing gates across Alberton and Johannesburg. We supply and fit leading brands including Centurion, ET Nice, Gemini, and Hansa with battery backup and anti-theft brackets. Call 082 498 1272.",
   });
 
   return (

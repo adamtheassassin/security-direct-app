@@ -23,6 +23,8 @@ const navLinks: NavLink[] = [
     subLinks: [
       { label: "Gate Motors Overview", href: "/gate-motors" },
       { label: "Centurion Gate Motors", href: "/gate-motors/centurion" },
+      { label: "ET Nice Gate Motors", href: "/gate-motors/et-nice" },
+      { label: "Gemini Gate Motors", href: "/gate-motors/gemini" },
       { label: "Gate Motor Installation", href: "/gate-motor-installation" },
       { label: "Gate Motor Repair", href: "/gate-motor-repair" },
     ],

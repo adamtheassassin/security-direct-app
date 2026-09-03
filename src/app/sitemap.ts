@@ -9,6 +9,8 @@ const lastModified = new Date();
 const servicePaths = [
   "/gate-motors",
   "/gate-motors/centurion",
+  "/gate-motors/et-nice",
+  "/gate-motors/gemini",
   "/gate-motor-installation",
   "/gate-motor-repair",
   "/garage-door-installation",

@@ -11,7 +11,7 @@ import AreasServed from "./AreasServed";
 const included = [
   {
     title: "A motor sized to your gate",
-    desc: "We weigh up your gate first and pick a Centurion that pulls it with room to spare. A motor that never strains is a motor that lasts.",
+    desc: "We weigh up your gate first and pick a motor that pulls it with room to spare. A motor that never strains is a motor that lasts.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
@@ -86,53 +86,52 @@ const gateTypes = [
 
 const range = [
   {
-    name: "Centurion D3 Smart",
-    image: "/images/gate-motors/d3-smart.jpg",
-    rating: "Gates under 300kg",
-    price: "From R6 600",
-    note: "installed",
-    desc: "A solid, good-value choice for a normal home gate. You get the 4m rack, base plate, and two remotes, all fitted and tested.",
-  },
-  {
-    name: "Centurion D5 Evo Smart",
+    brand: "Centurion Systems",
+    name: "Centurion D5 Smart",
     image: "/images/gate-motors/d5-evo-smart.jpg",
-    rating: "Gates under 500kg",
-    price: "From R7 850",
-    note: "installed",
-    desc: "Our most popular home motor. It runs quiet and quick, and it links up easily with an intercom or CCTV later on.",
+    rating: "Residential Sliding • Up to 500kg",
+    desc: "South Africa's benchmark residential motor. Delivers high opening speeds, intelligent battery management for load shedding, and wireless app diagnostics with MyCentsys.",
     popular: true,
   },
   {
-    name: "Centurion D6 Smart",
+    brand: "ET Nice",
+    name: "ET Drive 500 / 600",
+    image: "/images/gate-motors/d3-smart.jpg",
+    rating: "Residential Sliding • Up to 600kg",
+    desc: "Engineered for durability with a heavy-duty gearbox, smooth soft start and stop, built-in battery charging, and secure code-hopping remotes.",
+    popular: false,
+  },
+  {
+    brand: "Gemini",
+    name: "Gemini 24V DC Sliding",
     image: "/images/gate-motors/d6-smart.jpg",
-    rating: "Gates under 600kg",
-    price: "From R8 850",
-    note: "installed",
-    desc: "Built for busy gates at complexes and multi-unit stands where the gate opens all day. It handles the extra traffic without trouble.",
+    rating: "Domestic & Light Commercial",
+    desc: "Proven South African workhorse. Features a reliable 24V DC drive system, exceptionally quiet operation, and straightforward battery maintenance.",
+    popular: false,
   },
   {
-    name: "Centurion D10 Smart",
+    brand: "Centurion & ET Nice",
+    name: "Centurion D10 Smart / ET Drive 1000",
     image: "/images/gate-motors/d10-smart.jpg",
-    rating: "Gates under 1000kg",
-    price: "From R14 850",
-    note: "installed",
-    desc: "A heavy-duty motor for long, heavy gates. Strong enough for large homes and commercial entrances that get plenty of use.",
+    rating: "Heavy Gates & Complexes • Up to 1000kg+",
+    desc: "Commercial-grade operators built for heavy traffic on townhouse complexes, security estates, and industrial access gates.",
+    popular: false,
   },
   {
-    name: "Centurion D20 Smart",
+    brand: "Centurion & ET Nice",
+    name: "Linear Swing Gate Motors",
     image: "/images/gate-motors/d20-smart.jpg",
-    rating: "Heavy industrial gates",
-    price: "From R15 800",
-    note: "installed",
-    desc: "The workhorse of the range. Made for the biggest gates on industrial sites that open and close all day, every day.",
+    rating: "Single & Double Swing Gates",
+    desc: "Robust piston and articulated swing arm systems for driveway pillars. Smooth synchronized dual-leaf movement and optional electronic mag-locks.",
+    popular: false,
   },
   {
-    name: "Anti-Theft Bracket",
+    brand: "Security Direct",
+    name: "Anti-Theft Steel Bracket & Puck Lock",
     image: "/images/gate-motors/theft-bracket.jpg",
-    rating: "Add-on for any motor",
-    price: "From R1 100",
-    note: "installed",
-    desc: "A heavy steel cage and lock around the motor. With gate motor theft on the rise, this is one of the cheapest ways to protect your new setup.",
+    rating: "Essential Motor Protection",
+    desc: "Heavy-gauge solid steel cage anchored directly into the ground concrete base plate with a hardened steel puck padlock to prevent motor and battery theft.",
+    popular: false,
   },
 ];
 
@@ -172,8 +171,8 @@ const backupTips = [
   },
   {
     num: "3",
-    title: "Low-draw Smart motors",
-    desc: "The Centurion Smart range is gentle on the battery, so it lasts longer between charges.",
+    title: "Low-draw smart motors",
+    desc: "Modern smart gate motors are gentle on the battery, giving you maximum open and close cycles during power cuts.",
   },
 ];
 
@@ -188,7 +187,7 @@ const whyUs = [
   },
   {
     title: "We have fitted these since 2008",
-    desc: "Centurion gates across Alberton and the East Rand are what we do all day. You get a team that has seen every gate and every setup.",
+    desc: "Gate automation across Alberton and Johannesburg is what we do all day. You get a team that has seen every gate and every setup.",
   },
   {
     title: "We set it up and show you everything",
@@ -198,16 +197,16 @@ const whyUs = [
 
 const faqs = [
   {
-    q: "How much does it cost to install a gate motor in Alberton?",
-    a: "A standard Centurion install starts at R6 600 for the D3 Smart on a normal home gate. The D5 Evo Smart, our most popular motor, starts at R7 850. Bigger and heavier gates need a stronger motor, so the price moves up from there. Every quote is fixed and includes the 4m rack, two remotes, the base plate, and the labour.",
+    q: "How much does it cost to install a gate motor in Alberton & Johannesburg?",
+    a: "Installation cost depends on your gate's size, weight, and preferred brand (Centurion, ET Nice, Gemini, or Hansa), plus the power run. We provide a completely free on-site assessment and provide an exact, all-inclusive fixed quote before any work starts.",
   },
   {
-    q: "Which Centurion motor is right for my gate?",
-    a: "It comes down to gate weight. Under 300kg, the D3 Smart is plenty. Up to 500kg, most homes go with the D5 Evo Smart. Complexes and very long gates need the D6, D10, or D20. We weigh it up on the free site visit and tell you which one fits.",
+    q: "Which gate motor brand and model is right for my gate?",
+    a: "It comes down to gate weight, length, and daily opening frequency. For standard residential gates up to 500kg, the Centurion D5 Smart, ET Drive 500, or Gemini 24V are excellent choices. Commercial gates and complexes need 1000kg rated motors like the Centurion D10 Smart or ET Drive 1000. We evaluate your gate on the free site visit and recommend the best fit for your needs.",
   },
   {
     q: "Will the gate still open during load shedding?",
-    a: "Yes. Every install includes a backup battery, so the motor runs off battery when the power is out. The Smart range uses very little power, which means you get plenty of open and close cycles before it needs the mains again.",
+    a: "Yes. Every install includes a backup battery, so the motor runs off battery when the power is out. Modern motors use very little standby power, giving you plenty of open and close cycles before needing the mains again.",
   },
   {
     q: "Can you automate my existing manual gate?",
@@ -219,7 +218,7 @@ const faqs = [
   },
   {
     q: "Do you fit the anti-theft bracket?",
-    a: "Yes, and we recommend it. Gate motor theft is common in the area, so for around R1 100 we fit a heavy steel bracket and lock around the motor that makes it far harder to grab.",
+    a: "Yes, and we strongly recommend it. Gate motor theft is common across Gauteng, so we fit a heavy steel bracket and padlock around the motor that prevents criminals from unbolting the unit or stealing the battery.",
   },
   {
     q: "What warranty do I get on a new installation?",
@@ -233,7 +232,13 @@ const faqs = [
 
 export default function GateMotorInstallationClient() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState("Gate Motor Installation");
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
+
+  const openQuote = (serviceName?: string) => {
+    setSelectedService(serviceName || "Gate Motor Installation");
+    setIsQuoteModalOpen(true);
+  };
 
   const toggleFaq = (i: number) => setActiveFaq(activeFaq === i ? null : i);
 
@@ -248,7 +253,7 @@ export default function GateMotorInstallationClient() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/gate-motor-feature.jpg"
-              alt="New Centurion gate motor installed on a sliding gate in Alberton"
+              alt="Professional gate motor installation on a driveway sliding gate in Alberton"
               fill
               className="object-cover opacity-45"
               priority
@@ -265,11 +270,11 @@ export default function GateMotorInstallationClient() {
               Gate Motor Installation
             </h1>
             <p className="text-lg text-blue-200 mb-0 md:mb-10 max-w-lg leading-relaxed order-4 md:order-3 mx-auto md:mx-0">
-              New Centurion motors fitted to your gate, sized right, set up properly, and running from day one. Prices from R6 600 installed.
+              We supply and fit leading gate motor brands for sliding and swing gates. Sized right, installed properly, and running from day one with full battery backup.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10 md:mb-0 order-3 md:order-4 w-full sm:w-auto items-center sm:items-start justify-center sm:justify-start">
               <button
-                onClick={() => setIsQuoteModalOpen(true)}
+                onClick={() => openQuote("Gate Motor Installation General Quote")}
                 className="bg-white text-navy font-bold px-8 py-4 rounded-lg text-base hover:bg-blue-pale transition-colors shadow-lg cursor-pointer flex justify-center items-center gap-2"
               >
                 <svg className="w-5 h-5 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -296,7 +301,7 @@ export default function GateMotorInstallationClient() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { label: "Free Site Assessment", icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" },
-                { label: "From R6 600 Installed", icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
+                { label: "All Leading Brands", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5" },
                 { label: "Battery Backup Standard", icon: "M13 10V3L4 14h7v7l9-11h-7z" },
                 { label: "Fitted Since 2008", icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" },
               ].map(({ label, icon }) => (
@@ -359,16 +364,16 @@ export default function GateMotorInstallationClient() {
           </div>
         </section>
 
-        {/* ── Range & Pricing ── */}
+        {/* ── Motor Selection Lineup ── */}
         <section className="py-20 bg-[#f8f7f4]">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-12 max-w-2xl mx-auto">
               <span className="bg-blue-pale text-blue font-bold tracking-widest text-xs uppercase px-3.5 py-1.5 rounded-full w-fit mb-4 inline-block">
-                Motors &amp; Pricing
+                Motor Selection
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-navy font-display mb-4">The Centurion Smart Range</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-navy font-display mb-4">Gate Motors We Supply &amp; Fit</h2>
               <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-                We fit the full Centurion Smart line, from a small home gate to a heavy industrial one. Every price below covers the motor, a 4m rack, a base plate, two remotes, and the install. The right one for you comes down to how heavy your gate is.
+                We supply and fit leading gate motor brands for residential, commercial, and complex gates across Gauteng. Every complete installation includes the motor, steel rack, solid base plate, backup battery, programmed remotes, and expert handover.
               </p>
             </div>
 
@@ -376,7 +381,7 @@ export default function GateMotorInstallationClient() {
             <div className="relative w-full rounded-3xl overflow-hidden mb-12 shadow-sm border border-gray-100">
               <Image
                 src="/images/gate-motors/install-hero.jpg"
-                alt="Centurion D3, D5 Evo and D6 Smart gate motors for residential and commercial gates"
+                alt="Centurion, ET Nice and Gemini gate motors for residential and commercial gates"
                 width={1127}
                 height={376}
                 className="w-full h-auto object-cover"
@@ -392,11 +397,16 @@ export default function GateMotorInstallationClient() {
                     m.popular ? "border-blue ring-2 ring-blue/15" : "border-gray-100"
                   }`}
                 >
-                  {m.popular && (
-                    <span className="absolute top-4 right-4 z-10 bg-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
-                      Most Popular
+                  <div className="flex items-center justify-between p-4 pb-0">
+                    <span className="bg-slate-100 text-slate-700 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                      {m.brand}
                     </span>
-                  )}
+                    {m.popular && (
+                      <span className="bg-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                        Most Popular
+                      </span>
+                    )}
+                  </div>
                   <div className="relative aspect-[4/3] bg-white flex items-center justify-center p-6 border-b border-gray-50">
                     <Image
                       src={m.image}
@@ -409,21 +419,23 @@ export default function GateMotorInstallationClient() {
                   <div className="p-6 flex flex-col flex-grow">
                     <span className="text-blue text-[11px] font-bold uppercase tracking-wider mb-1">{m.rating}</span>
                     <h3 className="font-bold text-navy font-display text-lg mb-2">{m.name}</h3>
-                    <p className="text-gray-500 text-sm leading-relaxed mb-5 flex-grow">{m.desc}</p>
-                    <div className="flex items-end justify-between border-t border-gray-100 pt-4">
-                      <div>
-                        <span className="block text-2xl font-bold text-navy font-display leading-none">{m.price}</span>
-                        <span className="text-gray-400 text-xs">{m.note}</span>
-                      </div>
+                    <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">{m.desc}</p>
+                    <div className="flex items-center justify-between gap-2 border-t border-gray-100 pt-4">
+                      <button
+                        onClick={() => openQuote(`${m.name} Installation Quote`)}
+                        className="bg-navy hover:bg-slate-800 text-white font-bold text-xs px-4 py-2.5 rounded-lg transition-colors cursor-pointer"
+                      >
+                        Get Free Quote
+                      </button>
                       <a
                         href={`https://wa.me/+27824981272?text=${encodeURIComponent(
-                          `Hi Security Direct, I am interested in the ${m.name} (${m.price} installed).`
+                          `Hi Security Direct, I am interested in an installation quote for the ${m.name}.`
                         )}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-green-600 hover:bg-green-700 text-white font-bold text-xs px-4 py-2.5 rounded-lg transition-colors flex items-center justify-center gap-1.5 shrink-0"
+                        className="bg-green-600 hover:bg-green-700 text-white font-bold text-xs px-3.5 py-2.5 rounded-lg transition-colors flex items-center justify-center gap-1.5 shrink-0"
                       >
-                        <svg className="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                           <path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.761.459 3.475 1.332 4.987L2 22l5.176-1.358a9.92 9.92 0 004.836 1.246c5.506 0 9.988-4.482 9.988-9.988C22 6.482 17.518 2 12.012 2zm5.522 14.072c-.225.63-.884 1.15-1.523 1.275-.54.105-1.24.165-3.6-.825-3.04-1.275-5.01-4.38-5.16-4.59-.15-.21-1.21-1.605-1.21-3.06 0-1.455.765-2.175 1.035-2.46.225-.24.585-.33.885-.33h.84c.255 0 .48.015.69.525.27.645.93 2.265 1.005 2.415.075.15.135.33.03.54-.105.21-.21.345-.375.525-.15.18-.33.405-.45.54-.15.15-.3.315-.12.615.18.3.795 1.29 1.71 2.1 1.185 1.05 2.19 1.38 2.505 1.53.315.15.495.12.675-.09.18-.21.78-.9 1-1.215.18-.225.435-.18.705-.075.27.105 1.71.81 2.01.96.3.15.495.225.57.345.075.12.075.69-.15 1.365z" />
                         </svg>
                         WhatsApp
@@ -435,7 +447,7 @@ export default function GateMotorInstallationClient() {
             </div>
 
             <p className="text-center text-gray-400 text-xs mt-8 max-w-xl mx-auto leading-relaxed">
-              Prices are a starting point for a standard install. The final figure depends on your gate, the cabling run, and any extras like a keypad or intercom. You get the exact number on the free site visit, with nothing owed until you say go ahead.
+              Every installation is tailored to your gate's physical condition and power requirements. You get an exact, fixed quote on our free site visit with zero obligation.
             </p>
           </div>
         </section>
@@ -619,7 +631,11 @@ export default function GateMotorInstallationClient() {
 
       </main>
 
-      <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
+      <QuoteModal
+        isOpen={isQuoteModalOpen}
+        onClose={() => setIsQuoteModalOpen(false)}
+        defaultService={selectedService}
+      />
       <Footer />
     </>
   );
