@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  verification: {
+    google: "ViVtJ4RwcMY9YQi3leFxRj4juf5zdrP8T4g8VdnaF4k",
+  },
   openGraph: {
     title:
       "Gate Motor Repair & Installation | Garage Door Repair, Electric Fencing & CCTV | Alberton & Johannesburg - Security Direct",
