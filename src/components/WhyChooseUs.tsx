@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const reasons = [
   {
@@ -103,7 +104,7 @@ export default function WhyChooseUs() {
               <p className="text-gray-500 text-sm leading-relaxed mb-5">
                 {reason.description}
               </p>
-              <a
+              <Link
                 href={reason.href}
                 className="inline-flex items-center gap-1 text-sm font-semibold transition-colors"
                 style={{ color: "#094B92" }}
@@ -117,7 +118,7 @@ export default function WhyChooseUs() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

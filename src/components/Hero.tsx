@@ -1,21 +1,31 @@
 "use client";
 
 import { useState } from "react";
-import QuoteModal from "./QuoteModal";
+import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const QuoteModal = dynamic(() => import("./QuoteModal"), { ssr: false });
 
 export default function Hero() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
-      />
+      {/* Background image optimized for LCP */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero-bg.jpg"
+          alt="Security Direct Gate and Security Background"
+          fill
+          priority
+          sizes="100vw"
+          quality={75}
+          className="object-cover object-center"
+        />
+      </div>
       {/* Gradient overlay */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 z-[1]"
         style={{
           background:
             "linear-gradient(to bottom, rgba(0,18,36,0.96) 0%, rgba(0,29,59,0.90) 50%, rgba(0,10,24,0.95) 100%)",

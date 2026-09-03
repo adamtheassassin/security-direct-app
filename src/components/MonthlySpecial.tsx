@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function MonthlySpecial() {
   return (
@@ -45,7 +46,7 @@ export default function MonthlySpecial() {
                 </svg>
                 WhatsApp Us Now
               </a>
-              <a
+              <Link
                 href="/gate-motor-installation"
                 className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-7 py-3.5 rounded-lg text-sm transition-colors backdrop-blur-sm"
               >
@@ -53,7 +54,7 @@ export default function MonthlySpecial() {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -65,8 +66,8 @@ export default function MonthlySpecial() {
                 alt="Centurion D5 EVO Smart gate motor"
                 width={860}
                 height={537}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="w-full h-auto object-cover"
-                priority
               />
               {/* Price tag overlay */}
               <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 font-black px-4 py-2 rounded-xl text-center shadow-lg rotate-3">

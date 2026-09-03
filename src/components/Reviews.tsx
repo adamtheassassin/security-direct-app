@@ -9,7 +9,7 @@ export default function Reviews() {
         {/* Elfsight Google Reviews Widget Script */}
         <Script 
           src="https://elfsightcdn.com/platform.js" 
-          strategy="afterInteractive" 
+          strategy="lazyOnload" 
         />
         
         {/* Elfsight Widget Container */}

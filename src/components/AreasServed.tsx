@@ -2,7 +2,9 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import QuoteModal from "./QuoteModal";
+import dynamic from "next/dynamic";
+
+const QuoteModal = dynamic(() => import("./QuoteModal"), { ssr: false });
 
 // ── CUSTOM SVG ICON COMPONENTS FOR LOCAL LANDMARKS (FOR SMALL GRID TABS) ──
 
